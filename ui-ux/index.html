@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- uxp-ds-theme:start -->
+<style>
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
+
+:root {
+  --background: 210 40% 98%;
+  --foreground: 222.2 47.4% 11.2%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 47.4% 11.2%;
+  --card-border: 214.3 31.8% 91.4%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 47.4% 11.2%;
+  --primary: 211 100% 30.8%;
+  --primary-hover: 211 100% 23.5%;
+  --primary-active: 211.3 100% 17.6%;
+  --primary-subtle: 215.3 100% 96.7%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 40% 96.1%;
+  --secondary-hover: 214.3 31.8% 91.4%;
+  --secondary-active: 212.7 26.8% 83.9%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --accent: 215.3 100% 96.7%;
+  --accent-hover: 214.3 100% 93.1%;
+  --accent-foreground: 211 100% 30.8%;
+  --destructive: 358.8 80.5% 51.8%;
+  --destructive-hover: 358.6 78.2% 43.1%;
+  --destructive-active: 358.3 82.7% 33.9%;
+  --destructive-subtle: 0 85.7% 97.3%;
+  --destructive-foreground: 0 0% 100%;
+  --success: 142.4 71.8% 29.2%;
+  --success-hover: 142.8 64.2% 24.1%;
+  --success-subtle: 138.5 76.5% 96.7%;
+  --success-foreground: 0 0% 100%;
+  --warning: 26 90.5% 37.1%;
+  --warning-hover: 22.7 82.5% 31.4%;
+  --warning-subtle: 48 100% 96.1%;
+  --warning-foreground: 0 0% 100%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.3 19.3% 34.5%;
+  --brand-blue: 211 100% 30.8%;
+  --brand-red: 358.8 80.5% 51.8%;
+  --brand-yellow: 52.2 100% 50%;
+  --surface: 0 0% 100%;
+  --surface-subtle: 210 40% 98%;
+  --surface-muted: 210 40% 96.1%;
+  --surface-border: 214.3 31.8% 91.4%;
+  --border: 214.3 31.8% 91.4%;
+  --border-hover: 212.7 26.8% 83.9%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 211 100% 30.8%;
+  --font-family-sans: 'IBM Plex Sans Arabic', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --spacing-0: 0px;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --radius-none: 0px;
+  --radius-sm: 0.25rem;
+  --radius: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+  --shadow-none: none;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --border-width-0: 0px;
+  --border-width-2: 2px;
+  --border-width: 1px;
+}
+</style>
+<script>
+  (function () {
+    var ds = {
+      colors: {
+        "background": "hsl(var(--background) / <alpha-value>)",
+        "foreground": "hsl(var(--foreground) / <alpha-value>)",
+        "card": "hsl(var(--card) / <alpha-value>)",
+        "card-foreground": "hsl(var(--card-foreground) / <alpha-value>)",
+        "card-border": "hsl(var(--card-border) / <alpha-value>)",
+        "popover": "hsl(var(--popover) / <alpha-value>)",
+        "popover-foreground": "hsl(var(--popover-foreground) / <alpha-value>)",
+        "primary": "hsl(var(--primary) / <alpha-value>)",
+        "primary-hover": "hsl(var(--primary-hover) / <alpha-value>)",
+        "primary-active": "hsl(var(--primary-active) / <alpha-value>)",
+        "primary-subtle": "hsl(var(--primary-subtle) / <alpha-value>)",
+        "primary-foreground": "hsl(var(--primary-foreground) / <alpha-value>)",
+        "secondary": "hsl(var(--secondary) / <alpha-value>)",
+        "secondary-hover": "hsl(var(--secondary-hover) / <alpha-value>)",
+        "secondary-active": "hsl(var(--secondary-active) / <alpha-value>)",
+        "secondary-foreground": "hsl(var(--secondary-foreground) / <alpha-value>)",
+        "accent": "hsl(var(--accent) / <alpha-value>)",
+        "accent-hover": "hsl(var(--accent-hover) / <alpha-value>)",
+        "accent-foreground": "hsl(var(--accent-foreground) / <alpha-value>)",
+        "destructive": "hsl(var(--destructive) / <alpha-value>)",
+        "destructive-hover": "hsl(var(--destructive-hover) / <alpha-value>)",
+        "destructive-active": "hsl(var(--destructive-active) / <alpha-value>)",
+        "destructive-subtle": "hsl(var(--destructive-subtle) / <alpha-value>)",
+        "destructive-foreground": "hsl(var(--destructive-foreground) / <alpha-value>)",
+        "success": "hsl(var(--success) / <alpha-value>)",
+        "success-hover": "hsl(var(--success-hover) / <alpha-value>)",
+        "success-subtle": "hsl(var(--success-subtle) / <alpha-value>)",
+        "success-foreground": "hsl(var(--success-foreground) / <alpha-value>)",
+        "warning": "hsl(var(--warning) / <alpha-value>)",
+        "warning-hover": "hsl(var(--warning-hover) / <alpha-value>)",
+        "warning-subtle": "hsl(var(--warning-subtle) / <alpha-value>)",
+        "warning-foreground": "hsl(var(--warning-foreground) / <alpha-value>)",
+        "muted": "hsl(var(--muted) / <alpha-value>)",
+        "muted-foreground": "hsl(var(--muted-foreground) / <alpha-value>)",
+        "brand-blue": "hsl(var(--brand-blue) / <alpha-value>)",
+        "brand-red": "hsl(var(--brand-red) / <alpha-value>)",
+        "brand-yellow": "hsl(var(--brand-yellow) / <alpha-value>)",
+        "surface": "hsl(var(--surface) / <alpha-value>)",
+        "surface-subtle": "hsl(var(--surface-subtle) / <alpha-value>)",
+        "surface-muted": "hsl(var(--surface-muted) / <alpha-value>)",
+        "surface-border": "hsl(var(--surface-border) / <alpha-value>)",
+        "border": "hsl(var(--border) / <alpha-value>)",
+        "border-hover": "hsl(var(--border-hover) / <alpha-value>)",
+        "input": "hsl(var(--input) / <alpha-value>)",
+        "ring": "hsl(var(--ring) / <alpha-value>)",
+        "fg": "hsl(var(--foreground) / <alpha-value>)",
+        "card-fg": "hsl(var(--card-foreground) / <alpha-value>)",
+        "popover-fg": "hsl(var(--popover-foreground) / <alpha-value>)",
+        "primary-fg": "hsl(var(--primary-foreground) / <alpha-value>)",
+        "secondary-fg": "hsl(var(--secondary-foreground) / <alpha-value>)",
+        "accent-fg": "hsl(var(--accent-foreground) / <alpha-value>)",
+        "destructive-fg": "hsl(var(--destructive-foreground) / <alpha-value>)",
+        "success-fg": "hsl(var(--success-foreground) / <alpha-value>)",
+        "warning-fg": "hsl(var(--warning-foreground) / <alpha-value>)",
+        "muted-fg": "hsl(var(--muted-foreground) / <alpha-value>)",
+      },
+      fontSize: {
+        "xs": "var(--font-size-xs)",
+        "sm": "var(--font-size-sm)",
+        "base": "var(--font-size-base)",
+        "lg": "var(--font-size-lg)",
+        "xl": "var(--font-size-xl)",
+        "2xl": "var(--font-size-2xl)",
+        "3xl": "var(--font-size-3xl)",
+        "4xl": "var(--font-size-4xl)",
+      },
+      spacing: {
+        "ds-0": "var(--spacing-0)",
+        "ds-1": "var(--spacing-1)",
+        "ds-2": "var(--spacing-2)",
+        "ds-3": "var(--spacing-3)",
+        "ds-4": "var(--spacing-4)",
+        "ds-5": "var(--spacing-5)",
+        "ds-6": "var(--spacing-6)",
+        "ds-8": "var(--spacing-8)",
+        "ds-10": "var(--spacing-10)",
+        "ds-12": "var(--spacing-12)",
+        "ds-16": "var(--spacing-16)",
+      },
+      borderRadius: {
+        "none": "var(--radius-none)",
+        "sm": "var(--radius-sm)",
+        "DEFAULT": "var(--radius)",
+        "md": "var(--radius-md)",
+        "lg": "var(--radius-lg)",
+        "xl": "var(--radius-xl)",
+        "full": "var(--radius-full)",
+      },
+      boxShadow: {
+        "none": "var(--shadow-none)",
+        "sm": "var(--shadow-sm)",
+        "DEFAULT": "var(--shadow)",
+        "md": "var(--shadow-md)",
+        "lg": "var(--shadow-lg)",
+      },
+      borderWidth: {
+        "0": "var(--border-width-0)",
+        "2": "var(--border-width-2)",
+        "DEFAULT": "var(--border-width)",
+      },
+      fontFamily: {
+        "sans": ["'IBM Plex Sans Arabic'","'IBM Plex Sans'","-apple-system","BlinkMacSystemFont","'Segoe UI'","Roboto","sans-serif"],
+        "mono": ["'IBM Plex Mono'","'SFMono-Regular'","Consolas","'Liberation Mono'","monospace"],
+      },
+    };
+    var prev = (typeof tailwind !== "undefined" && tailwind.config) || {};
+    var prevTheme = prev.theme || {};
+    var isPlain = function (v) {
+      return Boolean(v) && typeof v === "object" && !Array.isArray(v);
+    };
+    var prevExtend = isPlain(prevTheme.extend) ? prevTheme.extend : {};
+    var extend = {};
+    Object.keys(prevExtend).forEach(function (k) {
+      extend[k] = prevExtend[k];
+    });
+    Object.keys(ds).forEach(function (k) {
+      extend[k] =
+        isPlain(prevExtend[k]) && isPlain(ds[k])
+          ? Object.assign({}, prevExtend[k], ds[k])
+          : ds[k];
+    });
+    tailwind.config = Object.assign({}, prev, {
+      theme: Object.assign({}, prevTheme, { extend: extend }),
+    });
+  })();
+</script>
+<!-- uxp-ds-theme:end -->
+<link rel="stylesheet" href="assets/demo.css">
+</head>
+<body class="bg-background text-foreground font-sans antialiased">
+
+<div id="app-shell" dir="rtl" class="flex w-full bg-background">
+
+  <!-- ============ SIDEBAR (right) ============ -->
+  <div id="sidebar-container" class="hidden lg:block sticky top-0 h-[900px] shrink-0">
+    <aside id="sidebar" dir="rtl" data-ds-comp="Sidebar" class="flex flex-col bg-card border-l border-border h-full transition-all duration-300 ease-in-out shrink-0 select-none w-64">
+      <!-- Brand Header -->
+      <div class="flex items-center justify-between h-16 px-4 border-b border-border shrink-0">
+        <div class="flex items-center gap-3 overflow-hidden">
+          <div class="flex items-center justify-center w-9 h-9 rounded-md bg-primary text-primary-foreground font-bold shrink-0">MK</div>
+          <div class="flex flex-col min-w-0">
+            <span class="font-sans font-bold text-sm tracking-wide text-foreground truncate">MK KASHIYAMA</span>
+            <span class="font-sans text-xs text-muted-foreground truncate">نظام إدارة الولاء للفنيين</span>
+          </div>
+        </div>
+        <button type="button" aria-label="طي القائمة الجانبية" class="p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+          <svg class="w-4 h-4 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Groups -->
+      <div class="flex-1 overflow-y-auto py-4 px-2 space-y-6">
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground tracking-wider mb-2">نظرة عامة</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-semibold transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring bg-accent text-primary border-r-4 border-primary" aria-current="page">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-primary"><i class="fa-solid fa-house text-base"></i></span>
+            <span class="flex-1 truncate">الرئيسية</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-bell text-base"></i></span>
+            <span class="flex-1 truncate">الإشعارات</span>
+            <span class="px-2 py-0.5 text-xs rounded-full font-sans font-semibold shrink-0 bg-accent text-primary">5</span>
+          </button>
+        </div>
+
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground tracking-wider mb-2">العمليات والتركيب</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-clipboard-check text-base"></i></span>
+            <span class="flex-1 truncate">طلبات التركيب</span>
+            <span class="px-2 py-0.5 text-xs rounded-full font-sans font-semibold shrink-0 bg-accent text-primary">31</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-barcode text-base"></i></span>
+            <span class="flex-1 truncate">دفعات الباركود</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-box-open text-base"></i></span>
+            <span class="flex-1 truncate">الأصناف والماركات</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-users text-base"></i></span>
+            <span class="flex-1 truncate">الفنيون</span>
+          </button>
+        </div>
+
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground tracking-wider mb-2">الولاء والمكافآت</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-medal text-base"></i></span>
+            <span class="flex-1 truncate">مستويات الولاء</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-gift text-base"></i></span>
+            <span class="flex-1 truncate">طلبات الاسترداد</span>
+            <span class="px-2 py-0.5 text-xs rounded-full font-sans font-semibold shrink-0 bg-accent text-primary">14</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-hand-holding-dollar text-base"></i></span>
+            <span class="flex-1 truncate">الصرف اليدوي</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-building-columns text-base"></i></span>
+            <span class="flex-1 truncate">العهدة المالية</span>
+          </button>
+        </div>
+
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground tracking-wider mb-2">النظام والتقارير</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-sliders text-base"></i></span>
+            <span class="flex-1 truncate">ترميز النقاط</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-chart-column text-base"></i></span>
+            <span class="flex-1 truncate">التقارير والتحليلات</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-user-shield text-base"></i></span>
+            <span class="flex-1 truncate">الصلاحيات وسجل التدقيق</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ============ MAIN COLUMN ============ -->
+  <div id="main-column" class="flex-1 min-w-0 flex flex-col">
+
+    <!-- Topbar -->
+    <header id="topbar" dir="rtl" data-ds-comp="Topbar" class="h-16 px-6 bg-card border-b border-border flex items-center justify-between gap-4 shrink-0 font-sans select-none">
+      <div class="flex items-center gap-3 min-w-0 flex-1">
+        <button id="menu-toggle" type="button" data-ds-comp="IconButton" data-ds-variant="variant=ghost,size=default" aria-label="فتح القائمة الجانبية" title="فتح القائمة الجانبية" class="inline-flex items-center justify-center shrink-0 transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.96] bg-transparent text-foreground hover:bg-secondary active:bg-secondary-active border border-transparent h-10 w-10 min-w-[40px] min-h-[40px] text-sm rounded-md lg:hidden">
+          <svg class="w-5 h-5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <!-- Search trigger -->
+        <div class="w-full max-w-md">
+          <div data-ds-comp="SearchField" class="w-full flex flex-col gap-1.5">
+            <div class="relative flex items-center w-full bg-surface rounded-md border transition-colors duration-150 ease-in-out border-input hover:border-border-hover focus-within:border-primary focus-within:ring-2 focus-within:ring-ring">
+              <span class="ps-3 text-muted-foreground flex items-center shrink-0 pointer-events-none">
+                <svg class="w-4 h-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </span>
+              <input type="search" aria-label="البحث في المنصة" placeholder="ابحث برقم الطلب، رقم الصنف، أو اسم الفني..." class="w-full bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none transition-colors select-text h-10 px-3 text-sm min-h-[40px] font-sans text-start" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="relative">
+          <button type="button" data-ds-comp="IconButton" data-ds-variant="variant=ghost,size=default" aria-label="الإشعارات (5 غير مقروء)" title="الإشعارات (5 غير مقروء)" class="inline-flex items-center justify-center shrink-0 transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.96] bg-transparent text-foreground hover:bg-secondary active:bg-secondary-active border border-transparent h-10 w-10 min-w-[40px] min-h-[40px] text-sm rounded-md">
+            <svg class="w-5 h-5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+          </button>
+          <span class="absolute top-1 start-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 text-[10px] font-bold text-white bg-destructive rounded-full border-2 border-card pointer-events-none">5</span>
+        </div>
+
+        <div class="h-6 w-px bg-border my-auto mx-1" aria-hidden="true"></div>
+
+        <button type="button" class="flex items-center gap-3 p-1 rounded-lg hover:bg-secondary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+          <div class="flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 text-primary font-bold text-sm shrink-0 border border-primary/20 overflow-hidden">
+            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" alt="أحمد الحربي" class="w-full h-full object-cover" />
+          </div>
+          <div class="hidden sm:flex flex-col text-right">
+            <span class="text-xs font-semibold text-foreground truncate max-w-[140px]">أحمد الحربي</span>
+            <span class="text-[11px] text-muted-foreground truncate max-w-[140px]">مدير العمليات</span>
+          </div>
+          <svg class="w-4 h-4 text-muted-foreground hidden sm:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="content" class="w-full max-w-[1440px] mx-auto p-6 lg:p-8 space-y-6">
+
+      <!-- Page Header -->
+      <div id="page-header" dir="rtl" data-ds-comp="PageHeader" class="flex flex-col gap-3 pb-6 border-b border-border select-none font-sans">
+        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+          <div class="space-y-2 min-w-0">
+            <div class="flex items-center gap-3 flex-wrap">
+              <h1 class="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">لوحة الإدارة الرئيسية</h1>
+              <div class="shrink-0">
+                <span data-ds-comp="Badge" data-ds-variant="variant=warning,dot=true" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-amber-50 text-amber-800 border-amber-200/50"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-amber-600" aria-hidden="true"></span><span>بيانات عينة — عرض تجريبي</span></span>
+              </div>
+            </div>
+            <p class="text-sm text-muted-foreground leading-relaxed max-w-3xl">ابدأ بالطلبات التي تحتاج قرارك. الاستثناءات جزء من الطلبات المعلّقة، والصرف لا يُعد مكتملًا قبل تأكيد الإتمام. آخر تحديث: اليوم 09:40 ص.</p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0 flex-wrap">
+            <button type="button" data-ds-comp="Button" data-ds-variant="variant=outline,size=default" class="inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.98] bg-transparent text-foreground border border-border hover:bg-secondary active:bg-secondary-active h-10 px-4 text-sm gap-2 rounded-md min-h-[40px]">
+              <span class="inline-flex shrink-0"><i class="fa-solid fa-file-export"></i></span>
+              <span>تصدير الملخص</span>
+            </button>
+            <a href="#review-workspace" data-ds-comp="Button" data-ds-variant="variant=primary,size=default" class="inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.98] bg-primary text-primary-foreground hover:bg-primary-hover active:bg-primary-active border border-transparent shadow-sm h-10 px-4 text-sm gap-2 rounded-md min-h-[40px]">
+              <span class="inline-flex shrink-0"><i class="fa-solid fa-clipboard-check"></i></span>
+              <span>متابعة مراجعة الطلبات</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Decision strip: one bordered band, four decision facts -->
+      <section id="decision-strip" aria-label="ملخص القرارات" class="bg-card border border-border rounded-lg grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-border">
+
+        <!-- Pending decisions with subset breakdown -->
+        <div id="kpi-pending" class="p-5 space-y-3">
+          <p class="text-sm font-medium text-muted-foreground">طلبات تركيب بانتظار القرار</p>
+          <div class="flex items-baseline gap-2">
+            <span class="text-3xl font-semibold tabular-nums text-foreground">31</span>
+            <span class="text-xs text-muted-foreground">طلبًا معلّقًا</span>
+          </div>
+          <div class="space-y-1.5">
+            <div class="flex w-full h-1.5 overflow-hidden rounded-full bg-muted" aria-hidden="true">
+              <div class="h-full bg-primary w-[77%]"></div>
+              <div class="h-full bg-warning w-[23%]"></div>
+            </div>
+            <div class="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+              <span><span class="font-mono tabular-nums text-foreground">24</span> جاهزة للقرار</span>
+              <span><span class="font-mono tabular-nums text-warning">7</span> تحتاج انتباه</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="kpi-approved" class="p-5 space-y-3">
+          <p class="text-sm font-medium text-muted-foreground">معتمدة اليوم</p>
+          <div class="flex items-baseline gap-2">
+            <span class="text-3xl font-semibold tabular-nums text-foreground">12</span>
+            <span class="text-xs text-muted-foreground">طلبًا</span>
+          </div>
+          <p class="text-xs text-muted-foreground leading-normal">تصبح نقاطها مكتسبة فور الاعتماد، وليس قبله.</p>
+        </div>
+
+        <div id="kpi-rejected" class="p-5 space-y-3">
+          <p class="text-sm font-medium text-muted-foreground">مرفوضة اليوم</p>
+          <div class="flex items-baseline gap-2">
+            <span class="text-3xl font-semibold tabular-nums text-foreground">3</span>
+            <span class="text-xs text-muted-foreground">طلبات</span>
+          </div>
+          <p class="text-xs text-muted-foreground leading-normal">أسباب الرفض مسجلة في سجل التدقيق.</p>
+        </div>
+
+        <div id="kpi-cycle" class="p-5 space-y-3">
+          <p class="text-sm font-medium text-muted-foreground">متوسط زمن المراجعة</p>
+          <div class="flex items-baseline gap-2">
+            <span class="text-3xl font-semibold tabular-nums text-foreground">1.8</span>
+            <span class="text-xs text-muted-foreground">يوم</span>
+          </div>
+          <p class="text-xs text-muted-foreground leading-normal">
+            <span class="text-success"><i class="fa-solid fa-arrow-trend-down text-xs"></i></span>
+            أسرع بـ 2.4 يوم مقارنة بالأسبوع السابق
+          </p>
+        </div>
+      </section>
+
+      <!-- Exception alert: explicitly a subset of pending claims -->
+      <div id="exception-alert" role="status" aria-live="polite" data-ds-comp="Alert" data-ds-variant="variant=warning" class="relative w-full rounded-lg border p-4 transition-all dir-rtl flex flex-col sm:flex-row gap-3 sm:items-center bg-amber-50 border-amber-200 text-amber-950">
+        <div class="flex gap-3 items-start flex-1 min-w-0">
+          <div class="shrink-0 mt-0.5 text-amber-700">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <div class="flex-1 space-y-1 text-sm leading-relaxed min-w-0">
+            <h5 class="text-sm font-semibold leading-tight text-amber-900">7 طلبات تحتاج انتباهك، من أصل 31 طلبًا معلّقًا</h5>
+            <p class="text-sm opacity-90">3 منها بسبب عدم تطابق GPS مع عنوان الورشة المسجل، و2 بأدلة ناقصة، و2 بتحقق باركود معلّق. لا تُعتمد أي منها تلقائيًا، ولا تمنح نقاطًا قبل القرار.</p>
+          </div>
+        </div>
+        <div class="shrink-0">
+          <button id="open-attention" type="button" data-ds-comp="Button" data-ds-variant="variant=outline,size=sm" class="inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.98] bg-transparent text-foreground border border-border hover:bg-secondary active:bg-secondary-active h-8 px-3 text-xs gap-1.5 rounded-md min-h-[32px] bg-card">
+            <span>عرض الاستثناءات السبعة</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Installation review workspace: queue (start) + decision detail -->
+      <section id="review-workspace" aria-label="مساحة مراجعة طلبات التركيب" class="grid grid-cols-1 xl:grid-cols-[380px_minmax(0,1fr)] gap-6">
+
+        <!-- Queue -->
+        <div id="claim-queue" class="bg-card border border-border rounded-lg overflow-hidden min-w-0 flex flex-col">
+          <div class="p-4 border-b border-border space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <h2 class="text-lg font-medium leading-snug text-foreground">طابور المراجعة</h2>
+              <span class="text-xs text-muted-foreground">الانتباه أولًا</span>
+            </div>
+            <div class="inline-flex items-center gap-1 p-1 rounded-md bg-muted" role="tablist" aria-label="تصفية طلبات المراجعة">
+              <button type="button" role="tab" aria-selected="true" data-filter="all" data-ds-comp="Button" data-ds-variant="variant=accent,size=sm" class="inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.98] bg-accent text-accent-foreground hover:bg-accent-hover active:bg-secondary border border-transparent h-8 px-3 text-xs gap-1.5 rounded-md min-h-[32px]">
+                <span>كل المعلّقة</span>
+                <span class="font-mono tabular-nums">31</span>
+              </button>
+              <button type="button" role="tab" aria-selected="false" data-filter="attention" data-ds-comp="Button" data-ds-variant="variant=ghost,size=sm" class="inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.98] bg-transparent text-foreground hover:bg-secondary active:bg-secondary-active border border-transparent h-8 px-3 text-xs gap-1.5 rounded-md min-h-[32px]">
+                <span>تحتاج انتباه</span>
+                <span class="font-mono tabular-nums">7</span>
+              </button>
+            </div>
+            <div data-ds-comp="SearchField" class="w-full flex flex-col gap-1.5">
+              <div class="relative flex items-center w-full bg-surface rounded-md border transition-colors duration-150 ease-in-out border-input hover:border-border-hover focus-within:border-primary focus-within:ring-2 focus-within:ring-ring">
+                <span class="ps-2.5 text-muted-foreground flex items-center shrink-0 pointer-events-none">
+                  <svg class="w-3.5 h-3.5 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </span>
+                <input type="search" aria-label="البحث برقم الطلب أو الصنف" placeholder="رقم الطلب أو رقم الصنف..." class="w-full bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none transition-colors select-text h-8 px-2.5 text-xs min-h-[32px] font-sans text-start" />
+              </div>
+            </div>
+          </div>
+
+          <ul id="claim-list" class="flex-1 divide-y divide-border">
+
+            <!-- Attention: GPS mismatch first (highest risk), then evidence, then barcode verification -->
+            <li data-attention="true">
+              <button type="button" aria-pressed="true" class="claim-row w-full text-start px-4 py-3 flex flex-col gap-2 border-s-4 border-primary bg-primary-subtle transition-colors hover:bg-surface-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                <div class="flex items-center justify-between gap-2">
+                  <span dir="ltr" class="font-mono text-sm font-medium tracking-wider text-foreground">CLM-24-08842</span>
+                  <span class="text-xs text-muted-foreground">اليوم 08:12</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-foreground truncate">خالد العتيبي</p>
+                    <p class="text-xs text-muted-foreground truncate">ورشة الشمال · الرياض</p>
+                  </div>
+                  <span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground shrink-0">MK-10025</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <span data-ds-comp="Badge" data-ds-variant="variant=error,dot=true,size=sm" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-[11px] px-2 py-0.5 gap-1 font-medium rounded bg-red-50 text-red-700 border-red-200/50"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-destructive" aria-hidden="true"></span><span>GPS لا يطابق الورشة</span></span>
+                  <span class="text-xs text-muted-foreground">أدلة <span dir="ltr" class="font-mono tabular-nums text-foreground">3/3</span></span>
+                </div>
+              </button>
+            </li>
+
+            <li data-attention="true">
+              <button type="button" aria-pressed="false" class="claim-row w-full text-start px-4 py-3 flex flex-col gap-2 border-s-4 border-transparent transition-colors hover:bg-surface-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                <div class="flex items-center justify-between gap-2">
+                  <span dir="ltr" class="font-mono text-sm font-medium tracking-wider text-foreground">CLM-24-08837</span>
+                  <span class="text-xs text-muted-foreground">أمس 16:20</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-foreground truncate">ماجد الشهري</p>
+                    <p class="text-xs text-muted-foreground truncate">ورشة الجنوب · أبها</p>
+                  </div>
+                  <span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground shrink-0">MK-10025</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <span data-ds-comp="Badge" data-ds-variant="variant=warning,dot=true,size=sm" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-[11px] px-2 py-0.5 gap-1 font-medium rounded bg-amber-50 text-amber-800 border-amber-200/50"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-amber-600" aria-hidden="true"></span><span>صورة المنتج ناقصة</span></span>
+                  <span class="text-xs text-muted-foreground">أدلة <span dir="ltr" class="font-mono tabular-nums text-foreground">2/3</span></span>
+                </div>
+              </button>
+            </li>
+
+            <li data-attention="true">
+              <button type="button" aria-pressed="false" class="claim-row w-full text-start px-4 py-3 flex flex-col gap-2 border-s-4 border-transparent transition-colors hover:bg-surface-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                <div class="flex items-center justify-between gap-2">
+                  <span dir="ltr" class="font-mono text-sm font-medium tracking-wider text-foreground">CLM-24-08833</span>
+                  <span class="text-xs text-muted-foreground">أمس 13:05</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-foreground truncate">سلطان القحطاني</p>
+                    <p class="text-xs text-muted-foreground truncate">ورشة الغربية · جدة</p>
+                  </div>
+                  <span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground shrink-0">MK-20417</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <span data-ds-comp="Badge" data-ds-variant="variant=error,dot=true,size=sm" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-[11px] px-2 py-0.5 gap-1 font-medium rounded bg-red-50 text-red-700 border-red-200/50"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-destructive" aria-hidden="true"></span><span>GPS لا يطابق الورشة</span></span>
+                  <span class="text-xs text-muted-foreground">أدلة <span dir="ltr" class="font-mono tabular-nums text-foreground">3/3</span></span>
+                </div>
+              </button>
+            </li>
+
+            <li data-attention="true">
+              <button type="button" aria-pressed="false" class="claim-row w-full text-start px-4 py-3 flex flex-col gap-2 border-s-4 border-transparent transition-colors hover:bg-surface-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                <div class="flex items-center justify-between gap-2">
+                  <span dir="ltr" class="font-mono text-sm font-medium tracking-wider text-foreground">CLM-24-08828</span>
+                  <span class="text-xs text-muted-foreground">أمس 10:30</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-foreground truncate">عبدالله الحربي</p>
+                    <p class="text-xs text-muted-foreground truncate">ورشة الشمال · حائل</p>
+                  </div>
+                  <span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground shrink-0">MK-31002</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <span data-ds-comp="Badge" data-ds-variant="variant=warning,dot=true,size=sm" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-[11px] px-2 py-0.5 gap-1 font-medium rounded bg-amber-50 text-amber-800 border-amber-200/50"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-amber-600" aria-hidden="true"></span><span>تحقق الباركود معلّق</span></span>
+                  <span class="text-xs text-muted-foreground">أدلة <span dir="ltr" class="font-mono tabular-nums text-foreground">3/3</span></span>
+                </div>
+              </button>
+            </li>
+
+            <li data-attention="true">
+              <button type="button" aria-pressed="false" class="claim-row w-full text-start px-4 py-3 flex flex-col gap-2 border-s-4 border-transparent transition-colors hover:bg-surface-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                <div class="flex items-center justify-between gap-2">
+                  <span dir="ltr" class="font-mono text-sm font-medium tracking-wider text-foreground">CLM-24-08826</span>
+                  <span class="text-xs text-muted-foreground">منذ يومين</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-foreground truncate">يوسف الزهراني</p>
+                    <p class="text-xs text-muted-foreground truncate">ورشة الغرب · مكة المكرمة</p>
+                  </div>
+                  <span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground shrink-0">MK-10025</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <span data-ds-comp="Badge" data-ds-variant="variant=error,dot=true,size=sm" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-[11px] px-2 py-0.5 gap-1 font-medium rounded bg-red-50 text-red-700 border-red-200/50"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-destructive" aria-hidden="true"></span><span>GPS لا يطابق الورشة</span></span>
+                  <span class="text-xs text-muted-foreground">أدلة <span dir="ltr" class="font-mono tabular-nums text-foreground">3/3</span></span>
+                </div>
+              </button>
+            </li>
+
+            <li data-attention="true">
+              <button type="button" aria-pressed="false" class="claim-row w-full text-start px-4 py-3 flex flex-col gap-2 border-s-4 border-transparent transition-colors hover:bg-surface-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                <div class="flex items-center justify-between gap-2">
+                  <span dir="ltr" class="font-mono text-sm font-medium tracking-wider text-foreground">CLM-24-08821</span>
+                  <span class="text-xs text-muted-foreground">منذ يومين</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-foreground truncate">ناصر البقمي</p>
+                    <p class="text-xs text-muted-foreground truncate">ورشة الشمال · تبوك</p>
+                  </div>
+                  <span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground shrink-0">MK-20417</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <span data-ds-comp="Badge" data-ds-variant="variant=warning,dot=true,size=sm" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-[11px] px-2 py-0.5 gap-1 font-medium rounded bg-amber-50 text-amber-800 border-amber-200/50"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-amber-600" aria-hidden="true"></span><span>تسجيل المركبة ناقص</span></span>
+                  <span class="text-xs text-muted-foreground">أدلة <span dir="ltr" class="font-mono tabular-nums text-foreground">2/3</span></span>
+                </div>
+              </button>
+            </li>
+
+            <li data-attention="true">
+              <button type="button" aria-pressed="false" class="claim-row w-full text-start px-4 py-3 flex flex-col gap-2 border-s-4 border-transparent transition-colors hover:bg-surface-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                <div class="flex items-center justify-between gap-2">
+                  <span dir="ltr" class="font-mono text-sm font-medium tracking-wider text-foreground">CLM-24-08819</span>
+                  <span class="text-xs text-muted-foreground">منذ 3 أيام</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-foreground truncate">محمد السبيعي</p>
+                    <p class="text-xs text-muted-foreground truncate">ورشة القصيم · بريدة</p>
+                  </div>
+                  <span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground shrink-0">MK-31002</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <span data-ds-comp="Badge" data-ds-variant="variant=warning,dot=true,size=sm" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-[11px] px-2 py-0.5 gap-1 font-medium rounded bg-amber-50 text-amber-800 border-amber-200/50"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-amber-600" aria-hidden="true"></span><span>تحقق الباركود معلّق</span></span>
+                  <span class="text-xs text-muted-foreground">أدلة <span dir="ltr" class="font-mono tabular-nums text-foreground">3/3</span></span>
+                </div>
+              </button>
+            </li>
+
+            <!-- Ready for decision (no exception) -->
+            <li data-attention="false">
+              <button type="button" aria-pressed="false" class="claim-row w-full text-start px-4 py-3 flex flex-col gap-2 border-s-4 border-transparent transition-colors hover:bg-surface-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                <div class="flex items-center justify-between gap-2">
+                  <span dir="ltr" class="font-mono text-sm font-medium tracking-wider text-foreground">CLM-24-08841</span>
+                  <span class="text-xs text-muted-foreground">اليوم 07:45</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-foreground truncate">فهد الدوسري</p>
+                    <p class="text-xs text-muted-foreground truncate">ورشة الشرق · الدمام</p>
+                  </div>
+                  <span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground shrink-0">MK-20417</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <span data-ds-comp="Badge" data-ds-variant="variant=success,dot=true,size=sm" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-[11px] px-2 py-0.5 gap-1 font-medium rounded bg-emerald-50 text-emerald-800 border-emerald-200/50"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-emerald-600" aria-hidden="true"></span><span>جاهز للقرار</span></span>
+                  <span class="text-xs text-muted-foreground">أدلة <span dir="ltr" class="font-mono tabular-nums text-foreground">3/3</span></span>
+                </div>
+              </button>
+            </li>
+
+            <li data-attention="false">
+              <button type="button" aria-pressed="false" class="claim-row w-full text-start px-4 py-3 flex flex-col gap-2 border-s-4 border-transparent transition-colors hover:bg-surface-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                <div class="flex items-center justify-between gap-2">
+                  <span dir="ltr" class="font-mono text-sm font-medium tracking-wider text-foreground">CLM-24-08835</span>
+                  <span class="text-xs text-muted-foreground">أمس 17:10</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-foreground truncate">راشد العنزي</p>
+                    <p class="text-xs text-muted-foreground truncate">ورشة الجوف · سكاكا</p>
+                  </div>
+                  <span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground shrink-0">MK-10025</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <span data-ds-comp="Badge" data-ds-variant="variant=success,dot=true,size=sm" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-[11px] px-2 py-0.5 gap-1 font-medium rounded bg-emerald-50 text-emerald-800 border-emerald-200/50"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-emerald-600" aria-hidden="true"></span><span>جاهز للقرار</span></span>
+                  <span class="text-xs text-muted-foreground">أدلة <span dir="ltr" class="font-mono tabular-nums text-foreground">3/3</span></span>
+                </div>
+              </button>
+            </li>
+
+            <li data-attention="false">
+              <button type="button" aria-pressed="false" class="claim-row w-full text-start px-4 py-3 flex flex-col gap-2 border-s-4 border-transparent transition-colors hover:bg-surface-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                <div class="flex items-center justify-between gap-2">
+                  <span dir="ltr" class="font-mono text-sm font-medium tracking-wider text-foreground">CLM-24-08816</span>
+                  <span class="text-xs text-muted-foreground">منذ 4 أيام</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-foreground truncate">ياسر الغامدي</p>
+                    <p class="text-xs text-muted-foreground truncate">ورشة الباحة · الباحة</p>
+                  </div>
+                  <span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground shrink-0">MK-31002</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <span data-ds-comp="Badge" data-ds-variant="variant=success,dot=true,size=sm" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-[11px] px-2 py-0.5 gap-1 font-medium rounded bg-emerald-50 text-emerald-800 border-emerald-200/50"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-emerald-600" aria-hidden="true"></span><span>جاهز للقرار</span></span>
+                  <span class="text-xs text-muted-foreground">أدلة <span dir="ltr" class="font-mono tabular-nums text-foreground">3/3</span></span>
+                </div>
+              </button>
+            </li>
+          </ul>
+
+          <div class="flex items-center justify-between gap-2 px-4 py-3 border-t border-border">
+            <p id="count-all" class="text-xs text-muted-foreground">يعرض 10 من أصل 31 طلبًا معلّقًا</p>
+            <p id="count-attention" class="text-xs text-muted-foreground hidden">يعرض 7 من أصل 7 طلبات تحتاج انتباه</p>
+          </div>
+        </div>
+
+        <!-- Decision detail for the selected claim -->
+        <article id="claim-detail" class="bg-card border border-border rounded-lg overflow-hidden min-w-0">
+
+          <header class="p-5 border-b border-border space-y-3">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div class="space-y-1 min-w-0">
+                <p class="text-xs font-medium text-muted-foreground">تفاصيل الطلب المحدد</p>
+                <h2 dir="ltr" class="font-mono text-xl font-medium tracking-wider text-start text-foreground">CLM-24-08842</h2>
+              </div>
+              <div class="flex flex-wrap items-center gap-2">
+                <span data-ds-comp="Badge" data-ds-variant="variant=error,dot=true" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-red-50 text-red-700 border-red-200/50"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-destructive" aria-hidden="true"></span><span>يحتاج انتباه</span></span>
+                <span data-ds-comp="Badge" data-ds-variant="variant=neutral" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-muted text-muted-foreground border-transparent"><span>بانتظار القرار</span></span>
+              </div>
+            </div>
+            <p class="text-sm text-muted-foreground leading-relaxed">قدّمه خالد العتيبي من ورشة الشمال في الرياض، اليوم 08:12. المنتج: فحمات فرامل أمامية، رمز الصنف <span dir="ltr" class="font-mono tracking-wider text-foreground">MK-10025</span>.</p>
+          </header>
+
+          <div class="p-5 space-y-6">
+
+            <!-- Required action before decision -->
+            <div id="next-action" class="rounded-md border border-warning/30 bg-warning-subtle p-4 flex gap-3 items-start">
+              <span class="shrink-0 text-warning mt-0.5"><i class="fa-solid fa-location-crosshairs text-base"></i></span>
+              <div class="space-y-1 min-w-0">
+                <p class="text-xs font-medium text-muted-foreground">الإجراء المطلوب قبل القرار</p>
+                <p class="text-sm font-semibold text-foreground">تحقق من موقع الورشة. موقع GPS المُرسل لا يطابق العنوان المسجل لدى الفني.</p>
+              </div>
+            </div>
+
+            <!-- Barcode verification by the system -->
+            <section id="barcode-check" class="space-y-3">
+              <h3 class="text-sm font-semibold text-foreground">تحقق النظام من الرموز</h3>
+              <ul class="space-y-2.5 text-sm text-foreground">
+                <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-success mt-0.5"></i><span>رمز المنتج الثابت مطابق للصنف <span dir="ltr" class="font-mono tracking-wider">MK-10025</span></span></li>
+                <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-success mt-0.5"></i><span>الرمز الفريد للمكافأة يخص هذا الصنف، وغير مستخدم سابقًا</span></li>
+                <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-success mt-0.5"></i><span>تسلسل المسح صحيح: المنتج أولًا، ثم رمز المكافأة من داخل العبوة</span></li>
+              </ul>
+              <p class="text-xs text-muted-foreground leading-relaxed">مسح الرموز وحده لا يمنح نقاطًا. النقاط تُمنح بعد اعتماد الطلب فقط.</p>
+            </section>
+
+            <!-- Evidence -->
+            <section id="evidence" class="space-y-3">
+              <div class="flex items-center justify-between gap-2">
+                <h3 class="text-sm font-semibold text-foreground">الأدلة المقدمة</h3>
+                <span class="text-xs text-muted-foreground">مقدّمة <span dir="ltr" class="font-mono tabular-nums text-foreground">3/3</span></span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div class="rounded-md border border-border overflow-hidden">
+                  <div class="h-24 bg-surface-muted flex items-center justify-center text-muted-foreground"><i class="fa-regular fa-image text-2xl"></i></div>
+                  <div class="p-3 space-y-1">
+                    <p class="text-sm font-medium text-foreground">صورة المنتج المركّب</p>
+                    <p class="inline-flex items-center gap-1.5 text-xs text-success"><i class="fa-solid fa-circle-check"></i>مكتملة</p>
+                  </div>
+                </div>
+                <div class="rounded-md border border-border overflow-hidden">
+                  <div class="h-24 bg-surface-muted flex items-center justify-center text-muted-foreground"><i class="fa-regular fa-id-card text-2xl"></i></div>
+                  <div class="p-3 space-y-1">
+                    <p class="text-sm font-medium text-foreground">تسجيل المركبة</p>
+                    <p class="inline-flex items-center gap-1.5 text-xs text-success"><i class="fa-solid fa-circle-check"></i>مكتمل</p>
+                  </div>
+                </div>
+                <div class="rounded-md border border-destructive/40 overflow-hidden">
+                  <div class="h-24 bg-surface-muted flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-location-dot text-2xl text-destructive"></i></div>
+                  <div class="p-3 space-y-1">
+                    <p class="text-sm font-medium text-foreground">موقع الورشة GPS</p>
+                    <p class="inline-flex items-center gap-1.5 text-xs text-destructive"><i class="fa-solid fa-circle-exclamation"></i>لا يطابق الورشة</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Location comparison -->
+            <section id="gps-compare" class="space-y-3">
+              <h3 class="text-sm font-semibold text-foreground">مقارنة الموقع</h3>
+              <div class="rounded-md border border-border divide-y divide-border">
+                <div class="flex items-center justify-between gap-3 p-3">
+                  <div class="min-w-0">
+                    <p class="text-xs text-muted-foreground">عنوان الورشة المسجل</p>
+                    <p class="text-sm text-foreground">الرياض، حي الملز</p>
+                  </div>
+                  <span class="inline-flex items-center justify-center w-8 h-8 rounded-md bg-accent text-primary shrink-0"><i class="fa-solid fa-warehouse text-xs"></i></span>
+                </div>
+                <div class="flex items-center justify-between gap-3 p-3">
+                  <div class="min-w-0">
+                    <p class="text-xs text-muted-foreground">موقع الإرسال من التطبيق</p>
+                    <p class="text-sm text-foreground">الرياض، حي العليا</p>
+                  </div>
+                  <span class="inline-flex items-center justify-center w-8 h-8 rounded-md bg-destructive-subtle text-destructive shrink-0"><i class="fa-solid fa-location-dot text-xs"></i></span>
+                </div>
+                <div class="flex items-center justify-between gap-3 p-3">
+                  <span class="text-xs text-muted-foreground">المسافة التقريبية بين الموقعين</span>
+                  <span dir="ltr" class="font-mono text-sm font-medium tabular-nums text-destructive">4.8 km</span>
+                </div>
+              </div>
+              <p class="text-xs text-muted-foreground leading-relaxed">حد الفرق المقبول غير مُعرَّف في هذا النموذج (افتراض عرض)، لذلك يبقى القرار للمراجع.</p>
+            </section>
+
+            <!-- Effect of decision -->
+            <div id="decision-effect" class="rounded-md bg-muted p-4 flex gap-3 items-start">
+              <span class="shrink-0 text-primary mt-0.5"><i class="fa-solid fa-star text-sm"></i></span>
+              <p class="text-sm text-foreground leading-relaxed">عند الاعتماد تصبح <span class="font-semibold">4 نقاط أساسية</span> مكتسبة للفني. عند الرفض أو بقاء الطلب معلّقًا: <span class="font-semibold">0 نقطة</span>. لا تُعرض أي قيمة مالية.</p>
+            </div>
+          </div>
+
+          <!-- Decision actions -->
+          <footer class="p-5 border-t border-border bg-surface-subtle space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <div class="flex items-center gap-2">
+                <button type="button" aria-label="الطلب السابق" data-ds-comp="IconButton" data-ds-variant="variant=outline,size=sm" class="inline-flex items-center justify-center shrink-0 transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.96] bg-transparent text-foreground border border-border hover:bg-secondary active:bg-secondary-active h-8 w-8 min-w-[32px] min-h-[32px] text-xs rounded-md"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+                <button type="button" aria-label="الطلب التالي" data-ds-comp="IconButton" data-ds-variant="variant=outline,size=sm" class="inline-flex items-center justify-center shrink-0 transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.96] bg-transparent text-foreground border border-border hover:bg-secondary active:bg-secondary-active h-8 w-8 min-w-[32px] min-h-[32px] text-xs rounded-md"><i class="fa-solid fa-chevron-left text-xs"></i></button>
+                <span class="text-xs text-muted-foreground ms-1">الطلب <span dir="ltr" class="font-mono tabular-nums text-foreground">1</span> من 31</span>
+              </div>
+              <div class="flex flex-wrap items-center gap-2">
+                <button type="button" data-ds-comp="Button" data-ds-variant="variant=outline,size=default" class="inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.98] bg-transparent text-foreground border border-border hover:bg-secondary active:bg-secondary-active h-10 px-4 text-sm gap-2 rounded-md min-h-[40px]"><span>طلب تحقق من الموقع</span></button>
+                <button type="button" data-ds-comp="Button" data-ds-variant="variant=outline,size=default" class="inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.98] bg-transparent text-destructive border border-destructive/40 hover:bg-destructive-subtle active:bg-destructive-subtle h-10 px-4 text-sm gap-2 rounded-md min-h-[40px]"><span>رفض مع سبب</span></button>
+                <button type="button" data-ds-comp="Button" data-ds-variant="variant=primary,size=default" class="inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.98] bg-primary text-primary-foreground hover:bg-primary-hover active:bg-primary-active border border-transparent shadow-sm h-10 px-4 text-sm gap-2 rounded-md min-h-[40px]"><span>اعتماد الطلب</span></button>
+              </div>
+            </div>
+            <p class="text-xs text-muted-foreground leading-relaxed">يُسجَّل كل قرار في سجل التدقيق. الرفض يتطلب سببًا مكتوبًا. الاعتماد لا يمنح نقاطًا إلا بعد تأكيده هنا.</p>
+          </footer>
+        </article>
+      </section>
+
+      <!-- Secondary row: financial workflow and barcode batches -->
+      <div id="secondary-grid" class="grid grid-cols-1 xl:grid-cols-3 gap-6 items-start">
+
+        <!-- Reward redemption and payout pipeline -->
+        <section id="reward-pipeline" aria-labelledby="reward-pipeline-title" class="xl:col-span-2 bg-card border border-border rounded-lg p-5 space-y-5 min-w-0">
+          <div class="flex flex-wrap items-start justify-between gap-3">
+            <div class="space-y-1 min-w-0">
+              <h2 id="reward-pipeline-title" class="text-lg font-medium leading-snug text-foreground">مسار طلبات الاسترداد والصرف</h2>
+              <p class="text-sm text-muted-foreground leading-normal">كل مرحلة منفصلة. طلب الاسترداد المقبول ليس دفعة مكتملة.</p>
+            </div>
+            <button type="button" data-ds-comp="Button" data-ds-variant="variant=ghost,size=sm" class="inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.98] bg-transparent text-foreground hover:bg-secondary active:bg-secondary-active border border-transparent h-8 px-3 text-xs gap-1.5 rounded-md min-h-[32px] text-primary">
+              <span>فتح طلبات الاسترداد</span>
+              <span class="inline-flex shrink-0"><i class="fa-solid fa-arrow-left"></i></span>
+            </button>
+          </div>
+
+          <ol class="grid grid-cols-1 md:grid-cols-4 gap-3">
+            <li id="stage-review" class="rounded-md border border-border p-4 space-y-3">
+              <span data-ds-comp="Badge" data-ds-variant="variant=info,dot=true" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-accent text-primary border-transparent"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-primary" aria-hidden="true"></span><span>بانتظار المراجعة</span></span>
+              <p class="text-2xl font-semibold tabular-nums text-foreground">14</p>
+              <p class="text-xs text-muted-foreground leading-relaxed">طلبات استرداد من فنيين بلغوا هدف النقاط. لم تبدأ معالجتها.</p>
+            </li>
+            <li id="stage-processing" class="rounded-md border border-border p-4 space-y-3">
+              <span data-ds-comp="Badge" data-ds-variant="variant=warning,dot=true" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-amber-50 text-amber-800 border-amber-200/50"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-amber-600" aria-hidden="true"></span><span>قيد المعالجة</span></span>
+              <p class="text-2xl font-semibold tabular-nums text-foreground">6</p>
+              <p class="text-xs text-muted-foreground leading-relaxed">تم قبول الطلب، والصرف اليدوي أو التحقق من القناة جارٍ.</p>
+            </li>
+            <li id="stage-confirmed" class="rounded-md border border-border p-4 space-y-3">
+              <span data-ds-comp="Badge" data-ds-variant="variant=success,dot=true" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-emerald-50 text-emerald-800 border-emerald-200/50"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-emerald-600" aria-hidden="true"></span><span>مكتمل ومؤكد</span></span>
+              <p class="text-2xl font-semibold tabular-nums text-foreground">21</p>
+              <p class="text-xs text-muted-foreground leading-relaxed">أُكّد إتمام الصرف من قناة الدفع هذا الشهر فقط.</p>
+            </li>
+            <li id="stage-unresolved" class="rounded-md border border-border p-4 space-y-3">
+              <span data-ds-comp="Badge" data-ds-variant="variant=error,dot=true" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-red-50 text-red-700 border-red-200/50"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-destructive" aria-hidden="true"></span><span>مرفوض أو غير محسوم</span></span>
+              <p class="text-2xl font-semibold tabular-nums text-foreground">3</p>
+              <p class="text-xs text-muted-foreground leading-relaxed">يحتاج قرارًا أو متابعة مع الفني أو قناة الصرف.</p>
+            </li>
+          </ol>
+
+          <div class="flex gap-2 rounded-md bg-muted p-3 text-xs text-muted-foreground leading-relaxed">
+            <span class="shrink-0 text-primary"><i class="fa-solid fa-circle-info text-sm"></i></span>
+            <p>الاسترداد لا يخفض نقاط التأهيل للمستوى. لا تُعرض أي قيمة مالية لأن قيمة النقطة غير مُعدّة في وحدة ترميز النقاط.</p>
+          </div>
+        </section>
+
+        <!-- Barcode batches -->
+        <section id="batches-panel" aria-labelledby="batches-title" class="bg-card border border-border rounded-lg p-5 space-y-2 min-w-0">
+          <div class="space-y-1 pb-2">
+            <h2 id="batches-title" class="text-lg font-medium leading-snug text-foreground">دفعات باركود المكافآت</h2>
+            <p class="text-sm text-muted-foreground leading-normal">الحالات: غير مستخدم · محجوز · مستخدم · ملغى</p>
+          </div>
+
+          <div id="batch-a" class="space-y-2.5 py-3 border-t border-border">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2 min-w-0">
+                <span dir="ltr" class="font-mono text-sm font-medium tracking-wider text-foreground">BT-2407-A</span>
+                <span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground">MK-10025</span>
+              </div>
+              <span class="text-xs text-muted-foreground tabular-nums">1,000 رمز</span>
+            </div>
+            <div data-ds-comp="Progress" class="w-full space-y-1.5 dir-rtl">
+              <div role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100" aria-valuetext="64% مستخدم" class="w-full bg-muted overflow-hidden relative h-1.5 rounded-full">
+                <div class="h-full transition-all duration-300 ease-out rounded-full bg-primary w-[64%]"></div>
+              </div>
+            </div>
+            <p class="text-xs text-muted-foreground tabular-nums leading-relaxed">غير مستخدم <span dir="ltr" class="font-mono text-foreground">210</span> · محجوز <span dir="ltr" class="font-mono text-foreground">150</span> · مستخدم <span dir="ltr" class="font-mono text-foreground">640</span> · ملغى <span dir="ltr" class="font-mono text-foreground">0</span></p>
+          </div>
+
+          <div id="batch-b" class="space-y-2.5 py-3 border-t border-border">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2 min-w-0">
+                <span dir="ltr" class="font-mono text-sm font-medium tracking-wider text-foreground">BT-2407-B</span>
+                <span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground">MK-20417</span>
+              </div>
+              <span class="text-xs text-muted-foreground tabular-nums">500 رمز</span>
+            </div>
+            <div data-ds-comp="Progress" class="w-full space-y-1.5 dir-rtl">
+              <div role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" aria-valuetext="12% مستخدم" class="w-full bg-muted overflow-hidden relative h-1.5 rounded-full">
+                <div class="h-full transition-all duration-300 ease-out rounded-full bg-primary w-[12%]"></div>
+              </div>
+            </div>
+            <p class="text-xs text-muted-foreground tabular-nums leading-relaxed">غير مستخدم <span dir="ltr" class="font-mono text-foreground">380</span> · محجوز <span dir="ltr" class="font-mono text-foreground">60</span> · مستخدم <span dir="ltr" class="font-mono text-foreground">58</span> · ملغى <span dir="ltr" class="font-mono text-foreground">2</span></p>
+          </div>
+
+          <div id="batch-c" class="space-y-2.5 py-3 border-t border-border">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2 min-w-0">
+                <span dir="ltr" class="font-mono text-sm font-medium tracking-wider text-foreground">BT-2406-C</span>
+                <span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground">MK-31002</span>
+              </div>
+              <span data-ds-comp="Badge" data-ds-variant="variant=warning,appearance=outline" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-[11px] px-2 py-0.5 gap-1 font-medium rounded bg-transparent text-amber-700 border-amber-600"><span>محجوزة لفترة طويلة</span></span>
+            </div>
+            <div data-ds-comp="Progress" class="w-full space-y-1.5 dir-rtl">
+              <div role="progressbar" aria-valuenow="27" aria-valuemin="0" aria-valuemax="100" aria-valuetext="27% مستخدم" class="w-full bg-muted overflow-hidden relative h-1.5 rounded-full">
+                <div class="h-full transition-all duration-300 ease-out rounded-full bg-primary w-[27%]"></div>
+              </div>
+            </div>
+            <p class="text-xs text-muted-foreground tabular-nums leading-relaxed">غير مستخدم <span dir="ltr" class="font-mono text-foreground">40</span> · محجوز <span dir="ltr" class="font-mono text-foreground">180</span> · مستخدم <span dir="ltr" class="font-mono text-foreground">80</span> · ملغى <span dir="ltr" class="font-mono text-foreground">0</span></p>
+          </div>
+        </section>
+      </div>
+
+      <p id="sample-disclosure" class="text-xs text-muted-foreground leading-relaxed border-t border-border pt-4">هذه الشاشة نموذج تصميمي تعرض بيانات عينة لأغراض العرض فقط، ولا تمثل أرقامًا تشغيلية فعلية. الافتراضات: قيمة النقطة غير مُعدّة، لذلك لا تُحتسب أي قيمة مالية، ولم يُحدَّد حد فرق GPS المقبول.</p>
+
+    </main>
+  </div>
+</div>
+
+<script>
+(function () {
+  var ON = ['bg-accent', 'text-accent-foreground', 'hover:bg-accent-hover'];
+  var OFF = ['bg-transparent', 'text-foreground', 'hover:bg-secondary'];
+  var tabs = document.querySelectorAll('[data-filter]');
+  var items = document.querySelectorAll('#claim-list > li');
+  var rows = document.querySelectorAll('.claim-row');
+  var countAll = document.getElementById('count-all');
+  var countAttn = document.getElementById('count-attention');
+
+  function setTab(btn, on) {
+    btn.setAttribute('aria-selected', on ? 'true' : 'false');
+    ON.forEach(function (c) { btn.classList.toggle(c, on); });
+    OFF.forEach(function (c) { btn.classList.toggle(c, !on); });
+  }
+
+  function applyFilter(f) {
+    tabs.forEach(function (t) { setTab(t, t.getAttribute('data-filter') === f); });
+    items.forEach(function (li) {
+      var show = f === 'all' || li.getAttribute('data-attention') === 'true';
+      li.classList.toggle('hidden', !show);
+    });
+    countAll.classList.toggle('hidden', f !== 'all');
+    countAttn.classList.toggle('hidden', f !== 'attention');
+  }
+
+  function selectRow(btn) {
+    rows.forEach(function (r) {
+      var on = r === btn;
+      r.setAttribute('aria-pressed', on ? 'true' : 'false');
+      r.classList.toggle('bg-primary-subtle', on);
+      r.classList.toggle('border-primary', on);
+      r.classList.toggle('border-transparent', !on);
+    });
+  }
+
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () { applyFilter(t.getAttribute('data-filter')); });
+  });
+  rows.forEach(function (r) {
+    r.addEventListener('click', function () { selectRow(r); });
+  });
+
+  var openAttn = document.getElementById('open-attention');
+  if (openAttn) {
+    openAttn.addEventListener('click', function () {
+      applyFilter('attention');
+      var ws = document.getElementById('review-workspace');
+      if (ws) ws.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+
+  applyFilter('all');
+})();
+</script>
+
+<script src="assets/demo.js" defer></script>
+</body>
+</html>

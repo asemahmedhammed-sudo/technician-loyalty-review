@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technicians Management</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- uxp-ds-theme:start -->
+<style>
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
+
+:root {
+  --background: 210 40% 98%;
+  --foreground: 222.2 47.4% 11.2%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 47.4% 11.2%;
+  --card-border: 214.3 31.8% 91.4%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 47.4% 11.2%;
+  --primary: 211 100% 30.8%;
+  --primary-hover: 211 100% 23.5%;
+  --primary-active: 211.3 100% 17.6%;
+  --primary-subtle: 215.3 100% 96.7%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 40% 96.1%;
+  --secondary-hover: 214.3 31.8% 91.4%;
+  --secondary-active: 212.7 26.8% 83.9%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --accent: 215.3 100% 96.7%;
+  --accent-hover: 214.3 100% 93.1%;
+  --accent-foreground: 211 100% 30.8%;
+  --destructive: 358.8 80.5% 51.8%;
+  --destructive-hover: 358.6 78.2% 43.1%;
+  --destructive-active: 358.3 82.7% 33.9%;
+  --destructive-subtle: 0 85.7% 97.3%;
+  --destructive-foreground: 0 0% 100%;
+  --success: 142.4 71.8% 29.2%;
+  --success-hover: 142.8 64.2% 24.1%;
+  --success-subtle: 138.5 76.5% 96.7%;
+  --success-foreground: 0 0% 100%;
+  --warning: 26 90.5% 37.1%;
+  --warning-hover: 22.7 82.5% 31.4%;
+  --warning-subtle: 48 100% 96.1%;
+  --warning-foreground: 0 0% 100%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.3 19.3% 34.5%;
+  --brand-blue: 211 100% 30.8%;
+  --brand-red: 358.8 80.5% 51.8%;
+  --brand-yellow: 52.2 100% 50%;
+  --surface: 0 0% 100%;
+  --surface-subtle: 210 40% 98%;
+  --surface-muted: 210 40% 96.1%;
+  --surface-border: 214.3 31.8% 91.4%;
+  --border: 214.3 31.8% 91.4%;
+  --border-hover: 212.7 26.8% 83.9%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 211 100% 30.8%;
+  --font-family-sans: 'IBM Plex Sans Arabic', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --spacing-0: 0px;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --radius-none: 0px;
+  --radius-sm: 0.25rem;
+  --radius: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+  --shadow-none: none;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --border-width-0: 0px;
+  --border-width-2: 2px;
+  --border-width: 1px;
+}
+</style>
+<script>
+  (function () {
+    var ds = {
+      colors: {
+        "background": "hsl(var(--background) / <alpha-value>)",
+        "foreground": "hsl(var(--foreground) / <alpha-value>)",
+        "card": "hsl(var(--card) / <alpha-value>)",
+        "card-foreground": "hsl(var(--card-foreground) / <alpha-value>)",
+        "card-border": "hsl(var(--card-border) / <alpha-value>)",
+        "popover": "hsl(var(--popover) / <alpha-value>)",
+        "popover-foreground": "hsl(var(--popover-foreground) / <alpha-value>)",
+        "primary": "hsl(var(--primary) / <alpha-value>)",
+        "primary-hover": "hsl(var(--primary-hover) / <alpha-value>)",
+        "primary-active": "hsl(var(--primary-active) / <alpha-value>)",
+        "primary-subtle": "hsl(var(--primary-subtle) / <alpha-value>)",
+        "primary-foreground": "hsl(var(--primary-foreground) / <alpha-value>)",
+        "secondary": "hsl(var(--secondary) / <alpha-value>)",
+        "secondary-hover": "hsl(var(--secondary-hover) / <alpha-value>)",
+        "secondary-active": "hsl(var(--secondary-active) / <alpha-value>)",
+        "secondary-foreground": "hsl(var(--secondary-foreground) / <alpha-value>)",
+        "accent": "hsl(var(--accent) / <alpha-value>)",
+        "accent-hover": "hsl(var(--accent-hover) / <alpha-value>)",
+        "accent-foreground": "hsl(var(--accent-foreground) / <alpha-value>)",
+        "destructive": "hsl(var(--destructive) / <alpha-value>)",
+        "destructive-hover": "hsl(var(--destructive-hover) / <alpha-value>)",
+        "destructive-active": "hsl(var(--destructive-active) / <alpha-value>)",
+        "destructive-subtle": "hsl(var(--destructive-subtle) / <alpha-value>)",
+        "destructive-foreground": "hsl(var(--destructive-foreground) / <alpha-value>)",
+        "success": "hsl(var(--success) / <alpha-value>)",
+        "success-hover": "hsl(var(--success-hover) / <alpha-value>)",
+        "success-subtle": "hsl(var(--success-subtle) / <alpha-value>)",
+        "success-foreground": "hsl(var(--success-foreground) / <alpha-value>)",
+        "warning": "hsl(var(--warning) / <alpha-value>)",
+        "warning-hover": "hsl(var(--warning-hover) / <alpha-value>)",
+        "warning-subtle": "hsl(var(--warning-subtle) / <alpha-value>)",
+        "warning-foreground": "hsl(var(--warning-foreground) / <alpha-value>)",
+        "muted": "hsl(var(--muted) / <alpha-value>)",
+        "muted-foreground": "hsl(var(--muted-foreground) / <alpha-value>)",
+        "brand-blue": "hsl(var(--brand-blue) / <alpha-value>)",
+        "brand-red": "hsl(var(--brand-red) / <alpha-value>)",
+        "brand-yellow": "hsl(var(--brand-yellow) / <alpha-value>)",
+        "surface": "hsl(var(--surface) / <alpha-value>)",
+        "surface-subtle": "hsl(var(--surface-subtle) / <alpha-value>)",
+        "surface-muted": "hsl(var(--surface-muted) / <alpha-value>)",
+        "surface-border": "hsl(var(--surface-border) / <alpha-value>)",
+        "border": "hsl(var(--border) / <alpha-value>)",
+        "border-hover": "hsl(var(--border-hover) / <alpha-value>)",
+        "input": "hsl(var(--input) / <alpha-value>)",
+        "ring": "hsl(var(--ring) / <alpha-value>)",
+        "fg": "hsl(var(--foreground) / <alpha-value>)",
+        "card-fg": "hsl(var(--card-foreground) / <alpha-value>)",
+        "popover-fg": "hsl(var(--popover-foreground) / <alpha-value>)",
+        "primary-fg": "hsl(var(--primary-foreground) / <alpha-value>)",
+        "secondary-fg": "hsl(var(--secondary-foreground) / <alpha-value>)",
+        "accent-fg": "hsl(var(--accent-foreground) / <alpha-value>)",
+        "destructive-fg": "hsl(var(--destructive-foreground) / <alpha-value>)",
+        "success-fg": "hsl(var(--success-foreground) / <alpha-value>)",
+        "warning-fg": "hsl(var(--warning-foreground) / <alpha-value>)",
+        "muted-fg": "hsl(var(--muted-foreground) / <alpha-value>)",
+      },
+      fontSize: {
+        "xs": "var(--font-size-xs)",
+        "sm": "var(--font-size-sm)",
+        "base": "var(--font-size-base)",
+        "lg": "var(--font-size-lg)",
+        "xl": "var(--font-size-xl)",
+        "2xl": "var(--font-size-2xl)",
+        "3xl": "var(--font-size-3xl)",
+        "4xl": "var(--font-size-4xl)",
+      },
+      spacing: {
+        "ds-0": "var(--spacing-0)",
+        "ds-1": "var(--spacing-1)",
+        "ds-2": "var(--spacing-2)",
+        "ds-3": "var(--spacing-3)",
+        "ds-4": "var(--spacing-4)",
+        "ds-5": "var(--spacing-5)",
+        "ds-6": "var(--spacing-6)",
+        "ds-8": "var(--spacing-8)",
+        "ds-10": "var(--spacing-10)",
+        "ds-12": "var(--spacing-12)",
+        "ds-16": "var(--spacing-16)",
+      },
+      borderRadius: {
+        "none": "var(--radius-none)",
+        "sm": "var(--radius-sm)",
+        "DEFAULT": "var(--radius)",
+        "md": "var(--radius-md)",
+        "lg": "var(--radius-lg)",
+        "xl": "var(--radius-xl)",
+        "full": "var(--radius-full)",
+      },
+      boxShadow: {
+        "none": "var(--shadow-none)",
+        "sm": "var(--shadow-sm)",
+        "DEFAULT": "var(--shadow)",
+        "md": "var(--shadow-md)",
+        "lg": "var(--shadow-lg)",
+      },
+      borderWidth: {
+        "0": "var(--border-width-0)",
+        "2": "var(--border-width-2)",
+        "DEFAULT": "var(--border-width)",
+      },
+      fontFamily: {
+        "sans": ["'IBM Plex Sans Arabic'","'IBM Plex Sans'","-apple-system","BlinkMacSystemFont","'Segoe UI'","Roboto","sans-serif"],
+        "mono": ["'IBM Plex Mono'","'SFMono-Regular'","Consolas","'Liberation Mono'","monospace"],
+      },
+    };
+    var prev = (typeof tailwind !== "undefined" && tailwind.config) || {};
+    var prevTheme = prev.theme || {};
+    var isPlain = function (v) {
+      return Boolean(v) && typeof v === "object" && !Array.isArray(v);
+    };
+    var prevExtend = isPlain(prevTheme.extend) ? prevTheme.extend : {};
+    var extend = {};
+    Object.keys(prevExtend).forEach(function (k) {
+      extend[k] = prevExtend[k];
+    });
+    Object.keys(ds).forEach(function (k) {
+      extend[k] =
+        isPlain(prevExtend[k]) && isPlain(ds[k])
+          ? Object.assign({}, prevExtend[k], ds[k])
+          : ds[k];
+    });
+    tailwind.config = Object.assign({}, prev, {
+      theme: Object.assign({}, prevTheme, { extend: extend }),
+    });
+  })();
+</script>
+<!-- uxp-ds-theme:end -->
+<link rel="stylesheet" href="assets/demo.css">
+</head>
+<body class="bg-background text-foreground font-sans antialiased">
+
+<div id="app-shell" dir="rtl" class="flex w-full bg-background">
+
+  <!-- ============ SIDEBAR (right) ============ -->
+  <div id="sidebar-container" class="hidden lg:block sticky top-0 h-[900px] shrink-0">
+    <aside id="sidebar" dir="rtl" data-ds-comp="Sidebar" class="flex flex-col bg-card border-l border-border h-full shrink-0 select-none w-64">
+      <div class="flex items-center justify-between h-16 px-4 border-b border-border shrink-0">
+        <div class="flex items-center gap-3 overflow-hidden">
+          <div class="flex items-center justify-center w-9 h-9 rounded-md bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] font-bold shrink-0">MK</div>
+          <div class="flex flex-col min-w-0">
+            <span class="font-sans font-bold text-sm tracking-wide text-foreground truncate">MK KASHIYAMA</span>
+            <span class="font-sans text-xs text-muted-foreground truncate">نظام إدارة الولاء للفنيين</span>
+          </div>
+        </div>
+        <button type="button" aria-label="طي القائمة الجانبية" class="p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+          <svg class="w-4 h-4 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+        </button>
+      </div>
+
+      <div class="flex-1 overflow-y-auto py-4 px-2 space-y-6">
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground tracking-wider mb-2">نظرة عامة</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-house text-base"></i></span>
+            <span class="flex-1 truncate">الرئيسية</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-bell text-base"></i></span>
+            <span class="flex-1 truncate">الإشعارات</span>
+            <span class="px-2 py-0.5 text-xs rounded-full font-sans font-semibold shrink-0 bg-accent text-primary">5</span>
+          </button>
+        </div>
+
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground tracking-wider mb-2">العمليات والتركيب</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-clipboard-check text-base"></i></span>
+            <span class="flex-1 truncate">طلبات التركيب</span>
+            <span class="px-2 py-0.5 text-xs rounded-full font-sans font-semibold shrink-0 bg-accent text-primary">31</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-barcode text-base"></i></span>
+            <span class="flex-1 truncate">دفعات الباركود</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-box-open text-base"></i></span>
+            <span class="flex-1 truncate">الأصناف والماركات</span>
+          </button>
+          <button type="button" aria-current="page" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-semibold transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring bg-accent text-primary border-r-4 border-primary">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-primary"><i class="fa-solid fa-users text-base"></i></span>
+            <span class="flex-1 truncate">الفنيون</span>
+          </button>
+        </div>
+
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground tracking-wider mb-2">الولاء والمكافآت</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-medal text-base"></i></span>
+            <span class="flex-1 truncate">مستويات الولاء</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-gift text-base"></i></span>
+            <span class="flex-1 truncate">طلبات الاسترداد</span>
+            <span class="px-2 py-0.5 text-xs rounded-full font-sans font-semibold shrink-0 bg-accent text-primary">14</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-hand-holding-dollar text-base"></i></span>
+            <span class="flex-1 truncate">الصرف اليدوي</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-building-columns text-base"></i></span>
+            <span class="flex-1 truncate">العهدة المالية</span>
+          </button>
+        </div>
+
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground tracking-wider mb-2">النظام والتقارير</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-sliders text-base"></i></span>
+            <span class="flex-1 truncate">ترميز النقاط</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-chart-column text-base"></i></span>
+            <span class="flex-1 truncate">التقارير والتحليلات</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-user-shield text-base"></i></span>
+            <span class="flex-1 truncate">الصلاحيات وسجل التدقيق</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ============ MAIN COLUMN ============ -->
+  <div id="main-column" class="flex-1 min-w-0 flex flex-col">
+
+    <!-- Topbar -->
+    <header id="topbar" dir="rtl" data-ds-comp="Topbar" class="h-16 px-6 bg-card border-b border-border flex items-center justify-between gap-4 shrink-0 font-sans select-none">
+      <div class="flex items-center gap-3 min-w-0 flex-1">
+        <div class="w-full max-w-md">
+          <div data-ds-comp="SearchField" class="w-full flex flex-col gap-1.5">
+            <div class="relative flex items-center w-full bg-surface rounded-md border transition-colors duration-150 ease-in-out border-input hover:border-border-hover focus-within:border-primary focus-within:ring-2 focus-within:ring-ring">
+              <span class="ps-3 text-muted-foreground flex items-center shrink-0 pointer-events-none">
+                <svg class="w-4 h-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+              </span>
+              <input type="search" aria-label="البحث في المنصة" placeholder="ابحث عن فني أو رقم مرجعي..." class="w-full bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none transition-colors select-text h-10 px-3 text-sm min-h-[40px] font-sans text-start" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="relative">
+          <button type="button" aria-label="الإشعارات (5 غير مقروء)" title="الإشعارات (5 غير مقروء)" class="inline-flex items-center justify-center shrink-0 transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-transparent text-foreground hover:bg-secondary active:bg-secondary-active border border-transparent h-10 w-10 min-w-[40px] min-h-[40px] text-sm rounded-md">
+            <svg class="w-5 h-5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
+          </button>
+          <span class="absolute top-1 start-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 text-[10px] font-bold text-white bg-destructive rounded-full border-2 border-card pointer-events-none">5</span>
+        </div>
+        <div class="h-6 w-px bg-border my-auto mx-1" aria-hidden="true"></div>
+        <button type="button" class="flex items-center gap-3 p-1 rounded-lg hover:bg-secondary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+          <div class="flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 text-primary font-bold text-sm shrink-0 border border-primary/20 overflow-hidden">
+            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" alt="أحمد الحربي" class="w-full h-full object-cover" />
+          </div>
+          <div class="hidden sm:flex flex-col text-right">
+            <span class="text-xs font-semibold text-foreground truncate max-w-[140px]">أحمد الحربي</span>
+            <span class="text-[11px] text-muted-foreground truncate max-w-[140px]">مدير العمليات</span>
+          </div>
+          <svg class="w-4 h-4 text-muted-foreground hidden sm:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="content" class="w-full max-w-[1440px] mx-auto p-6 lg:p-8 space-y-6">
+
+      <!-- Page Header -->
+      <div id="page-header" dir="rtl" data-ds-comp="PageHeader" class="flex flex-col gap-3 pb-6 border-b border-border select-none font-sans">
+        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+          <div class="space-y-2 min-w-0">
+            <div class="flex items-center gap-3 flex-wrap">
+              <h1 class="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">إدارة الفنيين</h1>
+              <span data-ds-comp="Badge" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-amber-50 text-amber-800 border-amber-200/50"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-amber-600" aria-hidden="true"></span><span>بيانات عينة — عرض تجريبي</span></span>
+            </div>
+            <p class="text-sm text-muted-foreground leading-relaxed max-w-3xl">ابحث عن الفني، وتحقّق من هويته وورشته ومستواه، ثم راجع نشاطه. نقاط التأهيل ورصيد المكافآت معروضان بشكل منفصل، ولا يُستبدل أحدهما بالآخر. <span dir="ltr" class="font-mono text-xs tracking-wider">Technicians Management</span></p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0 flex-wrap">
+            <span class="text-xs text-muted-foreground">آخر تحديث: اليوم 09:40 ص</span>
+            <button id="btn-tiers" type="button" class="inline-flex items-center justify-center font-sans font-medium bg-transparent text-foreground border border-border hover:bg-secondary h-10 px-4 text-sm gap-2 rounded-md min-h-[40px]"><i class="fa-solid fa-medal text-xs text-muted-foreground"></i><span>مستويات الولاء (للقراءة)</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- WORKSPACE -->
+      <section id="tech-workspace" aria-label="مساحة إدارة الفنيين" class="grid grid-cols-1 xl:grid-cols-[380px_minmax(0,1fr)] gap-6 items-start">
+        <!-- DIRECTORY -->
+        <aside id="tech-directory" aria-label="دليل الفنيين" class="bg-card border border-border rounded-lg overflow-hidden min-w-0 flex flex-col">
+          <div class="p-4 border-b border-border space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <h2 class="text-lg font-medium leading-snug text-foreground">دليل الفنيين</h2>
+              <span class="text-xs text-muted-foreground tabular-nums">681 فنيًا مسجّلًا</span>
+            </div>
+
+            <div class="w-full flex flex-col gap-1.5">
+              <div class="relative flex items-center w-full bg-surface rounded-md border transition-colors duration-150 ease-in-out border-input hover:border-border-hover focus-within:border-primary focus-within:ring-2 focus-within:ring-ring">
+                <span class="ps-2.5 text-muted-foreground flex items-center shrink-0 pointer-events-none">
+                  <svg class="w-3.5 h-3.5 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </span>
+                <input id="tech-search" type="search" aria-label="بحث بالاسم أو الرقم المرجعي أو الورشة" placeholder="الاسم، الرقم المرجعي، أو الورشة..." class="w-full bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none transition-colors select-text h-8 px-2.5 text-xs min-h-[32px] font-sans text-start" />
+              </div>
+            </div>
+
+            <div role="group" aria-label="تصفية حسب مستوى الولاء" class="flex flex-wrap gap-1.5">
+              <button type="button" data-tier="all" aria-pressed="true" class="tier-btn inline-flex items-center gap-1.5 font-sans font-medium h-7 px-2.5 text-xs rounded-md border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span>الكل</span><span class="font-mono tabular-nums opacity-70">681</span></button>
+              <button type="button" data-tier="basic" aria-pressed="false" class="tier-btn inline-flex items-center gap-1.5 font-sans font-medium h-7 px-2.5 text-xs rounded-md border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span>أساسي</span><span class="font-mono tabular-nums opacity-70">412</span></button>
+              <button type="button" data-tier="bronze" aria-pressed="false" class="tier-btn inline-flex items-center gap-1.5 font-sans font-medium h-7 px-2.5 text-xs rounded-md border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span>برونزي</span><span class="font-mono tabular-nums opacity-70">186</span></button>
+              <button type="button" data-tier="silver" aria-pressed="false" class="tier-btn inline-flex items-center gap-1.5 font-sans font-medium h-7 px-2.5 text-xs rounded-md border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span>فضي</span><span class="font-mono tabular-nums opacity-70">64</span></button>
+              <button type="button" data-tier="gold" aria-pressed="false" class="tier-btn inline-flex items-center gap-1.5 font-sans font-medium h-7 px-2.5 text-xs rounded-md border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span>ذهبي</span><span class="font-mono tabular-nums opacity-70">19</span></button>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2">
+              <label class="space-y-1 min-w-0">
+                <span class="text-xs font-medium text-muted-foreground">الورشة</span>
+                <select id="f-ws" class="w-full bg-surface text-foreground border border-input hover:border-border-hover h-8 px-2 text-xs rounded-md focus:outline-none focus:ring-2 focus:ring-ring"></select>
+              </label>
+              <label class="space-y-1 min-w-0">
+                <span class="text-xs font-medium text-muted-foreground">حالة الحساب</span>
+                <select id="f-status" class="w-full bg-surface text-foreground border border-input hover:border-border-hover h-8 px-2 text-xs rounded-md focus:outline-none focus:ring-2 focus:ring-ring">
+                  <option value="all">الكل</option>
+                  <option value="active">نشط</option>
+                  <option value="review">قيد المراجعة</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="flex items-center justify-between gap-2">
+              <button id="f-attn" type="button" aria-pressed="false" class="inline-flex items-center gap-1.5 font-sans font-medium h-8 px-2.5 text-xs rounded-md border border-border bg-transparent text-foreground hover:bg-secondary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                <i class="fa-solid fa-flag text-[11px]"></i><span>يحتاج انتباه</span><span class="font-mono tabular-nums opacity-70">7</span>
+              </button>
+              <label class="flex items-center gap-2 min-w-0">
+                <span class="text-xs text-muted-foreground shrink-0">الترتيب</span>
+                <select id="f-sort" class="bg-surface text-foreground border border-input hover:border-border-hover h-8 px-2 text-xs rounded-md focus:outline-none focus:ring-2 focus:ring-ring max-w-[170px]">
+                  <option value="activity">النشاط الأحدث</option>
+                  <option value="reg">الأحدث تسجيلًا</option>
+                  <option value="points">الأعلى تأهيلًا</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <ul id="tech-list" class="flex-1 divide-y divide-border max-h-[700px] overflow-y-auto"></ul>
+          <div class="px-4 py-3 border-t border-border">
+            <p id="list-count" class="text-xs text-muted-foreground tabular-nums"></p>
+          </div>
+        </aside>
+
+        <!-- PROFILE -->
+        <article id="tech-profile" aria-label="ملف الفني المحدد" class="bg-card border border-border rounded-lg overflow-hidden min-w-0 flex flex-col">
+          <div id="profile-body" class="flex flex-col flex-1"></div>
+          <footer class="p-5 border-t border-border bg-surface-subtle space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <p class="text-sm text-foreground leading-relaxed max-w-xl">إجراءات للعرض والمراجعة فقط. لا تُعدَّل النقاط أو حالة الحساب من هذه الشاشة.</p>
+              <div class="flex flex-wrap items-center gap-2">
+                <button id="btn-copy" type="button" class="inline-flex items-center justify-center font-sans font-medium bg-transparent text-foreground border border-border hover:bg-secondary h-10 px-4 text-sm gap-2 rounded-md min-h-[40px] disabled:opacity-50 disabled:pointer-events-none"><i class="fa-regular fa-copy text-xs"></i><span>نسخ الرقم المرجعي</span></button>
+                <button id="btn-audit" type="button" class="inline-flex items-center justify-center font-sans font-medium bg-transparent text-foreground border border-border hover:bg-secondary h-10 px-4 text-sm gap-2 rounded-md min-h-[40px] disabled:opacity-50 disabled:pointer-events-none"><i class="fa-solid fa-user-shield text-xs"></i><span>سجل التدقيق</span></button>
+                <button id="btn-claims" type="button" class="inline-flex items-center justify-center font-sans font-medium bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] hover:bg-[hsl(var(--primary-hover))] active:bg-[hsl(var(--primary-active))] border border-transparent shadow-sm h-10 px-4 text-sm gap-2 rounded-md min-h-[40px] disabled:opacity-50 disabled:pointer-events-none"><i class="fa-solid fa-clipboard-check text-xs"></i><span>عرض طلبات التركيب</span></button>
+              </div>
+            </div>
+            <p class="text-xs text-muted-foreground leading-relaxed">أي تعديل مستقبلي على النقاط أو الحساب يحتاج صلاحية مُعتمدة من الخادم، ويُسجَّل في سجل التدقيق.</p>
+          </footer>
+        </article>
+      </section>
+
+      <p class="text-xs text-muted-foreground leading-relaxed border-t border-border pt-4">هذه الشاشة نموذج تصميمي تعرض بيانات عينة لأغراض العرض فقط. أسماء الفنيين والأرقام والطلبات والمبالغ توضيحية ولا تمثل بيانات حية. لا تُعرض مواقع الفنيين كتتبع مباشر، ولا تُعدَّل النقاط أو حالات الحسابات من هذه الشاشة.</p>
+
+    </main>
+  </div>
+</div>
+
+<!-- TOAST (bottom-start) -->
+<div id="toast" role="status" aria-live="polite" class="hidden fixed bottom-5 start-5 z-50 min-w-[320px] max-w-md p-4 rounded-xl shadow-lg border backdrop-blur-sm transition-all duration-200 dir-rtl flex gap-3 items-start bg-surface border-primary/40 text-foreground">
+  <div class="shrink-0 mt-0.5 text-primary"><i class="fa-solid fa-circle-info"></i></div>
+  <div class="flex-1 space-y-1 text-sm">
+    <h5 id="toast-title" class="font-semibold text-foreground leading-tight"></h5>
+    <div id="toast-desc" class="text-muted-foreground text-xs leading-relaxed"></div>
+  </div>
+  <button type="button" id="toast-close" aria-label="إغلاق التنبيه" class="shrink-0 p-1 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors focus:outline-none focus:ring-2 focus:ring-ring">
+    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+  </button>
+</div>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var setT = function (id, t) { var el = $(id); if (el) el.textContent = t; };
+  var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+  var fmt = function (n) { return Number(n).toLocaleString('en-US'); };
+
+  // Loyalty configuration (reference, read-only on this screen)
+  var TIERS = {
+    basic:  { label: 'أساسي',  en: 'BASIC',  min: 0,    max: 999,  bonus: 0,  next: 'bronze', cls: 'bg-muted text-foreground border-border' },
+    bronze: { label: 'برونزي', en: 'BRONZE', min: 1000, max: 1999, bonus: 10, next: 'silver', cls: 'bg-orange-50 text-orange-800 border-orange-200/60' },
+    silver: { label: 'فضي',    en: 'SILVER', min: 2000, max: 3999, bonus: 20, next: 'gold',   cls: 'bg-slate-100 text-slate-700 border-slate-300/70' },
+    gold:   { label: 'ذهبي',   en: 'GOLD',   min: 4000, max: null, bonus: 30, next: null,     cls: 'bg-yellow-50 text-yellow-800 border-yellow-300/70' }
+  };
+  var TIER_COUNTS = { all: 681, basic: 412, bronze: 186, silver: 64, gold: 19 };
+  var ATTN_TOTAL = 7;
+  var PRODUCTS = { 'MK-10025': 'فحمات فرامل أمامية', 'MK-20417': 'أقراص فرامل مهوّاة', 'MK-31002': 'ممتص صدمات أمامي' };
+  var WS_LIST = ['ورشة الشمال', 'ورشة الجنوب', 'ورشة الغربية', 'ورشة الغرب', 'ورشة الشرق', 'ورشة القصيم'];
+  var LOC = {
+    verified: ['success', 'fa-solid fa-circle-check', 'موقع الورشة مُوثَّق'],
+    pending: ['warning', 'fa-regular fa-hourglass-half', 'التحقق من الموقع قيد الانتظار'],
+    none: ['neutral', 'fa-solid fa-circle-minus', 'لم يُسجَّل تحقق من موقع الورشة']
+  };
+  var ACC = {
+    active: ['success', 'fa-solid fa-circle-check', 'حساب نشط'],
+    review: ['warning', 'fa-solid fa-user-clock', 'الحساب قيد المراجعة']
+  };
+  var TONE = {
+    success: 'bg-emerald-50 text-emerald-800 border-emerald-200/50',
+    warning: 'bg-amber-50 text-amber-800 border-amber-200/50',
+    error: 'bg-red-50 text-red-700 border-red-200/50',
+    info: 'bg-accent text-primary border-transparent',
+    neutral: 'bg-muted text-muted-foreground border-transparent'
+  };
+
+  // Illustrative sample technicians. Claim IDs match the installation claims sample.
+  var TECHS = [
+    { id: 'TEC-2026-001', name: 'خالد العتيبي', ws: 'ورشة الشمال', city: 'الرياض', addr: 'الرياض، حي الملز', loc: 'verified', status: 'active', prov: 'Google', reg: '3 يناير 2026', regTs: 20260103, life: 2450, spend: 3120, last: 'اليوم 09:15', rank: 1, phone: '055 ••• 218', email: 'kh•••@•••.com',
+      attn: { text: 'طلب معلّق بتنبيه موقع GPS: موقع الإرسال لا يطابق عنوان الورشة المسجّل.', claim: 'CLM-24-08842' }, total: 17,
+      claims: [
+        { id: 'CLM-24-08842', prod: 'MK-10025', date: 'اليوم 08:12', st: 'pending', flag: 'موقع الإرسال يحتاج مراجعة بشرية' },
+        { id: 'CLM-24-08761', prod: 'MK-10025', date: 'أمس 14:05', st: 'approved' },
+        { id: 'CLM-24-08702', prod: 'MK-10025', date: 'منذ 4 أيام', st: 'approved', exc: 'استثناء مُغلق · أُعيد إرسال صورة التسجيل' },
+        { id: 'CLM-24-08650', prod: 'MK-31002', date: 'منذ 9 أيام', st: 'rejected', reason: 'صورة التركيب غير واضحة' }
+      ],
+      rewards: [
+        { id: 'RR-2026-0342', amt: 1000, st: 'requested', date: 'اليوم 09:15' },
+        { id: 'RR-2026-0318', amt: 800, st: 'paid', date: '28 أبريل 2026', ref: 'PAY-2026-0318' },
+        { id: 'RR-2026-0291', amt: 500, st: 'paid', date: '12 أبريل 2026', ref: 'PAY-2026-0291' }
+      ] },
+    { id: 'TEC-2025-148', name: 'ماجد الشهري', ws: 'ورشة الجنوب', city: 'أبها', addr: 'أبها، حي المنسك', loc: 'verified', status: 'active', prov: 'Apple', reg: '18 نوفمبر 2025', regTs: 20251118, life: 1480, spend: 860, last: 'أمس 16:20', rank: 3, phone: '054 ••• 730', email: 'ma•••@•••.com',
+      attn: { text: 'طلب معلّق: صورة التركيب غير مرفوعة. لا يُعتمد الطلب بدون دليل تركيب.', claim: 'CLM-24-08837' }, total: 9,
+      claims: [
+        { id: 'CLM-24-08837', prod: 'MK-10025', date: 'أمس 16:20', st: 'pending', flag: 'صورة التركيب غير مرفوعة' },
+        { id: 'CLM-24-08790', prod: 'MK-10025', date: 'منذ 6 أيام', st: 'approved' },
+        { id: 'CLM-24-08744', prod: 'MK-10025', date: 'منذ 11 يومًا', st: 'approved' }
+      ],
+      rewards: [
+        { id: 'RR-2026-0327', amt: 500, st: 'requested', date: 'أمس 11:00' },
+        { id: 'RR-2026-0296', amt: 300, st: 'paid', date: '3 أبريل 2026', ref: 'PAY-2026-0296' }
+      ] },
+    { id: 'TEC-2025-112', name: 'سلطان القحطاني', ws: 'ورشة الغربية', city: 'جدة', addr: 'جدة، حي الروضة', loc: 'none', status: 'active', prov: 'Google', reg: '2 سبتمبر 2025', regTs: 20250902, life: 4620, spend: 5340, last: 'أمس 13:05', rank: 4, phone: '050 ••• 644', email: 'su•••@•••.com',
+      attn: { text: 'طلب معلّق بتنبيه موقع GPS: موقع الإرسال يحتاج مقارنة بموقع الورشة.', claim: 'CLM-24-08833' }, total: 31,
+      claims: [
+        { id: 'CLM-24-08833', prod: 'MK-20417', date: 'أمس 13:05', st: 'pending', flag: 'موقع الإرسال يحتاج مراجعة بشرية' },
+        { id: 'CLM-24-08801', prod: 'MK-10025', date: 'منذ 5 أيام', st: 'approved' },
+        { id: 'CLM-24-08760', prod: 'MK-10025', date: 'منذ أسبوع', st: 'approved' }
+      ],
+      rewards: [
+        { id: 'RR-2026-0350', amt: 2000, st: 'requested', date: 'أمس 09:40' },
+        { id: 'RR-2026-0300', amt: 1500, st: 'paid', date: '5 أبريل 2026', ref: 'PAY-2026-0300' }
+      ] },
+    { id: 'TEC-2025-096', name: 'عبدالله الحربي', ws: 'ورشة الشمال', city: 'حائل', addr: 'حائل، حي السمراء', loc: 'verified', status: 'active', prov: 'Apple', reg: '7 أغسطس 2025', regTs: 20250807, life: 640, spend: 210, last: 'أمس 10:30', rank: 5, phone: '056 ••• 401', email: 'ab•••@•••.com',
+      attn: { text: 'التحقق من الرمز الفريد معلّق لدى الخادم. لا يصح الاعتماد قبل نتيجته.', claim: 'CLM-24-08828' }, total: 6,
+      claims: [
+        { id: 'CLM-24-08828', prod: 'MK-31002', date: 'أمس 10:30', st: 'pending', flag: 'التحقق من الرمز الفريد معلّق' },
+        { id: 'CLM-24-08774', prod: 'MK-10025', date: 'منذ 8 أيام', st: 'approved' }
+      ],
+      rewards: [
+        { id: 'RR-2026-0311', amt: 200, st: 'paid', date: '20 أبريل 2026', ref: 'PAY-2026-0311' }
+      ] },
+    { id: 'TEC-2026-022', name: 'فهد الدوسري', ws: 'ورشة الشرق', city: 'الدمام', addr: 'الدمام، حي الشاطئ', loc: 'verified', status: 'active', prov: 'Apple', reg: '22 يناير 2026', regTs: 20260122, life: 1260, spend: 540, last: 'اليوم 07:45', rank: 2, phone: '059 ••• 375', email: 'fa•••@•••.com',
+      attn: null, total: 7,
+      claims: [
+        { id: 'CLM-24-08841', prod: 'MK-20417', date: 'اليوم 07:45', st: 'pending' },
+        { id: 'CLM-24-08758', prod: 'MK-10025', date: 'منذ 6 أيام', st: 'approved' },
+        { id: 'CLM-24-08716', prod: 'MK-10025', date: 'منذ أسبوعين', st: 'approved' }
+      ],
+      rewards: [
+        { id: 'RR-2026-0345', amt: 400, st: 'requested', date: 'أمس 17:30' },
+        { id: 'RR-2026-0289', amt: 300, st: 'paid', date: '2 أبريل 2026', ref: 'PAY-2026-0289' }
+      ] },
+    { id: 'TEC-2025-077', name: 'يوسف الزهراني', ws: 'ورشة الغرب', city: 'مكة المكرمة', addr: 'مكة المكرمة، حي العزيزية', loc: 'pending', status: 'review', prov: 'Google', reg: '14 فبراير 2025', regTs: 20250214, life: 2080, spend: 1150, last: 'منذ يومين', rank: 7, phone: '056 ••• 902', email: 'yu•••@•••.com',
+      attn: { text: 'طلب معلّق بتنبيه موقع GPS، والحساب قيد المراجعة الإدارية.', claim: 'CLM-24-08826' }, total: 14,
+      claims: [
+        { id: 'CLM-24-08826', prod: 'MK-10025', date: 'منذ يومين', st: 'pending', flag: 'موقع الإرسال يحتاج مراجعة بشرية' },
+        { id: 'CLM-24-08748', prod: 'MK-10025', date: 'منذ 9 أيام', st: 'approved' },
+        { id: 'CLM-24-08712', prod: 'MK-20417', date: 'منذ 3 أسابيع', st: 'rejected', reason: 'معلومات الموقع تحتاج مراجعة' }
+      ],
+      rewards: [
+        { id: 'RR-2026-0334', amt: 800, st: 'requested', date: 'منذ 3 أيام' },
+        { id: 'RR-2026-0309', amt: 350, st: 'paid', date: '9 أبريل 2026', ref: 'PAY-2026-0309' }
+      ] },
+    { id: 'TEC-2026-014', name: 'ناصر البقمي', ws: 'ورشة الشمال', city: 'تبوك', addr: 'تبوك، حي المروج', loc: 'verified', status: 'active', prov: 'Google', reg: '11 مارس 2026', regTs: 20260311, life: 310, spend: 95, last: 'منذ يومين', rank: 6, phone: '053 ••• 117', email: 'na•••@•••.com',
+      attn: { text: 'صورة تسجيل المركبة غير واضحة للقراءة. افتحها بالعرض المكبّر في طلبات التركيب.', claim: 'CLM-24-08821' }, total: 2,
+      claims: [
+        { id: 'CLM-24-08821', prod: 'MK-20417', date: 'منذ يومين', st: 'pending', flag: 'صورة تسجيل المركبة غير واضحة' },
+        { id: 'CLM-24-08777', prod: 'MK-10025', date: 'منذ 12 يومًا', st: 'approved' }
+      ],
+      rewards: [] },
+    { id: 'TEC-2025-190', name: 'محمد السبيعي', ws: 'ورشة القصيم', city: 'بريدة', addr: 'بريدة، حي الفيصلية', loc: 'verified', status: 'active', prov: 'Google', reg: '5 يونيو 2025', regTs: 20250605, life: 720, spend: 380, last: 'منذ 3 أيام', rank: 8, phone: '054 ••• 288', email: 'mo•••@•••.com',
+      attn: { text: 'التحقق من الرمز الفريد معلّق لدى الخادم. انتظر نتيجته قبل أي قرار.', claim: 'CLM-24-08819' }, total: 5,
+      claims: [
+        { id: 'CLM-24-08819', prod: 'MK-31002', date: 'منذ 3 أيام', st: 'pending', flag: 'التحقق من الرمز الفريد معلّق' },
+        { id: 'CLM-24-08770', prod: 'MK-10025', date: 'منذ 3 أسابيع', st: 'rejected', reason: 'تعذر التحقق من باركود المكافأة' }
+      ],
+      rewards: [
+        { id: 'RR-2026-0265', amt: 200, st: 'paid', date: '30 مارس 2026', ref: 'PAY-2026-0265' }
+      ] }
+  ];
+
+  var tierF = 'all', wsF = 'all', stF = 'all', attnOnly = false, sortF = 'activity', selId = null;
+
+  function tierOf(p) { return p >= 4000 ? 'gold' : p >= 2000 ? 'silver' : p >= 1000 ? 'bronze' : 'basic'; }
+  function initials(name) { return name.split(' ').slice(0, 2).map(function (w) { return w.charAt(0); }).join(''); }
+  function find(id) { for (var i = 0; i < TECHS.length; i++) if (TECHS[i].id === id) return TECHS[i]; return null; }
+
+  function tag(tone, icon, text) {
+    return '<span class="inline-flex items-center justify-center border whitespace-nowrap max-w-full text-xs px-2 py-0.5 gap-1.5 font-medium rounded-md ' + TONE[tone] + '"><i class="' + icon + ' text-[11px] shrink-0"></i><span>' + text + '</span></span>';
+  }
+  function tierChip(key, size) {
+    var T = TIERS[key];
+    if (size === 'lg') {
+      return '<span class="inline-flex items-center gap-2 border whitespace-nowrap rounded-md text-sm font-semibold px-3 py-1.5 ' + T.cls + '"><i class="fa-solid fa-medal text-xs"></i><span>' + T.label + '</span><span dir="ltr" class="font-mono text-[10px] tracking-wider opacity-80">' + T.en + '</span></span>';
+    }
+    return '<span class="inline-flex items-center gap-1 border whitespace-nowrap rounded-md text-xs font-medium px-2 py-0.5 shrink-0 ' + T.cls + '"><i class="fa-solid fa-medal text-[10px]"></i><span>' + T.label + '</span></span>';
+  }
+  function claimTag(c) {
+    if (c.st === 'approved') return tag('success', 'fa-solid fa-circle-check', 'معتمد');
+    if (c.st === 'rejected') return tag('error', 'fa-solid fa-circle-xmark', 'مرفوض');
+    return tag('info', 'fa-regular fa-hourglass-half', 'قيد المراجعة');
+  }
+  function pointsText(c) {
+    if (c.st === 'approved') return '4 نقاط أساسية · مع مكافأة لقطة التقديم';
+    if (c.st === 'rejected') return '0 نقطة · الرفض لا يمنح نقاطًا';
+    return 'تُمنح عند الاعتماد فقط';
+  }
+
+  function visible() {
+    var q = ($('tech-search').value || '').trim().toLowerCase();
+    var list = TECHS.filter(function (t) {
+      if (tierF !== 'all' && tierOf(t.life) !== tierF) return false;
+      if (wsF !== 'all' && t.ws !== wsF) return false;
+      if (stF !== 'all' && t.status !== stF) return false;
+      if (attnOnly && !t.attn) return false;
+      if (q && (t.name + ' ' + t.id + ' ' + t.ws + ' ' + t.city).toLowerCase().indexOf(q) === -1) return false;
+      return true;
+    });
+    list.sort(function (a, b) {
+      if (sortF === 'reg') return b.regTs - a.regTs;
+      if (sortF === 'points') return b.life - a.life;
+      return a.rank - b.rank;
+    });
+    return list;
+  }
+
+  function rowHTML(t) {
+    var sel = t.id === selId;
+    var tk = tierOf(t.life);
+    var flags = '';
+    if (t.attn) flags += '<span class="inline-flex items-center gap-1 text-amber-800 shrink-0"><i class="fa-solid fa-flag text-[10px]"></i><span>انتباه</span></span>';
+    if (t.status === 'review') flags += '<span class="inline-flex items-center gap-1 text-amber-800 shrink-0"><i class="fa-solid fa-user-clock text-[10px]"></i><span>قيد المراجعة</span></span>';
+    return '<li><button type="button" data-id="' + t.id + '" aria-pressed="' + sel + '" class="w-full text-start px-4 py-3 flex flex-col gap-2 border-s-4 transition-colors hover:bg-surface-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ' + (sel ? 'bg-primary-subtle border-primary' : 'border-transparent') + '">' +
+      '<div class="flex items-start justify-between gap-2"><div class="min-w-0"><p class="text-sm font-semibold text-foreground truncate">' + esc(t.name) + '</p><p dir="ltr" class="font-mono text-[11px] tracking-wider text-muted-foreground text-start">' + t.id + '</p></div>' + tierChip(tk) + '</div>' +
+      '<p class="text-xs text-muted-foreground truncate">' + t.ws + ' · ' + t.city + '</p>' +
+      '<div class="flex items-center justify-between gap-2 text-xs"><div class="flex items-center gap-3 min-w-0"><span class="text-muted-foreground">التأهيل <span class="font-mono tabular-nums text-foreground">' + fmt(t.life) + '</span></span><span class="text-muted-foreground">الرصيد <span class="font-mono tabular-nums text-foreground">' + fmt(t.spend) + '</span></span></div><div class="flex items-center gap-2">' + flags + '</div></div>' +
+      '</button></li>';
+  }
+
+  function renderList() {
+    var list = visible();
+    if (!list.some(function (t) { return t.id === selId; })) selId = list.length ? list[0].id : null;
+
+    $('tech-list').innerHTML = list.length
+      ? list.map(rowHTML).join('')
+      : '<li class="p-6 text-center text-sm text-muted-foreground">لا يوجد فنيون مطابقون في العينة المعروضة. جرّب تغيير التصفية.</li>';
+
+    var plain = tierF === 'all' && !attnOnly && wsF === 'all' && stF === 'all' && !($('tech-search').value || '').trim();
+    var txt;
+    if (!plain) txt = 'نتائج العينة المعروضة: ' + list.length + ' فنيًا ضمن التصفية الحالية';
+    else if (attnOnly) txt = 'عينة معروضة: ' + list.length + ' من أصل ' + ATTN_TOTAL + ' فنيًا يحتاجون انتباه';
+    else txt = 'عينة معروضة: ' + list.length + ' من أصل ' + fmt(TIER_COUNTS.all) + ' فنيًا مسجّلًا';
+    setT('list-count', txt);
+    return list;
+  }
+
+  function updateChips() {
+    document.querySelectorAll('.tier-btn').forEach(function (b) {
+      var on = b.getAttribute('data-tier') === tierF;
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      b.classList.toggle('bg-accent', on);
+      b.classList.toggle('text-primary', on);
+      b.classList.toggle('border-primary/40', on);
+      b.classList.toggle('bg-transparent', !on);
+      b.classList.toggle('text-foreground', !on);
+      b.classList.toggle('border-border', !on);
+      b.classList.toggle('hover:bg-secondary', !on);
+    });
+    var a = $('f-attn');
+    a.setAttribute('aria-pressed', attnOnly ? 'true' : 'false');
+    a.classList.toggle('bg-warning-subtle', attnOnly);
+    a.classList.toggle('text-warning', attnOnly);
+    a.classList.toggle('border-warning/40', attnOnly);
+    a.classList.toggle('bg-transparent', !attnOnly);
+    a.classList.toggle('text-foreground', !attnOnly);
+    a.classList.toggle('hover:bg-secondary', !attnOnly);
+  }
+
+  function cell(label, value) {
+    return '<div class="bg-surface p-3 space-y-1 min-w-0"><dt class="text-xs text-muted-foreground">' + label + '</dt><dd class="text-sm font-medium text-foreground truncate">' + value + '</dd></div>';
+  }
+
+  function claimRow(c) {
+    var out = '<li class="p-3 space-y-2">' +
+      '<div class="flex items-center justify-between gap-2"><span dir="ltr" class="font-mono text-xs font-medium tracking-wider text-foreground">' + c.id + '</span><span class="text-xs text-muted-foreground">' + c.date + '</span></div>' +
+      '<p class="text-sm text-foreground"><span dir="ltr" class="font-mono text-xs tracking-wider">' + c.prod + '</span> · ' + PRODUCTS[c.prod] + '</p>' +
+      '<div class="flex flex-wrap items-center gap-2">' + claimTag(c) + '<span class="text-xs text-muted-foreground">' + pointsText(c) + '</span></div>';
+    if (c.flag) out += '<p class="text-xs text-amber-800 flex items-start gap-1.5"><i class="fa-solid fa-flag mt-0.5 text-[10px]"></i><span>' + c.flag + '</span></p>';
+    if (c.reason) out += '<p class="text-xs text-muted-foreground">السبب: ' + c.reason + '</p>';
+    if (c.exc) out += '<p class="text-xs text-amber-800 flex items-start gap-1.5"><i class="fa-solid fa-triangle-exclamation mt-0.5 text-[10px]"></i><span>' + c.exc + '</span></p>';
+    return out + '</li>';
+  }
+
+  function rewardRow(r) {
+    var tagHTML = r.st === 'paid' ? tag('success', 'fa-solid fa-circle-check', 'تم الصرف · مؤكد') : tag('info', 'fa-regular fa-clock', 'طلب مكافأة');
+    var sub = r.st === 'paid'
+      ? r.date + ' · مرجع الصرف <span dir="ltr" class="font-mono tracking-wider">' + r.ref + '</span>'
+      : r.date + ' · بانتظار المعالجة اليدوية، ولم يُصرف بعد';
+    return '<li class="flex items-start justify-between gap-3 p-3"><div class="min-w-0 space-y-1.5"><div class="flex items-center gap-2 flex-wrap"><span dir="ltr" class="font-mono text-xs tracking-wider text-foreground">' + r.id + '</span>' + tagHTML + '</div><p class="text-xs text-muted-foreground leading-relaxed">' + sub + '</p></div><div class="text-end shrink-0"><p class="font-mono tabular-nums text-sm font-medium text-foreground">' + fmt(r.amt) + '</p><p class="text-[11px] text-muted-foreground">نقطة</p></div></li>';
+  }
+
+  function profileHTML(t) {
+    var tk = tierOf(t.life), T = TIERS[tk], next = T.next ? TIERS[T.next] : null;
+    var acc = ACC[t.status], loc = LOC[t.loc];
+    var pct = next ? (t.life - T.min) / (next.min - T.min) * 100 : 100;
+    var h = '';
+
+    // 1. Identity
+    h += '<header class="p-5 border-b border-border space-y-4">' +
+      '<div class="flex flex-wrap items-start justify-between gap-4">' +
+        '<div class="flex items-start gap-4 min-w-0">' +
+          '<div class="flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary font-bold text-base shrink-0 border border-primary/20">' + esc(initials(t.name)) + '</div>' +
+          '<div class="space-y-1 min-w-0">' +
+            '<p class="text-xs font-medium text-muted-foreground">الفني المحدد</p>' +
+            '<h2 id="profile-name" class="text-xl font-semibold leading-tight text-foreground">' + esc(t.name) + '</h2>' +
+            '<p dir="ltr" class="font-mono text-sm tracking-wider text-muted-foreground text-start">' + t.id + '</p>' +
+          '</div>' +
+        '</div>' +
+        '<div class="flex flex-wrap items-center gap-2">' + tag(acc[0], acc[1], acc[2]) + tag('neutral', 'fa-brands fa-' + t.prov.toLowerCase(), 'تسجيل عبر ' + t.prov) + '</div>' +
+      '</div>' +
+      '<dl class="grid grid-cols-1 sm:grid-cols-3 gap-px overflow-hidden rounded-md border border-border bg-border">' +
+        cell('الورشة المرتبطة', t.ws + ' · ' + t.city) +
+        cell('تاريخ التسجيل', t.reg) +
+        cell('آخر نشاط', t.last) +
+      '</dl>' +
+      '<div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-foreground">' +
+        '<span class="inline-flex items-center gap-2"><i class="fa-solid fa-phone text-xs text-muted-foreground"></i><span dir="ltr" class="font-mono tracking-wider">' + t.phone + '</span></span>' +
+        '<span class="inline-flex items-center gap-2"><i class="fa-regular fa-envelope text-xs text-muted-foreground"></i><span dir="ltr" class="font-mono text-xs tracking-normal">' + t.email + '</span></span>' +
+        '<button type="button" data-reveal class="ms-auto text-xs font-medium text-primary hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm">إظهار البيانات الكاملة</button>' +
+      '</div>' +
+    '</header>';
+
+    h += '<div class="p-5 space-y-6">';
+
+    // Attention first (progressive priority)
+    if (t.attn) {
+      h += '<div class="rounded-md border border-warning/30 bg-warning-subtle p-4 flex flex-col sm:flex-row sm:items-center gap-3">' +
+        '<div class="flex gap-3 items-start min-w-0 flex-1"><span class="shrink-0 text-warning mt-0.5"><i class="fa-solid fa-circle-exclamation text-base"></i></span>' +
+        '<div class="space-y-1 min-w-0"><p class="text-xs font-medium text-muted-foreground">يحتاج انتباه إداري</p><p class="text-sm font-semibold text-foreground leading-relaxed">' + esc(t.attn.text) + '</p><p dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground text-start">' + t.attn.claim + '</p></div></div>' +
+        '<button type="button" data-go="claims" class="shrink-0 inline-flex items-center justify-center font-sans font-medium bg-transparent text-foreground border border-border hover:bg-secondary h-8 px-3 text-xs gap-1.5 rounded-md">مراجعة في طلبات التركيب</button>' +
+      '</div>';
+    } else {
+      h += '<div class="rounded-md border border-border bg-surface-subtle p-3 flex items-center gap-2 text-xs text-muted-foreground"><i class="fa-solid fa-circle-check text-success"></i><span>لا توجد بنود تحتاج انتباهًا إداريًا الآن.</span></div>';
+    }
+
+    // 2. Loyalty & two balances
+    h += '<section aria-labelledby="sec-loy" class="space-y-3">' +
+      '<h3 id="sec-loy" class="text-sm font-semibold text-foreground">المستوى والنقاط</h3>' +
+      '<div class="flex flex-wrap items-center justify-between gap-3">' +
+        '<div class="flex items-center gap-3 flex-wrap">' + tierChip(tk, 'lg') + '<span class="text-xs text-muted-foreground">نسبة مكافأة المستوى: <span class="font-mono tabular-nums text-foreground">' + T.bonus + '%</span></span></div>' +
+        '<span class="text-[11px] text-muted-foreground">يُحدَّد المستوى من نقاط التأهيل التراكمية</span>' +
+      '</div>';
+
+    if (next) {
+      h += '<div class="space-y-2 rounded-md border border-border p-3">' +
+        '<div class="flex flex-wrap items-center justify-between gap-2 text-xs"><span class="text-muted-foreground">التقدم نحو مستوى ' + next.label + '</span><span class="text-foreground"><span class="font-mono tabular-nums font-medium">' + fmt(next.min - t.life) + '</span> نقطة تأهيل متبقية</span></div>' +
+        '<div role="progressbar" aria-label="التقدم نحو المستوى التالي" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + Math.round(pct) + '" class="h-2 w-full rounded-full bg-muted overflow-hidden"><div class="h-full rounded-full bg-primary" style="width:' + pct.toFixed(1) + '%"></div></div>' +
+        '<div class="flex justify-between text-[11px] text-muted-foreground"><span>' + T.label + ' <span dir="ltr" class="font-mono tabular-nums">' + fmt(T.min) + '</span></span><span>' + next.label + ' <span dir="ltr" class="font-mono tabular-nums">' + fmt(next.min) + '</span>' + (next.max === null ? ' فأكثر' : '') + '</span></div>' +
+      '</div>';
+    } else {
+      h += '<p class="text-xs text-muted-foreground rounded-md border border-border p-3">هذا أعلى مستوى مُعرَّف في الإعداد الحالي.</p>';
+    }
+
+    h += '<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">' +
+        '<div class="rounded-md border border-border p-4 space-y-2 bg-card">' +
+          '<p class="text-xs font-medium text-muted-foreground">نقاط التأهيل التراكمية</p>' +
+          '<p class="text-2xl font-semibold tabular-nums text-foreground">' + fmt(t.life) + '</p>' +
+          '<p class="text-xs text-muted-foreground leading-relaxed">تحدد مستوى العضوية فقط. استرداد المكافآت لا يخفضها.</p>' +
+        '</div>' +
+        '<div class="rounded-md border border-primary/30 bg-primary-subtle p-4 space-y-2">' +
+          '<p class="text-xs font-medium text-muted-foreground">رصيد نقاط المكافآت المتاح</p>' +
+          '<p class="text-2xl font-semibold tabular-nums text-foreground">' + fmt(t.spend) + '</p>' +
+          '<p class="text-xs text-muted-foreground leading-relaxed">المتاح للاستبدال وفق قواعد المكافآت، ويتأثر بعمليات الاسترداد المعتمدة فقط.</p>' +
+        '</div>' +
+      '</div>' +
+      '<p class="text-xs text-muted-foreground leading-relaxed rounded-md bg-muted p-3">رصيدان مستقلان: التأهيل يحدد المستوى، والرصيد يحدد ما يمكن استبداله. لا يُستخدم أحدهما بدل الآخر، ولا تُحتسب الطلبات قيد المراجعة أو المرفوضة كنقاط معتمدة.</p>' +
+    '</section>';
+
+    // 3. Workshop
+    h += '<section aria-labelledby="sec-ws" class="space-y-3">' +
+      '<h3 id="sec-ws" class="text-sm font-semibold text-foreground">الورشة المرتبطة</h3>' +
+      '<div class="rounded-md border border-border p-4 flex flex-wrap items-start justify-between gap-3">' +
+        '<div class="flex items-start gap-3 min-w-0"><span class="w-9 h-9 rounded-md bg-accent text-primary flex items-center justify-center shrink-0"><i class="fa-solid fa-store text-sm"></i></span>' +
+        '<div class="min-w-0 space-y-0.5"><p class="text-sm font-semibold text-foreground">' + t.ws + '</p><p class="text-xs text-muted-foreground">' + t.addr + '</p></div></div>' +
+        tag(loc[0], loc[1], loc[2]) +
+      '</div>' +
+      '<p class="text-xs text-muted-foreground leading-relaxed">موقع الورشة المسجّل مرجع للتحقق من الطلبات. ليس موقعًا حيًا للفني، ومواقع الإرسال في الطلبات سجلات تاريخية.</p>' +
+    '</section>';
+
+    // 4. Claims (progressive disclosure, open)
+    var pendingN = t.claims.filter(function (c) { return c.st === 'pending'; }).length;
+    var excN = t.claims.filter(function (c) { return !!c.exc; }).length;
+    h += '<details open class="rounded-md border border-border group">' +
+      '<summary class="cursor-pointer select-none p-3 flex items-center justify-between gap-2 text-sm font-medium text-foreground list-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-md"><span>طلبات التركيب الأخيرة</span><span class="flex items-center gap-2 text-xs text-muted-foreground"><span class="tabular-nums">' + t.total + ' طلبًا</span><i class="fa-solid fa-chevron-down text-xs transition-transform group-open:rotate-180"></i></span></summary>' +
+      '<div class="border-t border-border p-3 space-y-3">' +
+        '<div class="flex flex-wrap items-center gap-2">' + tag('info', 'fa-regular fa-hourglass-half', 'قيد المراجعة: ' + pendingN) + tag('neutral', 'fa-solid fa-triangle-exclamation', 'استثناءات: ' + excN) + '</div>' +
+        '<ul class="divide-y divide-border rounded-md border border-border">' + t.claims.map(claimRow).join('') + '</ul>' +
+        '<div class="flex flex-wrap items-center justify-between gap-2"><p class="text-xs text-muted-foreground">آخر ' + t.claims.length + ' من أصل ' + t.total + ' طلبًا. المراجعة الكاملة تتم في طلبات التركيب.</p><button type="button" data-go="claims" class="text-xs font-medium text-primary hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm">فتح في طلبات التركيب</button></div>' +
+      '</div></details>';
+
+    // 5. Reward activity (progressive disclosure, closed)
+    h += '<details class="rounded-md border border-border group">' +
+      '<summary class="cursor-pointer select-none p-3 flex items-center justify-between gap-2 text-sm font-medium text-foreground list-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-md"><span>سجل المكافآت والصرف</span><i class="fa-solid fa-chevron-down text-xs text-muted-foreground transition-transform group-open:rotate-180"></i></summary>' +
+      '<div class="border-t border-border p-3 space-y-3">' +
+        '<p class="text-xs text-muted-foreground leading-relaxed rounded-md bg-surface-subtle border border-border p-2.5">طلب المكافأة ليس صرفًا. لا يُعد المبلغ مصروفًا إلا بعد تأكيده في السجل المالي. الصرف اليدوي يُدار في وحدة الصرف اليدوي.</p>' +
+        (t.rewards.length
+          ? '<ul class="divide-y divide-border rounded-md border border-border">' + t.rewards.map(rewardRow).join('') + '</ul>'
+          : '<p class="text-xs text-muted-foreground p-3 rounded-md border border-dashed border-border text-center">لا توجد طلبات مكافأة لهذا الفني.</p>') +
+        '<p class="text-[11px] text-muted-foreground">النقاط المحجوزة لطلبات قيد المعالجة تُعرض عند دعم الخادم لها.</p>' +
+      '</div></details>';
+
+    h += '</div>';
+    return h;
+  }
+
+  function renderProfile(list) {
+    var t = find(selId);
+    var body = $('profile-body');
+    var disabled = !t;
+    ['btn-copy', 'btn-audit', 'btn-claims'].forEach(function (id) { $(id).disabled = disabled; });
+    if (!t) {
+      body.innerHTML = '<div class="p-10 text-center text-sm text-muted-foreground"><i class="fa-regular fa-id-badge text-3xl mb-3 block"></i>اختر فنيًا من القائمة لعرض ملفه الإداري.</div>';
+      return;
+    }
+    body.innerHTML = profileHTML(t);
+  }
+
+  function refresh() {
+    var list = renderList();
+    updateChips();
+    renderProfile(list);
+  }
+
+  // Workshop options (derived from the sample)
+  var wsSel = $('f-ws');
+  wsSel.innerHTML = '<option value="all">كل الورش</option>' + WS_LIST.map(function (w) { return '<option value="' + w + '">' + w + '</option>'; }).join('');
+
+  // Toast
+  var toast = $('toast'), toastTimer = null;
+  function hideToast() { toast.classList.add('hidden'); clearTimeout(toastTimer); }
+  function showToast(title, desc) {
+    setT('toast-title', title);
+    setT('toast-desc', desc);
+    toast.classList.remove('hidden');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(hideToast, 7000);
+  }
+  $('toast-close').addEventListener('click', hideToast);
+
+  // Selection from the directory
+  $('tech-list').addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-id]');
+    if (!b) return;
+    selId = b.getAttribute('data-id');
+    refresh();
+  });
+
+  // Tier filter chips
+  document.querySelectorAll('.tier-btn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      tierF = b.getAttribute('data-tier');
+      refresh();
+    });
+  });
+
+  $('tech-search').addEventListener('input', refresh);
+  $('f-ws').addEventListener('change', function (e) { wsF = e.target.value; refresh(); });
+  $('f-status').addEventListener('change', function (e) { stF = e.target.value; refresh(); });
+  $('f-sort').addEventListener('change', function (e) { sortF = e.target.value; refresh(); });
+  $('f-attn').addEventListener('click', function () { attnOnly = !attnOnly; refresh(); });
+
+  // Profile inline actions (simulated, navigation-only)
+  $('profile-body').addEventListener('click', function (e) {
+    if (e.target.closest('[data-reveal]')) {
+      showToast('محاكاة: إظهار البيانات الكاملة', 'في النظام الفعلي يُسجَّل الإظهار في سجل التدقيق مع المراجع والوقت، ولا يُنسخ خارج المراجعة.');
+      return;
+    }
+    if (e.target.closest('[data-go="claims"]')) {
+      showToast('محاكاة: الانتقال إلى طلبات التركيب', 'المراجعة الكاملة للطلبات تتم في وحدة طلبات التركيب، ولا تُكرَّر في هذه الشاشة.');
+    }
+  });
+
+  $('btn-claims').addEventListener('click', function () {
+    showToast('محاكاة: الانتقال إلى طلبات التركيب', 'المراجعة الكاملة للطلبات تتم في وحدة طلبات التركيب، ولا تُكرَّر في هذه الشاشة.');
+  });
+  $('btn-audit').addEventListener('click', function () {
+    showToast('محاكاة: سجل التدقيق', 'تُعرض هنا السجلات الإدارية المرتبطة بهذا الفني فقط، ولا تُعدَّل النقاط من هذه الشاشة.');
+  });
+  $('btn-tiers').addEventListener('click', function () {
+    showToast('مستويات الولاء للقراءة', 'حدود المستويات ونسب المكافأة تُدار في وحدة مستويات الولاء، وتُعرض هنا للقراءة فقط.');
+  });
+  $('btn-copy').addEventListener('click', function () {
+    var t = find(selId);
+    if (!t) return;
+    var done = function () { showToast('تم نسخ الرقم المرجعي', t.id); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(t.id).then(done, done);
+    } else { done(); }
+  });
+
+  // Init
+  var first = visible();
+  selId = first.length ? first[0].id : null;
+  refresh();
+})();
+</script>
+<script src="assets/demo.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loyalty Tiers Management</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- uxp-ds-theme:start -->
+<style>
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
+
+:root {
+  --background: 210 40% 98%;
+  --foreground: 222.2 47.4% 11.2%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 47.4% 11.2%;
+  --card-border: 214.3 31.8% 91.4%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 47.4% 11.2%;
+  --primary: 211 100% 30.8%;
+  --primary-hover: 211 100% 23.5%;
+  --primary-active: 211.3 100% 17.6%;
+  --primary-subtle: 215.3 100% 96.7%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 40% 96.1%;
+  --secondary-hover: 214.3 31.8% 91.4%;
+  --secondary-active: 212.7 26.8% 83.9%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --accent: 215.3 100% 96.7%;
+  --accent-hover: 214.3 100% 93.1%;
+  --accent-foreground: 211 100% 30.8%;
+  --destructive: 358.8 80.5% 51.8%;
+  --destructive-hover: 358.6 78.2% 43.1%;
+  --destructive-active: 358.3 82.7% 33.9%;
+  --destructive-subtle: 0 85.7% 97.3%;
+  --destructive-foreground: 0 0% 100%;
+  --success: 142.4 71.8% 29.2%;
+  --success-hover: 142.8 64.2% 24.1%;
+  --success-subtle: 138.5 76.5% 96.7%;
+  --success-foreground: 0 0% 100%;
+  --warning: 26 90.5% 37.1%;
+  --warning-hover: 22.7 82.5% 31.4%;
+  --warning-subtle: 48 100% 96.1%;
+  --warning-foreground: 0 0% 100%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.3 19.3% 34.5%;
+  --brand-blue: 211 100% 30.8%;
+  --brand-red: 358.8 80.5% 51.8%;
+  --brand-yellow: 52.2 100% 50%;
+  --surface: 0 0% 100%;
+  --surface-subtle: 210 40% 98%;
+  --surface-muted: 210 40% 96.1%;
+  --surface-border: 214.3 31.8% 91.4%;
+  --border: 214.3 31.8% 91.4%;
+  --border-hover: 212.7 26.8% 83.9%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 211 100% 30.8%;
+  --font-family-sans: 'IBM Plex Sans Arabic', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --spacing-0: 0px;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --radius-none: 0px;
+  --radius-sm: 0.25rem;
+  --radius: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+  --shadow-none: none;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --border-width-0: 0px;
+  --border-width-2: 2px;
+  --border-width: 1px;
+}
+</style>
+<script>
+  (function () {
+    var ds = {
+      colors: {
+        "background": "hsl(var(--background) / <alpha-value>)",
+        "foreground": "hsl(var(--foreground) / <alpha-value>)",
+        "card": "hsl(var(--card) / <alpha-value>)",
+        "card-foreground": "hsl(var(--card-foreground) / <alpha-value>)",
+        "card-border": "hsl(var(--card-border) / <alpha-value>)",
+        "popover": "hsl(var(--popover) / <alpha-value>)",
+        "popover-foreground": "hsl(var(--popover-foreground) / <alpha-value>)",
+        "primary": "hsl(var(--primary) / <alpha-value>)",
+        "primary-hover": "hsl(var(--primary-hover) / <alpha-value>)",
+        "primary-active": "hsl(var(--primary-active) / <alpha-value>)",
+        "primary-subtle": "hsl(var(--primary-subtle) / <alpha-value>)",
+        "primary-foreground": "hsl(var(--primary-foreground) / <alpha-value>)",
+        "secondary": "hsl(var(--secondary) / <alpha-value>)",
+        "secondary-hover": "hsl(var(--secondary-hover) / <alpha-value>)",
+        "secondary-active": "hsl(var(--secondary-active) / <alpha-value>)",
+        "secondary-foreground": "hsl(var(--secondary-foreground) / <alpha-value>)",
+        "accent": "hsl(var(--accent) / <alpha-value>)",
+        "accent-hover": "hsl(var(--accent-hover) / <alpha-value>)",
+        "accent-foreground": "hsl(var(--accent-foreground) / <alpha-value>)",
+        "destructive": "hsl(var(--destructive) / <alpha-value>)",
+        "destructive-hover": "hsl(var(--destructive-hover) / <alpha-value>)",
+        "destructive-active": "hsl(var(--destructive-active) / <alpha-value>)",
+        "destructive-subtle": "hsl(var(--destructive-subtle) / <alpha-value>)",
+        "destructive-foreground": "hsl(var(--destructive-foreground) / <alpha-value>)",
+        "success": "hsl(var(--success) / <alpha-value>)",
+        "success-hover": "hsl(var(--success-hover) / <alpha-value>)",
+        "success-subtle": "hsl(var(--success-subtle) / <alpha-value>)",
+        "success-foreground": "hsl(var(--success-foreground) / <alpha-value>)",
+        "warning": "hsl(var(--warning) / <alpha-value>)",
+        "warning-hover": "hsl(var(--warning-hover) / <alpha-value>)",
+        "warning-subtle": "hsl(var(--warning-subtle) / <alpha-value>)",
+        "warning-foreground": "hsl(var(--warning-foreground) / <alpha-value>)",
+        "muted": "hsl(var(--muted) / <alpha-value>)",
+        "muted-foreground": "hsl(var(--muted-foreground) / <alpha-value>)",
+        "brand-blue": "hsl(var(--brand-blue) / <alpha-value>)",
+        "brand-red": "hsl(var(--brand-red) / <alpha-value>)",
+        "brand-yellow": "hsl(var(--brand-yellow) / <alpha-value>)",
+        "surface": "hsl(var(--surface) / <alpha-value>)",
+        "surface-subtle": "hsl(var(--surface-subtle) / <alpha-value>)",
+        "surface-muted": "hsl(var(--surface-muted) / <alpha-value>)",
+        "surface-border": "hsl(var(--surface-border) / <alpha-value>)",
+        "border": "hsl(var(--border) / <alpha-value>)",
+        "border-hover": "hsl(var(--border-hover) / <alpha-value>)",
+        "input": "hsl(var(--input) / <alpha-value>)",
+        "ring": "hsl(var(--ring) / <alpha-value>)",
+        "fg": "hsl(var(--foreground) / <alpha-value>)",
+        "card-fg": "hsl(var(--card-foreground) / <alpha-value>)",
+        "popover-fg": "hsl(var(--popover-foreground) / <alpha-value>)",
+        "primary-fg": "hsl(var(--primary-foreground) / <alpha-value>)",
+        "secondary-fg": "hsl(var(--secondary-foreground) / <alpha-value>)",
+        "accent-fg": "hsl(var(--accent-foreground) / <alpha-value>)",
+        "destructive-fg": "hsl(var(--destructive-foreground) / <alpha-value>)",
+        "success-fg": "hsl(var(--success-foreground) / <alpha-value>)",
+        "warning-fg": "hsl(var(--warning-foreground) / <alpha-value>)",
+        "muted-fg": "hsl(var(--muted-foreground) / <alpha-value>)",
+      },
+      fontSize: {
+        "xs": "var(--font-size-xs)",
+        "sm": "var(--font-size-sm)",
+        "base": "var(--font-size-base)",
+        "lg": "var(--font-size-lg)",
+        "xl": "var(--font-size-xl)",
+        "2xl": "var(--font-size-2xl)",
+        "3xl": "var(--font-size-3xl)",
+        "4xl": "var(--font-size-4xl)",
+      },
+      spacing: {
+        "ds-0": "var(--spacing-0)",
+        "ds-1": "var(--spacing-1)",
+        "ds-2": "var(--spacing-2)",
+        "ds-3": "var(--spacing-3)",
+        "ds-4": "var(--spacing-4)",
+        "ds-5": "var(--spacing-5)",
+        "ds-6": "var(--spacing-6)",
+        "ds-8": "var(--spacing-8)",
+        "ds-10": "var(--spacing-10)",
+        "ds-12": "var(--spacing-12)",
+        "ds-16": "var(--spacing-16)",
+      },
+      borderRadius: {
+        "none": "var(--radius-none)",
+        "sm": "var(--radius-sm)",
+        "DEFAULT": "var(--radius)",
+        "md": "var(--radius-md)",
+        "lg": "var(--radius-lg)",
+        "xl": "var(--radius-xl)",
+        "full": "var(--radius-full)",
+      },
+      boxShadow: {
+        "none": "var(--shadow-none)",
+        "sm": "var(--shadow-sm)",
+        "DEFAULT": "var(--shadow)",
+        "md": "var(--shadow-md)",
+        "lg": "var(--shadow-lg)",
+      },
+      borderWidth: {
+        "0": "var(--border-width-0)",
+        "2": "var(--border-width-2)",
+        "DEFAULT": "var(--border-width)",
+      },
+      fontFamily: {
+        "sans": ["'IBM Plex Sans Arabic'","'IBM Plex Sans'","-apple-system","BlinkMacSystemFont","'Segoe UI'","Roboto","sans-serif"],
+        "mono": ["'IBM Plex Mono'","'SFMono-Regular'","Consolas","'Liberation Mono'","monospace"],
+      },
+    };
+    var prev = (typeof tailwind !== "undefined" && tailwind.config) || {};
+    var prevTheme = prev.theme || {};
+    var isPlain = function (v) {
+      return Boolean(v) && typeof v === "object" && !Array.isArray(v);
+    };
+    var prevExtend = isPlain(prevTheme.extend) ? prevTheme.extend : {};
+    var extend = {};
+    Object.keys(prevExtend).forEach(function (k) {
+      extend[k] = prevExtend[k];
+    });
+    Object.keys(ds).forEach(function (k) {
+      extend[k] =
+        isPlain(prevExtend[k]) && isPlain(ds[k])
+          ? Object.assign({}, prevExtend[k], ds[k])
+          : ds[k];
+    });
+    tailwind.config = Object.assign({}, prev, {
+      theme: Object.assign({}, prevTheme, { extend: extend }),
+    });
+  })();
+</script>
+<!-- uxp-ds-theme:end -->
+<link rel="stylesheet" href="assets/demo.css">
+</head>
+<body class="bg-background text-foreground font-sans antialiased">
+
+<div id="app-shell" dir="rtl" class="flex w-full bg-background">
+
+  <!-- ============ SIDEBAR (right) ============ -->
+  <div id="sidebar-container" class="hidden lg:block sticky top-0 h-[900px] shrink-0">
+    <aside id="sidebar" dir="rtl" data-ds-comp="Sidebar" class="flex flex-col bg-card border-l border-border h-full shrink-0 select-none w-64">
+      <div class="flex items-center justify-between h-16 px-4 border-b border-border shrink-0">
+        <div class="flex items-center gap-3 overflow-hidden">
+          <div class="flex items-center justify-center w-9 h-9 rounded-md bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] font-bold shrink-0">MK</div>
+          <div class="flex flex-col min-w-0">
+            <span class="font-sans font-bold text-sm tracking-wide text-foreground truncate">MK KASHIYAMA</span>
+            <span class="font-sans text-xs text-muted-foreground truncate">نظام إدارة الولاء للفنيين</span>
+          </div>
+        </div>
+        <button type="button" aria-label="طي القائمة الجانبية" class="p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+          <svg class="w-4 h-4 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+        </button>
+      </div>
+
+      <div class="flex-1 overflow-y-auto py-4 px-2 space-y-6">
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground tracking-wider mb-2">نظرة عامة</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-house text-base"></i></span>
+            <span class="flex-1 truncate">الرئيسية</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-bell text-base"></i></span>
+            <span class="flex-1 truncate">الإشعارات</span>
+            <span class="px-2 py-0.5 text-xs rounded-full font-sans font-semibold shrink-0 bg-accent text-primary">5</span>
+          </button>
+        </div>
+
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground tracking-wider mb-2">العمليات والتركيب</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-clipboard-check text-base"></i></span>
+            <span class="flex-1 truncate">طلبات التركيب</span>
+            <span class="px-2 py-0.5 text-xs rounded-full font-sans font-semibold shrink-0 bg-accent text-primary">31</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-barcode text-base"></i></span>
+            <span class="flex-1 truncate">دفعات الباركود</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-box-open text-base"></i></span>
+            <span class="flex-1 truncate">الأصناف والماركات</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-users text-base"></i></span>
+            <span class="flex-1 truncate">الفنيون</span>
+          </button>
+        </div>
+
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground tracking-wider mb-2">الولاء والمكافآت</div>
+          <button type="button" aria-current="page" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-semibold transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring bg-accent text-primary border-r-4 border-primary">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-primary"><i class="fa-solid fa-medal text-base"></i></span>
+            <span class="flex-1 truncate">مستويات الولاء</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-gift text-base"></i></span>
+            <span class="flex-1 truncate">طلبات الاسترداد</span>
+            <span class="px-2 py-0.5 text-xs rounded-full font-sans font-semibold shrink-0 bg-accent text-primary">14</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-hand-holding-dollar text-base"></i></span>
+            <span class="flex-1 truncate">الصرف اليدوي</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-building-columns text-base"></i></span>
+            <span class="flex-1 truncate">العهدة المالية</span>
+          </button>
+        </div>
+
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground tracking-wider mb-2">النظام والتقارير</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-sliders text-base"></i></span>
+            <span class="flex-1 truncate">ترميز النقاط</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-chart-column text-base"></i></span>
+            <span class="flex-1 truncate">التقارير والتحليلات</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-user-shield text-base"></i></span>
+            <span class="flex-1 truncate">الصلاحيات وسجل التدقيق</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ============ MAIN COLUMN ============ -->
+  <div id="main-column" class="flex-1 min-w-0 flex flex-col">
+
+    <!-- Topbar -->
+    <header id="topbar" dir="rtl" data-ds-comp="Topbar" class="h-16 px-6 bg-card border-b border-border flex items-center justify-between gap-4 shrink-0 font-sans select-none">
+      <div class="flex items-center gap-3 min-w-0 flex-1">
+        <div class="w-full max-w-md">
+          <div data-ds-comp="SearchField" class="w-full flex flex-col gap-1.5">
+            <div class="relative flex items-center w-full bg-surface rounded-md border transition-colors duration-150 ease-in-out border-input hover:border-border-hover focus-within:border-primary focus-within:ring-2 focus-within:ring-ring">
+              <span class="ps-3 text-muted-foreground flex items-center shrink-0 pointer-events-none">
+                <svg class="w-4 h-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+              </span>
+              <input type="search" aria-label="البحث في المنصة" placeholder="ابحث عن مستوى أو فني..." class="w-full bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none transition-colors select-text h-10 px-3 text-sm min-h-[40px] font-sans text-start" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="relative">
+          <button type="button" aria-label="الإشعارات (5 غير مقروء)" title="الإشعارات (5 غير مقروء)" class="inline-flex items-center justify-center shrink-0 transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-transparent text-foreground hover:bg-secondary active:bg-secondary-active border border-transparent h-10 w-10 min-w-[40px] min-h-[40px] text-sm rounded-md">
+            <svg class="w-5 h-5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
+          </button>
+          <span class="absolute top-1 start-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 text-[10px] font-bold text-white bg-destructive rounded-full border-2 border-card pointer-events-none">5</span>
+        </div>
+        <div class="h-6 w-px bg-border my-auto mx-1" aria-hidden="true"></div>
+        <button type="button" class="flex items-center gap-3 p-1 rounded-lg hover:bg-secondary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+          <div class="flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 text-primary font-bold text-sm shrink-0 border border-primary/20 overflow-hidden">
+            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" alt="أحمد الحربي" class="w-full h-full object-cover" />
+          </div>
+          <div class="hidden sm:flex flex-col text-right">
+            <span class="text-xs font-semibold text-foreground truncate max-w-[140px]">أحمد الحربي</span>
+            <span class="text-[11px] text-muted-foreground truncate max-w-[140px]">مدير العمليات</span>
+          </div>
+          <svg class="w-4 h-4 text-muted-foreground hidden sm:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="content" class="w-full max-w-[1440px] mx-auto p-6 lg:p-8 space-y-6">
+
+      <!-- Breadcrumbs -->
+      <nav id="breadcrumbs" dir="rtl" aria-label="مسار التنقل" data-ds-comp="Breadcrumbs" class="flex items-center text-xs font-sans text-muted-foreground select-none">
+        <ol class="flex items-center flex-wrap gap-1.5">
+          <li class="inline-flex items-center gap-1.5">
+            <button type="button" class="hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded px-1 py-0.5">الرئيسية</button>
+          </li>
+          <li class="inline-flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-muted-foreground/60 shrink-0 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+            <button type="button" class="hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded px-1 py-0.5 max-w-[180px] truncate">الولاء والمكافآت</button>
+          </li>
+          <li class="inline-flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-muted-foreground/60 shrink-0 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+            <span aria-current="page" class="font-medium text-foreground max-w-[240px] truncate">مستويات الولاء</span>
+          </li>
+        </ol>
+      </nav>
+
+      <!-- Page Header -->
+      <div id="page-header" dir="rtl" data-ds-comp="PageHeader" class="flex flex-col gap-3 pb-6 border-b border-border select-none font-sans">
+        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+          <div class="space-y-2 min-w-0">
+            <div class="flex items-center gap-3 flex-wrap">
+              <h1 class="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">مستويات الولاء</h1>
+              <span data-ds-comp="Badge" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-amber-50 text-amber-800 border-amber-200/50"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-amber-600" aria-hidden="true"></span><span>بيانات عينة — عرض تجريبي</span></span>
+            </div>
+            <p class="text-sm text-muted-foreground leading-relaxed max-w-3xl">إدارة حدود نقاط التأهيل ونسب المكافأة لمستويات العضوية الأربعة. نقاط التأهيل التراكمية وحدها تحدد المستوى، ورصيد نقاط المكافآت منفصل عنها. كل تعديل يبقى مسودة حتى يؤكده الخادم. <span dir="ltr" class="font-mono text-xs tracking-wider whitespace-nowrap">Loyalty Tiers Management</span></p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0 flex-wrap">
+            <span data-ds-comp="Badge" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-emerald-50 text-emerald-800 border-emerald-200/50"><i class="fa-solid fa-user-shield text-[11px]"></i><span>صلاحية تعديل مُعتمدة</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- WORKSPACE -->
+      <section id="tiers-workspace" aria-label="مساحة إعداد مستويات الولاء" class="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_400px] gap-6 items-start">
+
+        <!-- CONFIGURATION COLUMN -->
+        <div id="tiers-config" class="space-y-6 min-w-0">
+
+          <!-- Qualification ranges -->
+          <section id="ladder-card" aria-labelledby="ladder-title" class="bg-card border border-border rounded-lg p-5 space-y-4">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div class="space-y-1 min-w-0">
+                <h2 id="ladder-title" class="text-lg font-medium leading-snug text-foreground">نطاقات نقاط التأهيل</h2>
+                <p class="text-sm text-muted-foreground leading-relaxed max-w-2xl">الحد الأدنى لكل مستوى هو بدايته، والحد الأعلى يبدأ من المستوى التالي. بهذا الشكل لا تتداخل النطاقات ولا تكون بينها فجوات.</p>
+              </div>
+              <div id="ladder-status"></div>
+            </div>
+            <div class="space-y-3">
+              <div class="space-y-1.5">
+                <p class="text-xs font-medium text-muted-foreground">الإعداد النشط حاليًا</p>
+                <div id="ladder-active" class="grid grid-cols-2 md:grid-cols-4 gap-2"></div>
+              </div>
+              <div id="ladder-draft-wrap" class="hidden space-y-1.5">
+                <p class="text-xs font-medium text-warning">المسودة · غير محفوظة وغير سارية</p>
+                <div id="ladder-draft" class="grid grid-cols-2 md:grid-cols-4 gap-2"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Tier rows -->
+          <section id="tier-list-card" aria-labelledby="tiers-title" class="bg-card border border-border rounded-lg overflow-hidden">
+            <div class="p-5 border-b border-border flex flex-wrap items-center justify-between gap-3">
+              <div class="space-y-1 min-w-0">
+                <h2 id="tiers-title" class="text-lg font-medium leading-snug text-foreground">المستويات الأربعة</h2>
+                <p class="text-xs text-muted-foreground leading-relaxed">حدّد مستوى لتعديل حده الأدنى أو نسبة مكافأته. كل تعديل يبقى مسودة حتى يؤكده الخادم.</p>
+              </div>
+              <span class="text-xs text-muted-foreground">مرتبة من الأدنى إلى الأعلى</span>
+            </div>
+            <ul id="tier-rows" aria-label="قائمة المستويات" class="divide-y divide-border"></ul>
+          </section>
+
+          <!-- Explainers -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <section id="model-card" aria-labelledby="model-title" class="bg-card border border-border rounded-lg p-5 space-y-4">
+              <h2 id="model-title" class="text-lg font-medium leading-snug text-foreground">كيف يُحدَّد المستوى</h2>
+              <div class="space-y-3">
+                <div class="rounded-md border border-primary/30 bg-primary-subtle p-4 space-y-1.5">
+                  <p class="text-sm font-semibold text-foreground">نقاط التأهيل التراكمية</p>
+                  <p class="text-xs text-muted-foreground leading-relaxed">هي وحدها التي تحدد مستوى العضوية ونسبة المكافأة. تُمنح عند اعتماد طلب التركيب، ولا يخفضها استرداد المكافآت.</p>
+                </div>
+                <div class="rounded-md border border-border bg-surface-subtle p-4 space-y-1.5">
+                  <p class="text-sm font-semibold text-foreground">رصيد نقاط المكافآت</p>
+                  <p class="text-xs text-muted-foreground leading-relaxed">المتاح للاستبدال وفق قواعد المكافآت. لا يحدد المستوى، ولا يُدمج مع نقاط التأهيل.</p>
+                </div>
+              </div>
+            </section>
+
+            <section id="calc-card" aria-labelledby="calc-title" class="bg-card border border-border rounded-lg p-5 space-y-4">
+              <div class="space-y-1">
+                <h2 id="calc-title" class="text-lg font-medium leading-snug text-foreground">مثال حساب توضيحي</h2>
+                <p id="calc-note" class="text-xs text-muted-foreground leading-relaxed">أعداد صحيحة فقط. يستخدم نسبة مستوى فضي المعروضة.</p>
+              </div>
+              <dl class="divide-y divide-border rounded-md border border-border text-sm">
+                <div class="flex items-center justify-between gap-3 px-3 py-2.5"><dt class="text-muted-foreground">نقاط الأساس للمنتج</dt><dd dir="ltr" class="font-mono tabular-nums text-foreground">10</dd></div>
+                <div class="flex items-center justify-between gap-3 px-3 py-2.5"><dt class="text-muted-foreground">المستوى المطبق</dt><dd class="text-foreground">فضي</dd></div>
+                <div class="flex items-center justify-between gap-3 px-3 py-2.5"><dt class="text-muted-foreground">نسبة مكافأة المستوى</dt><dd dir="ltr" id="calc-pct" class="font-mono tabular-nums text-foreground">20%</dd></div>
+                <div class="flex items-center justify-between gap-3 px-3 py-2.5"><dt class="text-muted-foreground">نقاط المكافأة الإضافية</dt><dd dir="ltr" id="calc-bonus" class="font-mono tabular-nums text-foreground">2</dd></div>
+                <div class="flex items-center justify-between gap-3 px-3 py-2.5 bg-surface-subtle"><dt class="font-medium text-foreground">إجمالي نقاط المكافأة (رصيد قابل للاستبدال)</dt><dd dir="ltr" id="calc-total" class="font-mono tabular-nums font-semibold text-foreground">12</dd></div>
+                <div class="flex items-center justify-between gap-3 px-3 py-2.5"><dt class="text-muted-foreground">نقاط التأهيل من الطلب نفسه (لا تُجمع مع الرصيد)</dt><dd dir="ltr" class="font-mono tabular-nums text-foreground">10</dd></div>
+              </dl>
+            </section>
+          </div>
+
+          <!-- Audit metadata -->
+          <section id="audit-card" aria-labelledby="audit-title" class="bg-card border border-border rounded-lg p-5 flex flex-wrap items-center justify-between gap-4">
+            <div class="space-y-1.5 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <h2 id="audit-title" class="text-sm font-semibold text-foreground">آخر تعديل معتمد</h2>
+                <span class="inline-flex items-center justify-center border whitespace-nowrap dir-rtl text-xs px-2 py-0.5 gap-1.5 font-medium rounded-md bg-muted text-muted-foreground border-transparent">بيانات عينة</span>
+              </div>
+              <p class="text-xs text-muted-foreground leading-relaxed"><span id="last-saved">12 مارس 2026 · 10:42 ص</span> · المعتمِد: نورة السالم · مسؤول الولاء</p>
+              <p class="text-xs text-muted-foreground leading-relaxed">التعديل مقصور على مسؤولي الولاء المعتمدين، ويتحقق الخادم من الصلاحية عند الحفظ.</p>
+            </div>
+            <button id="btn-audit" type="button" class="inline-flex items-center justify-center font-sans font-medium bg-transparent text-foreground border border-border hover:bg-secondary active:bg-secondary-active focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-all duration-150 ease-in-out select-none h-10 px-4 text-sm gap-2 rounded-md min-h-[40px]"><i class="fa-solid fa-clock-rotate-left text-xs text-muted-foreground"></i><span>فتح سجل التدقيق</span></button>
+          </section>
+
+          <!-- Pending business decisions -->
+          <div role="status" aria-live="polite" class="relative w-full rounded-lg border p-4 transition-all dir-rtl flex gap-3 items-start bg-accent/60 border-primary/30 text-foreground">
+            <div class="shrink-0 mt-0.5 text-primary"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+            <div class="flex-1 space-y-1 text-sm leading-relaxed">
+              <h5 class="text-sm font-semibold leading-tight text-primary-active font-semibold">قرارات الأعمال المعلّقة قبل التفعيل النهائي</h5>
+              <div class="text-sm opacity-90">لم تُعتمد بعد: تطبيق تغيير الحدود على الحالات القائمة، وتاريخ سريان نسب المكافأة، ومعالجة الكسور في حساب المكافأة. لذلك يُعرض الأثر في هذه الشاشة كتقدير فقط.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- EDITOR PANEL -->
+        <aside id="tier-editor" aria-labelledby="editor-title" class="bg-card border border-border rounded-lg overflow-hidden min-w-0 flex flex-col xl:sticky xl:top-6 xl:max-h-[calc(100vh-3rem)]">
+          <header class="p-5 border-b border-border space-y-3 shrink-0">
+            <div class="flex items-start justify-between gap-3">
+              <div class="space-y-1 min-w-0">
+                <h2 id="editor-title" class="text-lg font-medium leading-snug text-foreground">محرر المستويات</h2>
+                <p class="text-xs text-muted-foreground leading-relaxed">كل تعديل ينشئ مسودة. لا يُطبَّق أي رقم على النظام قبل حفظه وتأكيد الخادم.</p>
+              </div>
+              <div id="draft-badge" class="shrink-0"></div>
+            </div>
+            <div id="editor-tabs" role="group" aria-label="اختيار المستوى للتعديل" class="flex flex-wrap gap-1.5"></div>
+            <p class="text-[11px] text-muted-foreground flex items-center gap-1.5"><i class="fa-solid fa-user-shield"></i><span>الصلاحية: مسؤول الولاء المعتمد · يتحقق الخادم منها عند الحفظ</span></p>
+          </header>
+
+          <div class="flex-1 min-h-0 overflow-y-auto">
+            <div id="editor-body" class="p-5 space-y-5">
+              <div class="flex items-center justify-between gap-3">
+                <span id="ed-chip" class="inline-flex items-center gap-2 border whitespace-nowrap rounded-md text-sm font-semibold px-3 py-1.5 bg-orange-50 text-orange-800 border-orange-200/60"><i class="fa-solid fa-medal text-xs"></i><span id="ed-name">برونزي</span></span>
+                <span class="text-xs text-muted-foreground">المستوى <span id="ed-pos" dir="ltr" class="font-mono tabular-nums text-foreground">2</span> من 4</span>
+              </div>
+
+              <!-- Minimum threshold -->
+              <div class="space-y-1.5">
+                <div class="flex items-center justify-between gap-2">
+                  <label for="ed-min" class="text-sm font-medium font-sans text-foreground select-none"><span id="ed-min-label">الحد الأدنى لنقاط التأهيل</span><span id="ed-min-req" class="ms-1 text-destructive font-bold" aria-hidden="true">*</span></label>
+                  <span class="text-xs text-muted-foreground font-sans select-none">عدد صحيح</span>
+                </div>
+                <div id="ed-min-wrap" data-ds-comp="NumberInput" data-ds-variant="mode=integer,size=default" class="relative flex items-center w-full bg-surface rounded-md border transition-colors duration-150 ease-in-out select-none border-input hover:border-border-hover focus-within:border-primary focus-within:ring-2 focus-within:ring-ring">
+                  <input id="ed-min" data-field="min" type="text" inputmode="numeric" dir="ltr" autocomplete="off" aria-describedby="ed-min-msg" class="w-full bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none font-mono tracking-wider text-start px-3 h-10 text-sm min-h-[40px]" />
+                  <span class="px-3 text-xs font-medium text-muted-foreground bg-muted/50 h-full flex items-center border-s border-input shrink-0 select-none">نقطة</span>
+                  <div id="ed-min-ctrl" class="flex items-center border-s border-input shrink-0">
+                    <button type="button" data-step="-1" data-field="min" tabindex="-1" aria-label="إنقاص القيمة" class="w-9 h-10 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted/50 active:bg-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" /></svg></button>
+                    <div class="w-px h-5 bg-border"></div>
+                    <button type="button" data-step="1" data-field="min" tabindex="-1" aria-label="زيادة القيمة" class="w-9 h-10 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted/50 active:bg-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed rounded-e-md"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg></button>
+                  </div>
+                </div>
+                <p id="ed-min-msg" class="flex items-start gap-1.5 text-xs font-sans text-muted-foreground mt-0.5"><span id="ed-min-icon" class="hidden shrink-0 mt-0.5"><i class="fa-solid fa-circle-exclamation"></i></span><span id="ed-min-text"></span></p>
+              </div>
+
+              <!-- Derived maximum -->
+              <div class="rounded-md border border-border bg-surface-subtle p-3 flex items-center justify-between gap-3">
+                <div class="space-y-0.5 min-w-0">
+                  <p class="text-xs font-medium text-foreground">الحد الأعلى · يُحسب تلقائيًا</p>
+                  <p class="text-[11px] text-muted-foreground">الحد الأدنى للمستوى التالي ناقص 1</p>
+                </div>
+                <span id="ed-max" dir="ltr" class="font-mono tabular-nums text-base font-semibold text-foreground shrink-0">1,999</span>
+              </div>
+              <p id="ed-cont" class="text-xs text-muted-foreground leading-relaxed rounded-md bg-muted p-3"></p>
+
+              <!-- Bonus percentage -->
+              <div class="space-y-1.5">
+                <div class="flex items-center justify-between gap-2">
+                  <label for="ed-bonus" class="text-sm font-medium font-sans text-foreground select-none">نسبة مكافأة المستوى<span class="ms-1 text-destructive font-bold" aria-hidden="true">*</span></label>
+                  <span class="text-xs text-muted-foreground font-sans select-none">عدد صحيح</span>
+                </div>
+                <div id="ed-bonus-wrap" data-ds-comp="NumberInput" data-ds-variant="mode=integer,size=default" class="relative flex items-center w-full bg-surface rounded-md border transition-colors duration-150 ease-in-out select-none border-input hover:border-border-hover focus-within:border-primary focus-within:ring-2 focus-within:ring-ring">
+                  <input id="ed-bonus" data-field="bonus" type="text" inputmode="numeric" dir="ltr" autocomplete="off" aria-describedby="ed-bonus-msg" class="w-full bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none font-mono tracking-wider text-start px-3 h-10 text-sm min-h-[40px]" />
+                  <span class="px-3 text-xs font-medium text-muted-foreground bg-muted/50 h-full flex items-center border-s border-input shrink-0 select-none">%</span>
+                  <div id="ed-bonus-ctrl" class="flex items-center border-s border-input shrink-0">
+                    <button type="button" data-step="-1" data-field="bonus" tabindex="-1" aria-label="إنقاص القيمة" class="w-9 h-10 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted/50 active:bg-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" /></svg></button>
+                    <div class="w-px h-5 bg-border"></div>
+                    <button type="button" data-step="1" data-field="bonus" tabindex="-1" aria-label="زيادة القيمة" class="w-9 h-10 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted/50 active:bg-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed rounded-e-md"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg></button>
+                  </div>
+                </div>
+                <p id="ed-bonus-msg" class="flex items-start gap-1.5 text-xs font-sans text-muted-foreground mt-0.5"><span id="ed-bonus-icon" class="hidden shrink-0 mt-0.5"><i class="fa-solid fa-circle-exclamation"></i></span><span id="ed-bonus-text">أعداد صحيحة من 0 إلى 100. هذا قيد إدخال فني قابل للضبط، وليس سياسة نسب معتمدة.</span></p>
+                <p class="text-[11px] text-muted-foreground leading-relaxed">تُلتقط النسبة في لقطة طلب التركيب عند تقديمه. الطلبات المقدَّمة سابقًا لا تُعاد حسابها.</p>
+              </div>
+            </div>
+
+            <!-- Validation checklist -->
+            <div class="p-5 border-t border-border space-y-3">
+              <h3 class="text-sm font-semibold text-foreground">التحقق من الإعداد المقترح</h3>
+              <ul id="checks" class="space-y-2"></ul>
+            </div>
+
+            <!-- Impact preview -->
+            <div class="p-5 border-t border-border space-y-3">
+              <h3 class="text-sm font-semibold text-foreground">أثر التعديل قبل الحفظ</h3>
+              <div id="impact" class="space-y-4"></div>
+            </div>
+          </div>
+
+          <footer class="p-5 border-t border-border bg-surface-subtle space-y-3 shrink-0">
+            <p id="footer-hint" class="text-xs text-muted-foreground leading-relaxed"></p>
+            <div class="flex items-center gap-2">
+              <button id="btn-discard" type="button" class="inline-flex items-center justify-center font-sans font-medium bg-transparent text-foreground border border-border hover:bg-secondary active:bg-secondary-active focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed transition-all duration-150 ease-in-out select-none h-10 px-4 text-sm gap-2 rounded-md min-h-[40px] flex-1">تجاهل المسودة</button>
+              <button id="btn-review" type="button" class="inline-flex items-center justify-center font-sans font-medium bg-primary text-primary-foreground hover:bg-primary-hover active:bg-primary-active border border-transparent shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed transition-all duration-150 ease-in-out select-none active:scale-[0.98] h-10 px-4 text-sm gap-2 rounded-md min-h-[40px] flex-1">مراجعة التغييرات</button>
+            </div>
+          </footer>
+        </aside>
+
+      </section>
+
+      <p id="footer" class="text-xs text-muted-foreground leading-relaxed border-t border-border pt-4">هذه الشاشة نموذج تصميمي تعرض بيانات عينة لأغراض العرض فقط. الحدود والنسب والفنيون وسجل التدقيق توضيحية، ولا تتصل الشاشة بخادم حقيقي. لا تُعاد حسابات تاريخية، ولا تُدمج هذه الإعدادات مع ترميز النقاط أو قيمة الريال.</p>
+
+    </main>
+  </div>
+</div>
+
+<!-- CONFIRMATION DIALOG (ConfirmationDialog + Dialog) -->
+<div id="confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="cd-title" data-ds-comp="ConfirmationDialog" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 dir-rtl">
+  <div id="cd-backdrop" class="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity" aria-hidden="true"></div>
+  <div class="relative w-full max-w-md bg-card text-card-foreground rounded-lg border border-border shadow-md flex flex-col max-h-[calc(100vh-4rem)] z-10 transition-transform duration-200 focus:outline-none" tabindex="-1">
+    <div class="p-6 overflow-y-auto flex-1 text-start space-y-4">
+      <div class="flex flex-col items-center text-center p-2 space-y-4">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center shrink-0 bg-accent text-primary">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        </div>
+        <div class="space-y-2">
+          <h4 id="cd-title" class="text-lg font-semibold text-foreground leading-snug">تأكيد حفظ إعدادات المستويات</h4>
+          <p class="text-sm text-muted-foreground leading-relaxed max-w-sm">ستُرسل التغييرات التالية إلى الخادم للحفظ. لا تُعد سارية قبل تأكيد الخادم، ولا تُعاد حسابات الحالات القائمة تلقائيًا.</p>
+        </div>
+      </div>
+
+      <div class="space-y-2">
+        <p class="text-xs font-medium text-muted-foreground">ملخص التغييرات (بيانات عينة)</p>
+        <ul id="cd-list" class="divide-y divide-border rounded-md border border-border"></ul>
+      </div>
+
+      <div class="w-full text-xs text-muted-foreground bg-surface-muted p-2.5 rounded-md border border-border flex gap-2 items-start">
+        <span class="shrink-0 mt-0.5"><i class="fa-solid fa-circle-info"></i></span>
+        <span>إرسال الحفظ يبدأ معالجته على الخادم، ولا يُعد الإعداد ساريًا إلا بعد تأكيد الخادم النهائي.</span>
+      </div>
+
+      <div id="cd-error" class="hidden p-3 rounded-md bg-red-50 border border-red-200 text-red-900 text-sm flex items-start gap-2">
+        <svg class="w-5 h-5 text-destructive shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+        <span id="cd-error-text" class="flex-1 text-start"></span>
+      </div>
+
+      <div class="flex items-center justify-center gap-3 w-full pt-2">
+        <button id="cd-cancel" type="button" class="inline-flex items-center justify-center font-sans font-medium bg-secondary text-secondary-foreground hover:bg-secondary-hover active:bg-secondary-active border border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed transition-all duration-150 ease-in-out select-none active:scale-[0.98] h-10 px-4 text-sm gap-2 rounded-md min-h-[40px] flex-1">إلغاء</button>
+        <button id="cd-confirm" type="button" class="inline-flex items-center justify-center font-sans font-medium bg-primary text-primary-foreground hover:bg-primary-hover active:bg-primary-active border border-transparent shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed transition-all duration-150 ease-in-out select-none active:scale-[0.98] h-10 px-4 text-sm gap-2 rounded-md min-h-[40px] flex-1"><span>حفظ إعدادات المستويات</span></button>
+      </div>
+      <div class="text-center">
+        <button id="cd-simfail" type="button" class="text-xs font-medium text-muted-foreground hover:text-foreground underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm disabled:opacity-50">محاكاة: فشل استجابة الخادم (عرض تجريبي)</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST (bottom-start) -->
+<div id="toast" role="status" aria-live="polite" class="hidden fixed bottom-5 start-5 z-50 min-w-[320px] max-w-md p-4 rounded-xl shadow-lg border backdrop-blur-sm transition-all duration-200 dir-rtl flex gap-3 items-start bg-surface text-foreground border-primary/40">
+  <div id="toast-icon" class="shrink-0 mt-0.5 text-primary">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path id="toast-icon-path" stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+  </div>
+  <div class="flex-1 space-y-1 text-sm">
+    <h5 id="toast-title" class="font-semibold text-foreground leading-tight"></h5>
+    <div id="toast-desc" class="text-muted-foreground text-xs leading-relaxed"></div>
+  </div>
+  <button type="button" id="toast-close" aria-label="إغلاق التنبيه" class="shrink-0 p-1 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors focus:outline-none focus:ring-2 focus:ring-ring">
+    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+  </button>
+</div>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var fmt = function (n) { return (typeof n === 'number' && !isNaN(n)) ? Number(n).toLocaleString('en-US') : '—'; };
+  var toNum = function (s) { var t = String(s).trim(); return /^-?\d+$/.test(t) ? parseInt(t, 10) : NaN; };
+
+  var ORDER = ['basic', 'bronze', 'silver', 'gold'];
+  var META = {
+    basic:  { ar: 'أساسي',  bg: 'bg-muted text-foreground',         bd: 'border-border' },
+    bronze: { ar: 'برونزي', bg: 'bg-orange-50 text-orange-800',     bd: 'border-orange-200/60' },
+    silver: { ar: 'فضي',    bg: 'bg-slate-100 text-slate-700',      bd: 'border-slate-300/70' },
+    gold:   { ar: 'ذهبي',   bg: 'bg-yellow-50 text-yellow-800',     bd: 'border-yellow-300/70' }
+  };
+  // Saved (active) configuration. Only changed through confirmed save.
+  var saved = { basic: { min: 0, bonus: 0 }, bronze: { min: 1000, bonus: 10 }, silver: { min: 2000, bonus: 20 }, gold: { min: 4000, bonus: 30 } };
+  // Illustrative sample technicians (from the sample dataset of the Technicians screen)
+  var SAMPLE = [
+    { name: 'خالد العتيبي', life: 2450 },
+    { name: 'ماجد الشهري', life: 1480 },
+    { name: 'سلطان القحطاني', life: 4620 },
+    { name: 'عبدالله الحربي', life: 640 },
+    { name: 'فهد الدوسري', life: 1260 },
+    { name: 'يوسف الزهراني', life: 2080 },
+    { name: 'ناصر البقمي', life: 310 },
+    { name: 'محمد السبيعي', life: 720 }
+  ];
+  var BADGE = {
+    neutral: ['bg-muted text-muted-foreground border-transparent', 'bg-muted-foreground'],
+    info: ['bg-accent text-primary border-transparent', 'bg-primary'],
+    success: ['bg-emerald-50 text-emerald-800 border-emerald-200/50', 'bg-emerald-600'],
+    warning: ['bg-amber-50 text-amber-800 border-amber-200/50', 'bg-amber-600'],
+    error: ['bg-red-50 text-red-700 border-red-200/50', 'bg-destructive']
+  };
+  var draft = {}, selected = 'bronze', saving = false;
+
+  function badge(v, text, dot) {
+    var b = BADGE[v];
+    return '<span class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md ' + b[0] + '">' +
+      (dot ? '<span class="w-1.5 h-1.5 rounded-full shrink-0 ' + b[1] + '" aria-hidden="true"></span>' : '') + '<span>' + text + '</span></span>';
+  }
+  function resetDraft() { ORDER.forEach(function (k) { draft[k] = { min: String(saved[k].min), bonus: String(saved[k].bonus) }; }); }
+  function parsed() { var p = {}; ORDER.forEach(function (k) { p[k] = { min: toNum(draft[k].min), bonus: toNum(draft[k].bonus) }; }); return p; }
+  function idx(k) { return ORDER.indexOf(k); }
+  function isChanged(p, k) { return isNaN(p[k].min) || p[k].min !== saved[k].min || isNaN(p[k].bonus) || p[k].bonus !== saved[k].bonus; }
+  function rangeText(mins, i) {
+    var s = mins[i];
+    if (i === 3) return isNaN(s) ? '—' : fmt(s) + '+';
+    var n = mins[i + 1];
+    if (isNaN(s) || isNaN(n)) return '—';
+    return fmt(s) + ' – ' + fmt(n - 1);
+  }
+  var savedMins = function () { return ORDER.map(function (k) { return saved[k].min; }); };
+  var savedBonuses = function () { return ORDER.map(function (k) { return saved[k].bonus; }); };
+
+  function validate() {
+    var p = parsed(), errs = {}, ok = { ints: true, order: true, bonus: true };
+    ORDER.forEach(function (k, i) {
+      errs[k] = { min: '', bonus: '' };
+      if (i > 0) {
+        var m = p[k].min, prevM = p[ORDER[i - 1]].min, nextM = i < 3 ? p[ORDER[i + 1]].min : NaN;
+        if (isNaN(m)) { errs[k].min = 'أدخل حدًا أدنى كعدد صحيح غير سالب.'; ok.ints = false; }
+        else if (m < 0) { errs[k].min = 'لا يمكن أن يكون الحد الأدنى سالبًا.'; ok.ints = false; }
+        else if (!isNaN(prevM) && m <= prevM) { errs[k].min = 'يتداخل مع مستوى ' + META[ORDER[i - 1]].ar + ': يجب أن يكون أكبر من ' + fmt(prevM) + '.'; ok.order = false; }
+        else if (!isNaN(nextM) && m >= nextM) { errs[k].min = 'يتداخل مع مستوى ' + META[ORDER[i + 1]].ar + ': يجب أن يكون أقل من ' + fmt(nextM) + '.'; ok.order = false; }
+      }
+      var b = p[k].bonus;
+      if (isNaN(b)) { errs[k].bonus = 'أدخل نسبة كعدد صحيح بين 0 و100.'; ok.bonus = false; }
+      else if (b < 0 || b > 100) { errs[k].bonus = 'القيمة خارج القيد الفني للإدخال (0–100%).'; ok.bonus = false; }
+    });
+    var checks = [
+      { ok: ok.ints, good: 'الحدود أعداد صحيحة غير سالبة', bad: 'توجد حدود فارغة أو غير صحيحة' },
+      { ok: ok.order, good: 'لا يوجد تداخل: كل حد أعلى من حد المستوى السابق', bad: 'يوجد تداخل بين مستويين متجاورين' },
+      { ok: ok.order && ok.ints, good: 'لا توجد فجوات: كل مستوى يبدأ مباشرة بعد نهاية السابق', bad: 'تعذّر تحديد نطاقات متصلة قبل تصحيح الحدود' },
+      { ok: ok.bonus, good: 'نسب المكافأة ضمن القيد الفني 0–100%', bad: 'توجد نسبة فارغة أو خارج القيد الفني' },
+      { ok: true, good: 'الأساسي يبدأ من صفر، والذهبي بلا حد أعلى', bad: '' }
+    ];
+    var lines = [];
+    ORDER.forEach(function (k, i) {
+      var m = p[k].min;
+      if (i > 0 && !isNaN(m) && m >= 1 && m !== saved[k].min) {
+        lines.push({ kind: 'min', text: META[k].ar + ' · الحد الأدنى', from: fmt(saved[k].min), to: fmt(m) });
+        lines.push({ kind: 'bound', text: META[ORDER[i - 1]].ar + ' · الحد الأعلى (محسوب)', from: fmt(saved[k].min - 1), to: fmt(m - 1) });
+      }
+      var b = p[k].bonus;
+      if (!isNaN(b) && b !== saved[k].bonus) lines.push({ kind: 'bonus', text: META[k].ar + ' · نسبة المكافأة', from: saved[k].bonus + '%', to: b + '%' });
+    });
+    var changedN = ORDER.filter(function (k) { return isChanged(p, k); }).length;
+    return {
+      p: p, errs: errs, checks: checks, ok: ok, lines: lines, changedN: changedN,
+      valid: ok.ints && ok.order && ok.bonus,
+      dirty: changedN > 0,
+      mins: ORDER.map(function (k) { return p[k].min; }),
+      bonuses: ORDER.map(function (k) { return p[k].bonus; })
+    };
+  }
+
+  function ladderHTML(mins, bonuses, dashed) {
+    return ORDER.map(function (k, i) {
+      return '<div class="min-w-0 rounded-md border p-3 space-y-1 ' + META[k].bg + ' ' + (dashed ? 'border-dashed border-amber-500/70' : META[k].bd) + '">' +
+        '<p class="text-xs font-semibold text-foreground truncate">' + META[k].ar + '</p>' +
+        '<p dir="ltr" class="font-mono text-xs tabular-nums text-foreground truncate">' + rangeText(mins, i) + '</p>' +
+        '<p class="text-[11px] text-muted-foreground">مكافأة ' + (isNaN(bonuses[i]) ? '—' : bonuses[i] + '%') + '</p></div>';
+    }).join('');
+  }
+
+  function renderLadders(v) {
+    $('ladder-status').innerHTML = (v.ok.ints && v.ok.order)
+      ? badge('success', 'متصل · بلا فجوات أو تداخل', true)
+      : badge('error', 'يوجد تعارض في المسودة', true);
+    $('ladder-active').innerHTML = ladderHTML(savedMins(), savedBonuses(), false);
+    $('ladder-draft-wrap').classList.toggle('hidden', !v.dirty);
+    if (v.dirty) $('ladder-draft').innerHTML = ladderHTML(v.mins, v.bonuses, true);
+  }
+
+  function renderRows(v) {
+    var sm = savedMins(), sb = savedBonuses();
+    $('tier-rows').innerHTML = ORDER.map(function (k, i) {
+      var sel = k === selected, ch = isChanged(v.p, k);
+      var dBonus = isNaN(v.p[k].bonus) ? '—' : v.p[k].bonus + '%';
+      return '<li><button type="button" data-select="' + k + '" aria-pressed="' + sel + '" class="w-full grid grid-cols-1 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1.4fr)_96px_auto] items-center gap-3 md:gap-4 px-5 py-4 text-start transition-colors hover:bg-surface-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring border-s-4 ' + (sel ? 'bg-primary-subtle border-primary' : 'border-transparent') + '">' +
+        '<span class="min-w-0 space-y-1.5"><span class="inline-flex items-center gap-2 border whitespace-nowrap rounded-md text-sm font-semibold px-3 py-1.5 ' + META[k].bg + ' ' + META[k].bd + '"><i class="fa-solid fa-medal text-xs"></i><span>' + META[k].ar + '</span></span><span class="block text-xs text-muted-foreground">المستوى ' + (i + 1) + ' من 4</span></span>' +
+        '<span class="min-w-0 space-y-1"><span class="block text-xs text-muted-foreground">نطاق نقاط التأهيل</span><span dir="ltr" class="block font-mono text-sm tabular-nums text-foreground">' + rangeText(sm, i) + '</span>' +
+          (ch ? '<span dir="ltr" class="block font-mono text-xs tabular-nums text-warning">مسودة: ' + rangeText(v.mins, i) + '</span>' : '') + '</span>' +
+        '<span class="space-y-1"><span class="block text-xs text-muted-foreground">نسبة المكافأة</span><span dir="ltr" class="block font-mono tabular-nums text-lg font-semibold text-foreground">' + sb[i] + '%</span>' +
+          (ch ? '<span dir="ltr" class="block font-mono text-xs tabular-nums text-warning">مسودة: ' + dBonus + '</span>' : '') + '</span>' +
+        '<span class="flex items-center gap-3 justify-between md:justify-end">' + (ch ? badge('warning', 'مسودة', true) : badge('success', 'نشط', true)) + '<i class="fa-solid fa-chevron-left text-xs text-muted-foreground"></i></span>' +
+      '</button></li>';
+    }).join('');
+  }
+
+  function renderTabs(v) {
+    $('editor-tabs').innerHTML = ORDER.map(function (k) {
+      var on = k === selected, ch = isChanged(v.p, k);
+      return '<button type="button" data-select="' + k + '" aria-pressed="' + on + '" class="inline-flex items-center gap-1.5 font-sans font-medium h-8 px-3 text-xs rounded-md border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ' +
+        (on ? 'bg-accent text-primary border-primary/40' : 'bg-transparent text-foreground border-border hover:bg-secondary') + '"><span>' + META[k].ar + '</span>' +
+        (ch ? '<span class="w-1.5 h-1.5 rounded-full bg-amber-600" aria-hidden="true"></span><span class="sr-only">(مسودة)</span>' : '') + '</button>';
+    }).join('');
+  }
+
+  function renderChecks(v) {
+    $('checks').innerHTML = v.checks.map(function (c) {
+      var icon = c.ok ? '<i class="fa-solid fa-circle-check text-success"></i>' : '<i class="fa-solid fa-circle-xmark text-destructive"></i>';
+      return '<li class="flex items-start gap-2.5 text-xs leading-relaxed ' + (c.ok ? 'text-foreground' : 'text-destructive font-medium') + '"><span class="shrink-0 mt-0.5">' + icon + '</span><span>' + (c.ok ? c.good : c.bad) + '</span></li>';
+    }).join('');
+  }
+
+  function tierIdxFor(life, mins) { for (var i = 3; i >= 0; i--) if (life >= mins[i]) return i; return 0; }
+
+  function renderImpact(v) {
+    var el = $('impact');
+    if (!v.dirty) {
+      el.innerHTML = '<p class="text-xs text-muted-foreground leading-relaxed">لا توجد مسودة حاليًا. عدّل حدًا أو نسبة لعرض أثره قبل الحفظ. الإعداد النشط يبقى كما هو.</p>';
+      return;
+    }
+    var bounds = v.lines.filter(function (l) { return l.kind !== 'bonus'; });
+    var bonuses = v.lines.filter(function (l) { return l.kind === 'bonus'; });
+    var row = function (l) { return '<li class="flex items-center justify-between gap-3 text-xs"><span class="text-foreground">' + l.text + '</span><span dir="ltr" class="font-mono tabular-nums text-muted-foreground whitespace-nowrap">' + l.from + ' → ' + l.to + '</span></li>'; };
+    var html = '<div class="space-y-2"><p class="text-xs font-semibold text-foreground">حدود التأهيل</p>' +
+      (bounds.length ? '<ul class="space-y-2">' + bounds.map(row).join('') + '</ul>' : '<p class="text-xs text-muted-foreground">لا تغيير في حدود النطاقات.</p>') + '</div>';
+    html += '<div class="space-y-2"><p class="text-xs font-semibold text-foreground">نسب المكافأة</p>' +
+      (bonuses.length ? '<ul class="space-y-2">' + bonuses.map(row).join('') + '</ul>' : '<p class="text-xs text-muted-foreground">لا تغيير في النسب.</p>') + '</div>';
+
+    html += '<div class="space-y-2 rounded-md border border-border p-3"><div class="flex items-center justify-between gap-2"><p class="text-xs font-semibold text-foreground">أثر تقديري على عينة توضيحية</p>' + badge('neutral', 'عينة توضيحية') + '</div>';
+    if (!v.ok.ints || !v.ok.order) {
+      html += '<p class="text-xs text-muted-foreground leading-relaxed">يُحسب الأثر بعد تصحيح حدود المسودة.</p>';
+    } else {
+      var mins = v.mins, savedM = savedMins(), rows = [];
+      SAMPLE.forEach(function (s) {
+        var a = tierIdxFor(s.life, savedM), b = tierIdxFor(s.life, mins);
+        if (a !== b) rows.push({ s: s, a: ORDER[a], b: ORDER[b] });
+      });
+      html += '<p class="text-xs text-foreground leading-relaxed">' + rows.length + ' من ' + SAMPLE.length + ' فنيين في عينة العرض سيتغير مستواهم المحسوب.</p>';
+      if (rows.length) {
+        html += '<ul class="space-y-1.5">' + rows.map(function (r) {
+          return '<li class="flex items-center justify-between gap-2 text-xs"><span class="text-foreground truncate">' + r.s.name + '</span><span class="text-muted-foreground whitespace-nowrap">' + fmt(r.s.life) + ' نقطة · من ' + META[r.a].ar + ' إلى ' + META[r.b].ar + '</span></li>';
+        }).join('') + '</ul>';
+      }
+    }
+    html += '<p class="text-[11px] text-muted-foreground leading-relaxed">أسماء وأرقام العينة توضيحية، وليست حصرًا للمتأثرين الفعليين.</p></div>';
+
+    html += '<ul class="space-y-1.5 text-xs text-muted-foreground leading-relaxed list-disc ps-4">' +
+      '<li>لا تُعاد احتساب الحالات القائمة أو النقاط المعتمدة تلقائيًا.</li>' +
+      '<li>نسبة المكافأة تُلتقط عند تقديم طلب التركيب، والطلبات السابقة لا تتغير.</li>' +
+      '<li>سياسة تطبيق التغيير على الحالات القائمة وتاريخ السريان بانتظار اعتماد الأعمال.</li></ul>';
+    el.innerHTML = html;
+  }
+
+  function renderFooter(v) {
+    $('footer-hint').textContent = !v.dirty
+      ? 'لا توجد تغييرات للحفظ. الإعداد النشط معروض كما هو.'
+      : (!v.valid ? 'أصلح الحقول المعلّمة بالأحمر قبل المراجعة. لن تُفعَّل أي قيمة غير صالحة.'
+        : 'المراجعة تعرض ملخص التغيير. لا يُعتبر الإعداد ساريًا قبل تأكيد الخادم.');
+    $('btn-discard').disabled = !v.dirty || saving;
+    $('btn-review').disabled = !v.dirty || !v.valid || saving;
+  }
+
+  function renderBadge(v) {
+    var n = v.changedN;
+    $('draft-badge').innerHTML = !v.dirty ? badge('neutral', 'لا توجد تغييرات')
+      : (!v.valid ? badge('error', 'المسودة تحتوي أخطاء', true)
+        : badge('warning', n === 1 ? 'مستوى واحد قيد التعديل' : (n === 2 ? 'مستويان قيد التعديل' : n + ' مستويات قيد التعديل'), true));
+  }
+
+  function setWrap(el, readonly, err) {
+    el.className = 'relative flex items-center w-full bg-surface rounded-md border transition-colors duration-150 ease-in-out select-none ' +
+      (readonly ? 'bg-muted/30 border-dashed cursor-default border-input'
+        : err ? 'border-destructive text-destructive focus-within:border-destructive focus-within:ring-2 focus-within:ring-destructive/30'
+        : 'border-input hover:border-border-hover focus-within:border-primary focus-within:ring-2 focus-within:ring-ring');
+  }
+  function setMsg(id, err, helper) {
+    var box = $(id + '-msg');
+    $(id + '-icon').classList.toggle('hidden', !err);
+    if (err) { box.className = 'flex items-start gap-1.5 text-xs font-medium font-sans text-destructive mt-0.5'; $(id + '-text').textContent = err; }
+    else { box.className = 'flex items-start gap-1.5 text-xs font-sans text-muted-foreground mt-0.5'; $(id + '-text').textContent = helper; }
+  }
+
+  function paintEditor(v) {
+    var k = selected, i = idx(k), p = v.p;
+    $('ed-chip').className = 'inline-flex items-center gap-2 border whitespace-nowrap rounded-md text-sm font-semibold px-3 py-1.5 ' + META[k].bg + ' ' + META[k].bd;
+    $('ed-name').textContent = META[k].ar;
+    $('ed-pos').textContent = String(i + 1);
+    var isBasic = i === 0;
+    $('ed-min').readOnly = isBasic;
+    $('ed-min-ctrl').classList.toggle('hidden', isBasic);
+    $('ed-min-req').classList.toggle('hidden', isBasic);
+    $('ed-min-label').textContent = isBasic ? 'الحد الأدنى (ثابت عند صفر)' : 'الحد الأدنى لنقاط التأهيل';
+    setWrap($('ed-min-wrap'), isBasic, !!v.errs[k].min);
+    var helper = isBasic ? 'الأساسي يبدأ دائمًا من صفر ولا يُعدَّل.'
+      : 'عدد صحيح غير سالب، أكبر من ' + fmt(p[ORDER[i - 1]].min) + (i < 3 ? ' وأقل من ' + fmt(p[ORDER[i + 1]].min) : '') + '.';
+    setMsg('ed-min', v.errs[k].min, helper);
+    setWrap($('ed-bonus-wrap'), false, !!v.errs[k].bonus);
+    setMsg('ed-bonus', v.errs[k].bonus, 'أعداد صحيحة من 0 إلى 100. هذا قيد إدخال فني قابل للضبط، وليس سياسة نسب معتمدة.');
+    $('ed-max').textContent = i === 3 ? 'بلا حد أعلى' : (i < 3 && !isNaN(p[ORDER[i + 1]].min) ? fmt(p[ORDER[i + 1]].min - 1) : '—');
+    var cont;
+    if (isBasic) cont = 'الحد الأعلى للأساسي هو الحد الأدنى للبرونزي ناقص 1. تغيير حد البرونزي يعدّل هذا النطاق تلقائيًا.';
+    else if (v.errs[k].min) cont = 'هذا الحد يتعارض مع الجوار، لذلك لا يُحسب نطاق ' + META[ORDER[i - 1]].ar + ' المتصل به قبل تصحيحه.';
+    else if (isNaN(p[k].min)) cont = 'أدخل حدًا صحيحًا ليُحسب نطاق ' + META[ORDER[i - 1]].ar + ' المتصل به.';
+    else cont = 'نطاق ' + META[ORDER[i - 1]].ar + ' سيصبح ' + fmt(p[ORDER[i - 1]].min) + ' – ' + fmt(p[k].min - 1) + ' تلقائيًا، دون فجوة أو تداخل.';
+    $('ed-cont').textContent = cont;
+
+    // Sample calculation uses Silver bonus from the draft (integers only)
+    var base = 10, sb = v.p.silver.bonus;
+    $('calc-pct').textContent = isNaN(sb) ? '—' : sb + '%';
+    var raw = isNaN(sb) ? NaN : base * sb / 100;
+    if (isNaN(raw)) { $('calc-bonus').textContent = '—'; $('calc-total').textContent = '—'; $('calc-note').textContent = 'أدخل نسبة فضي صحيحة لعرض المثال.'; }
+    else if (raw % 1 !== 0) { $('calc-bonus').textContent = String(raw); $('calc-total').textContent = '—'; $('calc-note').textContent = 'ينتج كسرًا (' + raw + ')، وقاعدة التقريب غير معتمدة بعد، لذلك لا يُعرض إجمالي نهائي.'; }
+    else { $('calc-bonus').textContent = String(raw); $('calc-total').textContent = String(base + raw); $('calc-note').textContent = v.dirty && v.p.silver.bonus !== saved.silver.bonus ? 'أعداد صحيحة فقط. يستخدم نسبة فضي من المسودة، وليست نشطة بعد.' : 'أعداد صحيحة فقط. يستخدم نسبة فضي النشطة حاليًا.'; }
+  }
+
+  function loadFields() {
+    $('ed-min').value = draft[selected].min;
+    $('ed-bonus').value = draft[selected].bonus;
+  }
+
+  function refresh() {
+    var v = validate();
+    renderLadders(v);
+    renderRows(v);
+    renderTabs(v);
+    paintEditor(v);
+    renderChecks(v);
+    renderImpact(v);
+    renderFooter(v);
+    renderBadge(v);
+  }
+
+  // ----- Toast -----
+  var toast = $('toast'), toastTimer = null;
+  var TOAST = {
+    success: { bd: 'border-emerald-500/40', ic: 'text-emerald-600', d: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' },
+    info: { bd: 'border-primary/40', ic: 'text-primary', d: 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' },
+    error: { bd: 'border-destructive/40', ic: 'text-destructive', d: 'M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z' }
+  };
+  function hideToast() { toast.classList.add('hidden'); }
+  function showToast(v, title, desc) {
+    var t = TOAST[v];
+    toast.className = 'fixed bottom-5 start-5 z-50 min-w-[320px] max-w-md p-4 rounded-xl shadow-lg border backdrop-blur-sm transition-all duration-200 dir-rtl flex gap-3 items-start bg-surface text-foreground ' + t.bd;
+    $('toast-icon').className = 'shrink-0 mt-0.5 ' + t.ic;
+    $('toast-icon-path').setAttribute('d', t.d);
+    $('toast-title').textContent = title;
+    $('toast-desc').textContent = desc;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(hideToast, 5000);
+  }
+  $('toast-close').addEventListener('click', hideToast);
+
+  // ----- Confirmation dialog & safe save -----
+  var dlg = $('confirm-dialog');
+  function dialogOpen() { return !dlg.classList.contains('hidden'); }
+  function closeDialog() { if (saving) return; dlg.classList.add('hidden'); }
+  function setSaving(on) {
+    saving = on;
+    var c = $('cd-confirm');
+    c.disabled = on;
+    c.innerHTML = on
+      ? '<svg class="animate-spin h-4 w-4 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg><span>جارٍ الحفظ...</span>'
+      : '<span>حفظ إعدادات المستويات</span>';
+    $('cd-cancel').disabled = on;
+    $('cd-simfail').disabled = on;
+    refresh();
+  }
+  function openDialog() {
+    var v = validate();
+    if (!v.dirty || !v.valid) return;
+    $('cd-list').innerHTML = v.lines.map(function (l) {
+      return '<li class="flex items-center justify-between gap-3 px-3 py-2 text-xs"><span class="text-foreground">' + l.text + '</span><span dir="ltr" class="font-mono tabular-nums text-muted-foreground whitespace-nowrap">' + l.from + ' → ' + l.to + '</span></li>';
+    }).join('');
+    $('cd-error').classList.add('hidden');
+    dlg.classList.remove('hidden');
+    $('cd-cancel').focus();
+  }
+  function doSave(fail) {
+    if (saving) return;
+    setSaving(true);
+    $('cd-error').classList.add('hidden');
+    setTimeout(function () {
+      setSaving(false);
+      if (fail) {
+        $('cd-error-text').textContent = 'تعذّر تأكيد الحفظ من الخادم. لم تُطبَّق أي قيمة، وما زالت المسودة محفوظة في هذه الجلسة. أعد المحاولة.';
+        $('cd-error').classList.remove('hidden');
+        showToast('error', 'فشل حفظ إعدادات المستويات', 'لم يؤكد الخادم الحفظ. الإعداد النشط لم يتغير.');
+        return;
+      }
+      ORDER.forEach(function (k) { saved[k] = { min: toNum(draft[k].min), bonus: toNum(draft[k].bonus) }; });
+      dlg.classList.add('hidden');
+      resetDraft();
+      loadFields();
+      $('last-saved').textContent = 'للتو · عرض تجريبي';
+      refresh();
+      showToast('success', 'تم حفظ إعدادات المستويات', 'أكّد الخادم الحفظ في هذا العرض التجريبي. البيانات المعروضة عينة ولا تمثل تغييرًا حقيقيًا.');
+    }, 1400);
+  }
+
+  $('btn-review').addEventListener('click', openDialog);
+  $('cd-cancel').addEventListener('click', closeDialog);
+  $('cd-backdrop').addEventListener('click', closeDialog);
+  $('cd-confirm').addEventListener('click', function () { doSave(false); });
+  $('cd-simfail').addEventListener('click', function () { doSave(true); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && dialogOpen()) closeDialog(); });
+
+  $('btn-discard').addEventListener('click', function () {
+    resetDraft();
+    loadFields();
+    refresh();
+    showToast('info', 'تم تجاهل المسودة', 'لم يتغير أي إعداد نشط.');
+  });
+  $('btn-audit').addEventListener('click', function () {
+    showToast('info', 'سجل التدقيق', 'يعرض السجلات الفعلية عند توفرها. في هذا العرض التجريبي لا تُعرض أحداث مؤكدة.');
+  });
+
+  // ----- Selection, steppers and typing -----
+  document.addEventListener('click', function (e) {
+    var sel = e.target.closest('[data-select]');
+    if (sel) {
+      var key = sel.getAttribute('data-select');
+      var box = sel.closest('#tier-rows, #editor-tabs');
+      selected = key;
+      loadFields();
+      refresh();
+      var again = box ? box.querySelector('[data-select="' + key + '"]') : null;
+      if (again) again.focus();
+      return;
+    }
+    var st = e.target.closest('[data-step]');
+    if (st) {
+      stepField(st.getAttribute('data-field'), Number(st.getAttribute('data-step')));
+    }
+  });
+  function stepField(f, d) {
+    if (selected === 'basic' && f === 'min') return;
+    var cur = toNum(draft[selected][f]);
+    if (isNaN(cur)) cur = saved[selected][f];
+    var nx = cur + d;
+    nx = f === 'bonus' ? Math.max(0, Math.min(100, nx)) : Math.max(0, nx);
+    draft[selected][f] = String(nx);
+    $(f === 'min' ? 'ed-min' : 'ed-bonus').value = String(nx);
+    refresh();
+  }
+  document.addEventListener('input', function (e) {
+    var t = e.target;
+    if (t.tagName !== 'INPUT' || !t.hasAttribute('data-field') || t.readOnly) return;
+    var clean = t.value.replace(/[^\d-]/g, '');
+    if (clean !== t.value) t.value = clean;
+    draft[selected][t.getAttribute('data-field')] = clean;
+    refresh();
+  });
+  document.addEventListener('keydown', function (e) {
+    var t = e.target;
+    if (t.tagName !== 'INPUT' || !t.hasAttribute('data-field')) return;
+    if (e.key === 'ArrowUp') { e.preventDefault(); stepField(t.getAttribute('data-field'), 1); }
+    if (e.key === 'ArrowDown') { e.preventDefault(); stepField(t.getAttribute('data-field'), -1); }
+  });
+
+  // ----- Init -----
+  resetDraft();
+  loadFields();
+  refresh();
+})();
+</script>
+
+<script src="assets/demo.js" defer></script>
+</body>
+</html>

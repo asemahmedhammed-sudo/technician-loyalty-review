@@ -1,0 +1,21 @@
+
+/* MK KASHIYAMA client-review navigation. No production authentication or backend. */
+.mk-tour{position:fixed;left:18px;bottom:18px;z-index:9000;font-family:'IBM Plex Sans Arabic',sans-serif;direction:rtl;color:#0f172a}
+.mk-tour button{cursor:pointer}
+.mk-tour-trigger{background:#004c9d;color:#fff;border:1px solid #003a78;padding:11px 16px;border-radius:14px;box-shadow:0 8px 22px rgba(15,23,42,.17);font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px}
+.mk-tour-trigger:hover{background:#003a78}
+.mk-tour-panel{position:absolute;bottom:55px;left:0;width:290px;max-height:min(76vh,520px);overflow:auto;background:white;border:1px solid #d9e1eb;border-radius:16px;box-shadow:0 20px 60px rgba(15,23,42,.16);padding:14px}
+.mk-tour-panel[hidden]{display:none!important}
+.mk-tour-heading{display:flex;align-items:center;justify-content:space-between;padding-bottom:9px;border-bottom:1px solid #e2e8f0;font-size:14px;font-weight:700}
+.mk-tour-sub{font-size:11px;color:#64748b;margin-top:6px;line-height:1.7}
+.mk-tour-link{display:flex;align-items:center;gap:10px;text-decoration:none!important;color:#334155!important;padding:10px 12px;margin-top:6px;border-radius:10px;font-size:13px;border:1px solid transparent}
+.mk-tour-link:hover{background:#f1f5f9}.mk-tour-link[aria-current=page]{background:#eef5ff;color:#004c9d!important;border-color:#c5d9f4;font-weight:700}
+.mk-tour-no{font-family:monospace;color:#64748b;font-size:11px;direction:ltr}
+.mk-tour-notice{position:fixed;left:18px;bottom:78px;z-index:9200;max-width:min(390px,90vw);padding:12px 16px;border-radius:11px;border:1px solid #c5d9f4;background:white;box-shadow:0 12px 35px rgba(15,23,42,.19);font-family:'IBM Plex Sans Arabic',sans-serif;color:#0f172a;font-size:13px;direction:rtl;text-align:right}
+.mk-tour-bar{display:flex;gap:7px;margin-top:11px}.mk-tour-bar button{flex:1;background:#f1f5f9;padding:9px;border-radius:9px;font-size:12px;color:#334155}
+.mk-demo-watermark{position:fixed;left:18px;top:72px;z-index:50;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:10px;color:#64748b;pointer-events:none;opacity:.76}
+@media print{.mk-tour,.mk-demo-watermark,.mk-tour-notice{display:none!important}}
+@media (max-width:700px){.mk-tour{left:8px;bottom:8px}.mk-tour-trigger{padding:9px 12px}.mk-tour-panel{width:270px}}
+
+.mk-tour-home{display:block;padding:12px 10px 4px;color:#004c9d;text-align:center;font-size:12px;font-weight:700;text-decoration:none!important}
+.mk-tour-home:hover{text-decoration:underline!important}

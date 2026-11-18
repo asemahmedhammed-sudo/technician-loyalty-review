@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barcode Batches</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- uxp-ds-theme:start -->
+<style>
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
+
+:root {
+  --background: 210 40% 98%;
+  --foreground: 222.2 47.4% 11.2%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 47.4% 11.2%;
+  --card-border: 214.3 31.8% 91.4%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 47.4% 11.2%;
+  --primary: 211 100% 30.8%;
+  --primary-hover: 211 100% 23.5%;
+  --primary-active: 211.3 100% 17.6%;
+  --primary-subtle: 215.3 100% 96.7%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 40% 96.1%;
+  --secondary-hover: 214.3 31.8% 91.4%;
+  --secondary-active: 212.7 26.8% 83.9%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --accent: 215.3 100% 96.7%;
+  --accent-hover: 214.3 100% 93.1%;
+  --accent-foreground: 211 100% 30.8%;
+  --destructive: 358.8 80.5% 51.8%;
+  --destructive-hover: 358.6 78.2% 43.1%;
+  --destructive-active: 358.3 82.7% 33.9%;
+  --destructive-subtle: 0 85.7% 97.3%;
+  --destructive-foreground: 0 0% 100%;
+  --success: 142.4 71.8% 29.2%;
+  --success-hover: 142.8 64.2% 24.1%;
+  --success-subtle: 138.5 76.5% 96.7%;
+  --success-foreground: 0 0% 100%;
+  --warning: 26 90.5% 37.1%;
+  --warning-hover: 22.7 82.5% 31.4%;
+  --warning-subtle: 48 100% 96.1%;
+  --warning-foreground: 0 0% 100%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.3 19.3% 34.5%;
+  --brand-blue: 211 100% 30.8%;
+  --brand-red: 358.8 80.5% 51.8%;
+  --brand-yellow: 52.2 100% 50%;
+  --surface: 0 0% 100%;
+  --surface-subtle: 210 40% 98%;
+  --surface-muted: 210 40% 96.1%;
+  --surface-border: 214.3 31.8% 91.4%;
+  --border: 214.3 31.8% 91.4%;
+  --border-hover: 212.7 26.8% 83.9%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 211 100% 30.8%;
+  --font-family-sans: 'IBM Plex Sans Arabic', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --spacing-0: 0px;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --radius-none: 0px;
+  --radius-sm: 0.25rem;
+  --radius: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+  --shadow-none: none;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --border-width-0: 0px;
+  --border-width-2: 2px;
+  --border-width: 1px;
+}
+</style>
+<script>
+  (function () {
+    var ds = {
+      colors: {
+        "background": "hsl(var(--background) / <alpha-value>)",
+        "foreground": "hsl(var(--foreground) / <alpha-value>)",
+        "card": "hsl(var(--card) / <alpha-value>)",
+        "card-foreground": "hsl(var(--card-foreground) / <alpha-value>)",
+        "card-border": "hsl(var(--card-border) / <alpha-value>)",
+        "popover": "hsl(var(--popover) / <alpha-value>)",
+        "popover-foreground": "hsl(var(--popover-foreground) / <alpha-value>)",
+        "primary": "hsl(var(--primary) / <alpha-value>)",
+        "primary-hover": "hsl(var(--primary-hover) / <alpha-value>)",
+        "primary-active": "hsl(var(--primary-active) / <alpha-value>)",
+        "primary-subtle": "hsl(var(--primary-subtle) / <alpha-value>)",
+        "primary-foreground": "hsl(var(--primary-foreground) / <alpha-value>)",
+        "secondary": "hsl(var(--secondary) / <alpha-value>)",
+        "secondary-hover": "hsl(var(--secondary-hover) / <alpha-value>)",
+        "secondary-active": "hsl(var(--secondary-active) / <alpha-value>)",
+        "secondary-foreground": "hsl(var(--secondary-foreground) / <alpha-value>)",
+        "accent": "hsl(var(--accent) / <alpha-value>)",
+        "accent-hover": "hsl(var(--accent-hover) / <alpha-value>)",
+        "accent-foreground": "hsl(var(--accent-foreground) / <alpha-value>)",
+        "destructive": "hsl(var(--destructive) / <alpha-value>)",
+        "destructive-hover": "hsl(var(--destructive-hover) / <alpha-value>)",
+        "destructive-active": "hsl(var(--destructive-active) / <alpha-value>)",
+        "destructive-subtle": "hsl(var(--destructive-subtle) / <alpha-value>)",
+        "destructive-foreground": "hsl(var(--destructive-foreground) / <alpha-value>)",
+        "success": "hsl(var(--success) / <alpha-value>)",
+        "success-hover": "hsl(var(--success-hover) / <alpha-value>)",
+        "success-subtle": "hsl(var(--success-subtle) / <alpha-value>)",
+        "success-foreground": "hsl(var(--success-foreground) / <alpha-value>)",
+        "warning": "hsl(var(--warning) / <alpha-value>)",
+        "warning-hover": "hsl(var(--warning-hover) / <alpha-value>)",
+        "warning-subtle": "hsl(var(--warning-subtle) / <alpha-value>)",
+        "warning-foreground": "hsl(var(--warning-foreground) / <alpha-value>)",
+        "muted": "hsl(var(--muted) / <alpha-value>)",
+        "muted-foreground": "hsl(var(--muted-foreground) / <alpha-value>)",
+        "brand-blue": "hsl(var(--brand-blue) / <alpha-value>)",
+        "brand-red": "hsl(var(--brand-red) / <alpha-value>)",
+        "brand-yellow": "hsl(var(--brand-yellow) / <alpha-value>)",
+        "surface": "hsl(var(--surface) / <alpha-value>)",
+        "surface-subtle": "hsl(var(--surface-subtle) / <alpha-value>)",
+        "surface-muted": "hsl(var(--surface-muted) / <alpha-value>)",
+        "surface-border": "hsl(var(--surface-border) / <alpha-value>)",
+        "border": "hsl(var(--border) / <alpha-value>)",
+        "border-hover": "hsl(var(--border-hover) / <alpha-value>)",
+        "input": "hsl(var(--input) / <alpha-value>)",
+        "ring": "hsl(var(--ring) / <alpha-value>)",
+        "fg": "hsl(var(--foreground) / <alpha-value>)",
+        "card-fg": "hsl(var(--card-foreground) / <alpha-value>)",
+        "popover-fg": "hsl(var(--popover-foreground) / <alpha-value>)",
+        "primary-fg": "hsl(var(--primary-foreground) / <alpha-value>)",
+        "secondary-fg": "hsl(var(--secondary-foreground) / <alpha-value>)",
+        "accent-fg": "hsl(var(--accent-foreground) / <alpha-value>)",
+        "destructive-fg": "hsl(var(--destructive-foreground) / <alpha-value>)",
+        "success-fg": "hsl(var(--success-foreground) / <alpha-value>)",
+        "warning-fg": "hsl(var(--warning-foreground) / <alpha-value>)",
+        "muted-fg": "hsl(var(--muted-foreground) / <alpha-value>)",
+      },
+      fontSize: {
+        "xs": "var(--font-size-xs)",
+        "sm": "var(--font-size-sm)",
+        "base": "var(--font-size-base)",
+        "lg": "var(--font-size-lg)",
+        "xl": "var(--font-size-xl)",
+        "2xl": "var(--font-size-2xl)",
+        "3xl": "var(--font-size-3xl)",
+        "4xl": "var(--font-size-4xl)",
+      },
+      spacing: {
+        "ds-0": "var(--spacing-0)",
+        "ds-1": "var(--spacing-1)",
+        "ds-2": "var(--spacing-2)",
+        "ds-3": "var(--spacing-3)",
+        "ds-4": "var(--spacing-4)",
+        "ds-5": "var(--spacing-5)",
+        "ds-6": "var(--spacing-6)",
+        "ds-8": "var(--spacing-8)",
+        "ds-10": "var(--spacing-10)",
+        "ds-12": "var(--spacing-12)",
+        "ds-16": "var(--spacing-16)",
+      },
+      borderRadius: {
+        "none": "var(--radius-none)",
+        "sm": "var(--radius-sm)",
+        "DEFAULT": "var(--radius)",
+        "md": "var(--radius-md)",
+        "lg": "var(--radius-lg)",
+        "xl": "var(--radius-xl)",
+        "full": "var(--radius-full)",
+      },
+      boxShadow: {
+        "none": "var(--shadow-none)",
+        "sm": "var(--shadow-sm)",
+        "DEFAULT": "var(--shadow)",
+        "md": "var(--shadow-md)",
+        "lg": "var(--shadow-lg)",
+      },
+      borderWidth: {
+        "0": "var(--border-width-0)",
+        "2": "var(--border-width-2)",
+        "DEFAULT": "var(--border-width)",
+      },
+      fontFamily: {
+        "sans": ["'IBM Plex Sans Arabic'","'IBM Plex Sans'","-apple-system","BlinkMacSystemFont","'Segoe UI'","Roboto","sans-serif"],
+        "mono": ["'IBM Plex Mono'","'SFMono-Regular'","Consolas","'Liberation Mono'","monospace"],
+      },
+    };
+    var prev = (typeof tailwind !== "undefined" && tailwind.config) || {};
+    var prevTheme = prev.theme || {};
+    var isPlain = function (v) {
+      return Boolean(v) && typeof v === "object" && !Array.isArray(v);
+    };
+    var prevExtend = isPlain(prevTheme.extend) ? prevTheme.extend : {};
+    var extend = {};
+    Object.keys(prevExtend).forEach(function (k) {
+      extend[k] = prevExtend[k];
+    });
+    Object.keys(ds).forEach(function (k) {
+      extend[k] =
+        isPlain(prevExtend[k]) && isPlain(ds[k])
+          ? Object.assign({}, prevExtend[k], ds[k])
+          : ds[k];
+    });
+    tailwind.config = Object.assign({}, prev, {
+      theme: Object.assign({}, prevTheme, { extend: extend }),
+    });
+  })();
+</script>
+<!-- uxp-ds-theme:end -->
+<link rel="stylesheet" href="assets/demo.css">
+</head>
+<body class="bg-background text-foreground font-sans antialiased">
+
+<div id="app-shell" dir="rtl" class="flex w-full bg-background">
+
+  <!-- ============ SIDEBAR (right) ============ -->
+  <div id="sidebar-container" class="hidden lg:block sticky top-0 h-[900px] shrink-0">
+    <aside id="sidebar" dir="rtl" data-ds-comp="Sidebar" class="flex flex-col bg-card border-l border-border h-full transition-all duration-300 ease-in-out shrink-0 select-none w-64">
+      <div class="flex items-center justify-between h-16 px-4 border-b border-border shrink-0">
+        <div class="flex items-center gap-3 overflow-hidden">
+          <div class="flex items-center justify-center w-9 h-9 rounded-md bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] font-bold shrink-0">MK</div>
+          <div class="flex flex-col min-w-0">
+            <span class="font-sans font-bold text-sm tracking-wide text-foreground truncate">MK KASHIYAMA</span>
+            <span class="font-sans text-xs text-muted-foreground truncate">نظام إدارة الولاء للفنيين</span>
+          </div>
+        </div>
+        <button type="button" aria-label="طي القائمة الجانبية" class="p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+          <svg class="w-4 h-4 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+        </button>
+      </div>
+
+      <div class="flex-1 overflow-y-auto py-4 px-2 space-y-6">
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground tracking-wider mb-2">نظرة عامة</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-house text-base"></i></span>
+            <span class="flex-1 truncate">الرئيسية</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-bell text-base"></i></span>
+            <span class="flex-1 truncate">الإشعارات</span>
+            <span class="px-2 py-0.5 text-xs rounded-full font-sans font-semibold shrink-0 bg-accent text-primary">5</span>
+          </button>
+        </div>
+
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground tracking-wider mb-2">العمليات والتركيب</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-clipboard-check text-base"></i></span>
+            <span class="flex-1 truncate">طلبات التركيب</span>
+            <span class="px-2 py-0.5 text-xs rounded-full font-sans font-semibold shrink-0 bg-accent text-primary">31</span>
+          </button>
+          <button type="button" aria-current="page" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-semibold transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring bg-accent text-primary border-r-4 border-primary">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-primary"><i class="fa-solid fa-barcode text-base"></i></span>
+            <span class="flex-1 truncate">دفعات الباركود</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-box-open text-base"></i></span>
+            <span class="flex-1 truncate">الأصناف والماركات</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-users text-base"></i></span>
+            <span class="flex-1 truncate">الفنيون</span>
+          </button>
+        </div>
+
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground tracking-wider mb-2">الولاء والمكافآت</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-medal text-base"></i></span>
+            <span class="flex-1 truncate">مستويات الولاء</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-gift text-base"></i></span>
+            <span class="flex-1 truncate">طلبات الاسترداد</span>
+            <span class="px-2 py-0.5 text-xs rounded-full font-sans font-semibold shrink-0 bg-accent text-primary">14</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-hand-holding-dollar text-base"></i></span>
+            <span class="flex-1 truncate">الصرف اليدوي</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-building-columns text-base"></i></span>
+            <span class="flex-1 truncate">العهدة المالية</span>
+          </button>
+        </div>
+
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground tracking-wider mb-2">النظام والتقارير</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-sliders text-base"></i></span>
+            <span class="flex-1 truncate">ترميز النقاط</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-chart-column text-base"></i></span>
+            <span class="flex-1 truncate">التقارير والتحليلات</span>
+          </button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-sans font-medium transition-colors text-right relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground hover:bg-secondary hover:text-foreground">
+            <span class="shrink-0 w-5 h-5 flex items-center justify-center text-muted-foreground"><i class="fa-solid fa-user-shield text-base"></i></span>
+            <span class="flex-1 truncate">الصلاحيات وسجل التدقيق</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ============ MAIN COLUMN ============ -->
+  <div id="main-column" class="flex-1 min-w-0 flex flex-col">
+
+    <!-- Topbar -->
+    <header id="topbar" dir="rtl" data-ds-comp="Topbar" class="h-16 px-6 bg-card border-b border-border flex items-center justify-between gap-4 shrink-0 font-sans select-none">
+      <div class="flex items-center gap-3 min-w-0 flex-1">
+        <div class="w-full max-w-md">
+          <div data-ds-comp="SearchField" class="w-full flex flex-col gap-1.5">
+            <div class="relative flex items-center w-full bg-surface rounded-md border transition-colors duration-150 ease-in-out border-input hover:border-border-hover focus-within:border-primary focus-within:ring-2 focus-within:ring-ring">
+              <span class="ps-3 text-muted-foreground flex items-center shrink-0 pointer-events-none">
+                <svg class="w-4 h-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+              </span>
+              <input type="search" aria-label="البحث في المنصة" placeholder="ابحث برقم الدفعة، رقم الصنف، أو الرمز الفريد..." class="w-full bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none transition-colors select-text h-10 px-3 text-sm min-h-[40px] font-sans text-start" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="relative">
+          <button type="button" data-ds-comp="IconButton" data-ds-variant="variant=ghost,size=default" aria-label="الإشعارات (5 غير مقروء)" title="الإشعارات (5 غير مقروء)" class="inline-flex items-center justify-center shrink-0 transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.96] bg-transparent text-foreground hover:bg-secondary active:bg-secondary-active border border-transparent h-10 w-10 min-w-[40px] min-h-[40px] text-sm rounded-md">
+            <svg class="w-5 h-5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
+          </button>
+          <span class="absolute top-1 start-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 text-[10px] font-bold text-white bg-destructive rounded-full border-2 border-card pointer-events-none">5</span>
+        </div>
+        <div class="h-6 w-px bg-border my-auto mx-1" aria-hidden="true"></div>
+        <button type="button" class="flex items-center gap-3 p-1 rounded-lg hover:bg-secondary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+          <div class="flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 text-primary font-bold text-sm shrink-0 border border-primary/20 overflow-hidden">
+            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" alt="أحمد الحربي" class="w-full h-full object-cover" />
+          </div>
+          <div class="hidden sm:flex flex-col text-right">
+            <span class="text-xs font-semibold text-foreground truncate max-w-[140px]">أحمد الحربي</span>
+            <span class="text-[11px] text-muted-foreground truncate max-w-[140px]">مدير العمليات</span>
+          </div>
+          <svg class="w-4 h-4 text-muted-foreground hidden sm:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="content" class="w-full max-w-[1440px] mx-auto p-6 lg:p-8 space-y-6">
+
+      <!-- Page Header -->
+      <div id="page-header" dir="rtl" data-ds-comp="PageHeader" class="flex flex-col gap-3 pb-6 border-b border-border select-none font-sans">
+        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+          <div class="space-y-2 min-w-0">
+            <div class="flex items-center gap-3 flex-wrap">
+              <h1 class="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">دفعات الباركود</h1>
+              <div class="shrink-0">
+                <span data-ds-comp="Badge" data-ds-variant="variant=warning,dot=true" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-amber-50 text-amber-800 border-amber-200/50"><span class="w-1.5 h-1.5 rounded-full shrink-0 bg-amber-600" aria-hidden="true"></span><span>بيانات عينة — عرض تجريبي</span></span>
+              </div>
+            </div>
+            <p class="text-sm text-muted-foreground leading-relaxed max-w-3xl">أنشئ دفعات الرموز الفريدة للمكافآت، وراجع حالتها، واطبع ملصقات المصنع لكل صنف. كل رمز يخص عبوة واحدة فقط، ولا يُستخدم بديلًا عن الباركود الثابت للصنف. <span dir="ltr" class="font-mono text-xs tracking-wider">Barcode Batch Management</span></p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0 flex-wrap">
+            <button type="button" data-ds-comp="Button" data-ds-variant="variant=outline,size=default" class="inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.98] bg-transparent text-foreground border border-border hover:bg-secondary active:bg-secondary-active h-10 px-4 text-sm gap-2 rounded-md min-h-[40px]">
+              <span class="inline-flex shrink-0"><i class="fa-solid fa-file-export"></i></span>
+              <span>تصدير سجل الدفعات</span>
+            </button>
+            <button id="open-generate" type="button" data-ds-comp="Button" data-ds-variant="variant=primary,size=default" class="inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.98] bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] hover:bg-[hsl(var(--primary-hover))] active:bg-[hsl(var(--primary-active))] border border-transparent shadow-sm h-10 px-4 text-sm gap-2 rounded-md min-h-[40px]">
+              <span class="inline-flex shrink-0"><i class="fa-solid fa-plus"></i></span>
+              <span>إنشاء دفعة باركود جديدة</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Identifier distinction band -->
+      <section id="identifier-rule" aria-label="الفرق بين نوعي الباركود" class="bg-card border border-border rounded-lg grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
+        <div class="p-4 flex gap-3 items-start">
+          <span class="inline-flex items-center justify-center w-9 h-9 rounded-md bg-muted text-muted-foreground shrink-0"><i class="fa-solid fa-tag text-sm"></i></span>
+          <div class="space-y-1 min-w-0">
+            <p class="text-sm font-semibold text-foreground">الباركود الثابت للصنف <span class="text-xs font-normal text-muted-foreground">· تُدار في إدارة الأصناف</span></p>
+            <p class="text-xs text-muted-foreground leading-relaxed">يحدد نوع المنتج وتشترك فيه كل عبوات الصنف. يُمسح أولًا. لا يُنشأ ولا يُعدَّل من هذه الشاشة.</p>
+          </div>
+        </div>
+        <div class="p-4 flex gap-3 items-start">
+          <span class="inline-flex items-center justify-center w-9 h-9 rounded-md bg-accent text-primary shrink-0"><i class="fa-solid fa-barcode text-sm"></i></span>
+          <div class="space-y-1 min-w-0">
+            <p class="text-sm font-semibold text-foreground">الرمز الفريد للمكافأة <span class="text-xs font-normal text-muted-foreground">· Code 128 · لكل عبوة</span></p>
+            <p class="text-xs text-muted-foreground leading-relaxed">رمز واحد لكل عبوة، مرتبط بصنف واحد داخل دفعة معروفة. يُمسح ثانيًا للتحقق من أهلية المكافأة.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Workspace: batch list (start) + batch detail -->
+      <section id="batch-workspace" aria-label="مساحة إدارة الدفعات" class="grid grid-cols-1 xl:grid-cols-[360px_minmax(0,1fr)] gap-6 items-start">
+
+        <!-- Batch list -->
+        <aside id="batch-list-panel" aria-label="قائمة الدفعات" class="bg-card border border-border rounded-lg overflow-hidden min-w-0 flex flex-col">
+          <div class="p-4 border-b border-border space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <h2 class="text-lg font-medium leading-snug text-foreground">قائمة الدفعات</h2>
+              <span class="text-xs text-muted-foreground tabular-nums">12 دفعة</span>
+            </div>
+            <div data-ds-comp="SearchField" class="w-full flex flex-col gap-1.5">
+              <div class="relative flex items-center w-full bg-surface rounded-md border transition-colors duration-150 ease-in-out border-input hover:border-border-hover focus-within:border-primary focus-within:ring-2 focus-within:ring-ring">
+                <span class="ps-2.5 text-muted-foreground flex items-center shrink-0 pointer-events-none">
+                  <svg class="w-3.5 h-3.5 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </span>
+                <input id="batch-search" type="search" aria-label="بحث في الدفعات" placeholder="رقم الدفعة أو رقم الصنف..." class="w-full bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none transition-colors select-text h-8 px-2.5 text-xs min-h-[32px] font-sans text-start" />
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <div class="space-y-1 min-w-0">
+                <span class="text-xs font-medium text-muted-foreground">الصنف</span>
+                <button type="button" aria-haspopup="listbox" class="flex items-center justify-between w-full bg-surface text-foreground font-normal border border-input hover:border-border-hover select-none cursor-pointer h-8 px-3 text-xs min-h-[32px] rounded-md"><span class="truncate">كل الأصناف</span><i class="fa-solid fa-chevron-down text-[10px] text-muted-foreground ms-2"></i></button>
+              </div>
+              <div class="space-y-1 min-w-0">
+                <span class="text-xs font-medium text-muted-foreground">الترتيب</span>
+                <button type="button" aria-haspopup="listbox" class="flex items-center justify-between w-full bg-surface text-foreground font-normal border border-input hover:border-border-hover select-none cursor-pointer h-8 px-3 text-xs min-h-[32px] rounded-md"><span class="truncate">الأحدث أولًا</span><i class="fa-solid fa-chevron-down text-[10px] text-muted-foreground ms-2"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <ul id="batch-list" class="flex-1 divide-y divide-border">
+            <li data-idx="0" data-search="BATCH-2026-001 MK-10025 فحمات فرامل أمامية">
+              <button type="button" aria-pressed="true" class="batch-row w-full text-start px-4 py-3 flex flex-col gap-2 border-s-4 border-primary bg-primary-subtle transition-colors hover:bg-surface-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                <div class="flex items-center justify-between gap-2">
+                  <span dir="ltr" class="font-mono text-sm font-medium tracking-wider text-foreground">BATCH-2026-001</span>
+                  <span class="text-xs text-muted-foreground tabular-nums">1,000 رمز</span>
+                </div>
+                <div class="flex items-center justify-between gap-2 min-w-0">
+                  <span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground shrink-0">MK-10025</span>
+                  <span class="text-xs text-foreground truncate">فحمات فرامل أمامية</span>
+                </div>
+                <div data-ds-comp="Progress" class="w-full space-y-1.5 dir-rtl">
+                  <div role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100" aria-valuetext="64% مستخدم" class="w-full bg-muted overflow-hidden relative h-1.5 rounded-full">
+                    <div class="h-full transition-all duration-300 ease-out rounded-full bg-[hsl(var(--primary))] w-[64%]"></div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+                  <span dir="ltr" class="tabular-nums">2026-03-02</span>
+                  <span>مستخدم <span class="font-mono tabular-nums text-foreground">64%</span></span>
+                </div>
+              </button>
+            </li>
+            <li data-idx="1" data-search="BATCH-2026-002 MK-20417 أقراص فرامل مهوّاة">
+              <button type="button" aria-pressed="false" class="batch-row w-full text-start px-4 py-3 flex flex-col gap-2 border-s-4 border-transparent transition-colors hover:bg-surface-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                <div class="flex items-center justify-between gap-2">
+                  <span dir="ltr" class="font-mono text-sm font-medium tracking-wider text-foreground">BATCH-2026-002</span>
+                  <span class="text-xs text-muted-foreground tabular-nums">500 رمز</span>
+                </div>
+                <div class="flex items-center justify-between gap-2 min-w-0">
+                  <span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground shrink-0">MK-20417</span>
+                  <span class="text-xs text-foreground truncate">أقراص فرامل مهوّاة</span>
+                </div>
+                <div data-ds-comp="Progress" class="w-full space-y-1.5 dir-rtl">
+                  <div role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" aria-valuetext="12% مستخدم" class="w-full bg-muted overflow-hidden relative h-1.5 rounded-full">
+                    <div class="h-full transition-all duration-300 ease-out rounded-full bg-[hsl(var(--primary))] w-[12%]"></div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+                  <span dir="ltr" class="tabular-nums">2026-03-09</span>
+                  <span>مستخدم <span class="font-mono tabular-nums text-foreground">12%</span></span>
+                </div>
+              </button>
+            </li>
+            <li data-idx="2" data-search="BATCH-2026-003 MK-31002 ممتص صدمات أمامي">
+              <button type="button" aria-pressed="false" class="batch-row w-full text-start px-4 py-3 flex flex-col gap-2 border-s-4 border-transparent transition-colors hover:bg-surface-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                <div class="flex items-center justify-between gap-2">
+                  <span dir="ltr" class="font-mono text-sm font-medium tracking-wider text-foreground">BATCH-2026-003</span>
+                  <span class="text-xs text-muted-foreground tabular-nums">300 رمز</span>
+                </div>
+                <div class="flex items-center justify-between gap-2 min-w-0">
+                  <span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground shrink-0">MK-31002</span>
+                  <span class="text-xs text-foreground truncate">ممتص صدمات أمامي</span>
+                </div>
+                <div data-ds-comp="Progress" class="w-full space-y-1.5 dir-rtl">
+                  <div role="progressbar" aria-valuenow="27" aria-valuemin="0" aria-valuemax="100" aria-valuetext="27% مستخدم" class="w-full bg-muted overflow-hidden relative h-1.5 rounded-full">
+                    <div class="h-full transition-all duration-300 ease-out rounded-full bg-[hsl(var(--primary))] w-[27%]"></div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+                  <span dir="ltr" class="tabular-nums">2026-02-18</span>
+                  <span>مستخدم <span class="font-mono tabular-nums text-foreground">27%</span></span>
+                </div>
+              </button>
+            </li>
+            <li data-idx="3" data-search="BATCH-2026-004 MK-40815 مرشح زيت المحرك">
+              <button type="button" aria-pressed="false" class="batch-row w-full text-start px-4 py-3 flex flex-col gap-2 border-s-4 border-transparent transition-colors hover:bg-surface-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                <div class="flex items-center justify-between gap-2">
+                  <span dir="ltr" class="font-mono text-sm font-medium tracking-wider text-foreground">BATCH-2026-004</span>
+                  <span class="text-xs text-muted-foreground tabular-nums">250 رمز</span>
+                </div>
+                <div class="flex items-center justify-between gap-2 min-w-0">
+                  <span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground shrink-0">MK-40815</span>
+                  <span class="text-xs text-foreground truncate">مرشح زيت المحرك</span>
+                </div>
+                <div data-ds-comp="Progress" class="w-full space-y-1.5 dir-rtl">
+                  <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-valuetext="0% مستخدم" class="w-full bg-muted overflow-hidden relative h-1.5 rounded-full">
+                    <div class="h-full transition-all duration-300 ease-out rounded-full bg-[hsl(var(--primary))] w-[0%]"></div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+                  <span dir="ltr" class="tabular-nums">2026-03-20</span>
+                  <span>مستخدم <span class="font-mono tabular-nums text-foreground">0%</span></span>
+                </div>
+              </button>
+            </li>
+            <li data-idx="4" data-search="BATCH-2025-018 MK-10025 فحمات فرامل أمامية">
+              <button type="button" aria-pressed="false" class="batch-row w-full text-start px-4 py-3 flex flex-col gap-2 border-s-4 border-transparent transition-colors hover:bg-surface-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                <div class="flex items-center justify-between gap-2">
+                  <span dir="ltr" class="font-mono text-sm font-medium tracking-wider text-foreground">BATCH-2025-018</span>
+                  <span class="text-xs text-muted-foreground tabular-nums">800 رمز</span>
+                </div>
+                <div class="flex items-center justify-between gap-2 min-w-0">
+                  <span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground shrink-0">MK-10025</span>
+                  <span class="text-xs text-foreground truncate">فحمات فرامل أمامية</span>
+                </div>
+                <div data-ds-comp="Progress" class="w-full space-y-1.5 dir-rtl">
+                  <div role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" aria-valuetext="99% مستخدم" class="w-full bg-muted overflow-hidden relative h-1.5 rounded-full">
+                    <div class="h-full transition-all duration-300 ease-out rounded-full bg-[hsl(var(--primary))] w-[99%]"></div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+                  <span dir="ltr" class="tabular-nums">2025-12-11</span>
+                  <span>مستخدم <span class="font-mono tabular-nums text-foreground">99%</span></span>
+                </div>
+              </button>
+            </li>
+          </ul>
+
+          <div class="flex items-center justify-between gap-2 px-4 py-3 border-t border-border">
+            <p class="text-xs text-muted-foreground tabular-nums">1–5 من 12 دفعة</p>
+            <div class="flex items-center gap-2">
+              <button type="button" aria-label="الصفحة السابقة" disabled class="inline-flex items-center justify-center shrink-0 transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed bg-transparent text-foreground border border-border hover:bg-secondary active:bg-secondary-active h-8 w-8 min-w-[32px] min-h-[32px] text-xs rounded-md"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+              <span class="text-xs text-muted-foreground tabular-nums">صفحة <span class="font-mono text-foreground">1</span> من <span class="font-mono text-foreground">3</span></span>
+              <button type="button" aria-label="الصفحة التالية" class="inline-flex items-center justify-center shrink-0 transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed bg-transparent text-foreground border border-border hover:bg-secondary active:bg-secondary-active h-8 w-8 min-w-[32px] min-h-[32px] text-xs rounded-md"><i class="fa-solid fa-chevron-left text-xs"></i></button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Batch detail -->
+        <article id="batch-detail" aria-labelledby="detail-title" class="bg-card border border-border rounded-lg overflow-hidden min-w-0">
+
+          <header class="p-5 border-b border-border space-y-3">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div class="space-y-1 min-w-0">
+                <p class="text-xs font-medium text-muted-foreground">الدفعة المحددة · معرّف الدفعة</p>
+                <h2 id="detail-title" class="font-mono text-xl font-medium tracking-wider text-foreground">BATCH-2026-001</h2>
+                <p class="text-sm text-muted-foreground leading-relaxed">تجمع هذه الدفعة الرموز الفريدة المنشأة معًا. معرّف الدفعة لا يُستخدم كرمز مكافأة.</p>
+              </div>
+              <div class="flex flex-wrap items-center gap-2">
+                <button type="button" data-ds-comp="Button" data-ds-variant="variant=outline,size=default" class="inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.98] bg-transparent text-foreground border border-border hover:bg-secondary active:bg-secondary-active h-10 px-4 text-sm gap-2 rounded-md min-h-[40px]">
+                  <span class="inline-flex shrink-0"><i class="fa-solid fa-file-csv"></i></span>
+                  <span>تصدير سجل الرموز</span>
+                </button>
+                <button id="open-print" type="button" data-ds-comp="Button" data-ds-variant="variant=primary,size=default" class="inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.98] bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] hover:bg-[hsl(var(--primary-hover))] active:bg-[hsl(var(--primary-active))] border border-transparent shadow-sm h-10 px-4 text-sm gap-2 rounded-md min-h-[40px]">
+                  <span class="inline-flex shrink-0"><i class="fa-solid fa-print"></i></span>
+                  <span>معاينة الملصقات وطباعتها</span>
+                </button>
+              </div>
+            </div>
+          </header>
+
+          <div class="p-5 space-y-6">
+
+            <!-- Batch facts -->
+            <dl id="batch-meta" class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+              <div class="rounded-md border border-border p-3 space-y-1">
+                <dt class="text-xs text-muted-foreground">رقم الصنف</dt>
+                <dd class="font-mono text-sm font-medium tracking-wider text-foreground"><span dir="ltr" id="d-item">MK-10025</span></dd>
+              </div>
+              <div class="rounded-md border border-border p-3 space-y-1 min-w-0">
+                <dt class="text-xs text-muted-foreground">اسم الصنف</dt>
+                <dd id="d-name" class="text-sm font-medium text-foreground">فحمات فرامل أمامية</dd>
+              </div>
+              <div class="rounded-md border border-border p-3 space-y-1">
+                <dt class="text-xs text-muted-foreground">تاريخ التوليد</dt>
+                <dd class="font-mono text-sm tracking-wider text-foreground tabular-nums"><span dir="ltr" id="d-date">2026-03-02</span></dd>
+              </div>
+              <div class="rounded-md border border-border p-3 space-y-1">
+                <dt class="text-xs text-muted-foreground">عدد الرموز المُولَّدة</dt>
+                <dd id="d-total" class="text-sm font-semibold text-foreground tabular-nums">1,000 رمز</dd>
+              </div>
+            </dl>
+
+            <!-- Lifecycle status counts -->
+            <section id="status-counts" aria-labelledby="status-title" class="space-y-3">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h3 id="status-title" class="text-sm font-semibold text-foreground">حالة الرموز الفريدة في هذه الدفعة</h3>
+                <span class="text-xs text-muted-foreground">مجموع الحالات = الكمية المُولَّدة · <span dir="ltr" id="math" class="font-mono tabular-nums text-foreground">210 + 150 + 640 + 0 = 1,000</span></span>
+              </div>
+
+              <div class="flex w-full h-2 overflow-hidden rounded-full bg-muted" aria-hidden="true">
+                <div id="seg-u" class="h-full bg-[hsl(var(--primary)/0.4)]"></div>
+                <div id="seg-r" class="h-full bg-warning"></div>
+                <div id="seg-s" class="h-full bg-success"></div>
+                <div id="seg-c" class="h-full bg-destructive"></div>
+              </div>
+
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div class="rounded-md border border-border p-3 space-y-2">
+                  <span data-ds-comp="Badge" data-ds-variant="variant=info,appearance=subtle" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-accent text-primary border-transparent"><span class="shrink-0 flex items-center"><i class="fa-regular fa-circle text-[10px]"></i></span><span>غير مستخدم</span></span>
+                  <p class="text-2xl font-semibold tabular-nums text-foreground"><span id="c-u">210</span> <span class="text-xs font-normal text-muted-foreground" id="p-u">21%</span></p>
+                  <p class="text-xs text-muted-foreground leading-relaxed">متاح لمطالبة مستقبلية صالحة.</p>
+                </div>
+                <div class="rounded-md border border-border p-3 space-y-2">
+                  <span data-ds-comp="Badge" data-ds-variant="variant=warning,appearance=subtle" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-amber-50 text-amber-800 border-amber-200/50"><span class="shrink-0 flex items-center"><i class="fa-solid fa-hourglass-half"></i></span><span>محجوز</span></span>
+                  <p class="text-2xl font-semibold tabular-nums text-foreground"><span id="c-r">150</span> <span class="text-xs font-normal text-muted-foreground" id="p-r">15%</span></p>
+                  <p class="text-xs text-muted-foreground leading-relaxed">مرتبط بمطالبة لم تكتمل مراجعتها النهائية. ليس مكافأة مكتملة.</p>
+                </div>
+                <div class="rounded-md border border-border p-3 space-y-2">
+                  <span data-ds-comp="Badge" data-ds-variant="variant=success,appearance=subtle" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-emerald-50 text-emerald-800 border-emerald-200/50"><span class="shrink-0 flex items-center"><i class="fa-solid fa-circle-check"></i></span><span>مستخدم</span></span>
+                  <p class="text-2xl font-semibold tabular-nums text-foreground"><span id="c-s">640</span> <span class="text-xs font-normal text-muted-foreground" id="p-s">64%</span></p>
+                  <p class="text-xs text-muted-foreground leading-relaxed">استُهلك عبر مسار التركيب المعتمد فقط.</p>
+                </div>
+                <div class="rounded-md border border-border p-3 space-y-2">
+                  <span data-ds-comp="Badge" data-ds-variant="variant=error,appearance=subtle" class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-red-50 text-red-700 border-red-200/50"><span class="shrink-0 flex items-center"><i class="fa-solid fa-ban"></i></span><span>ملغى</span></span>
+                  <p class="text-2xl font-semibold tabular-nums text-foreground"><span id="c-c">0</span> <span class="text-xs font-normal text-muted-foreground" id="p-c">0%</span></p>
+                  <p class="text-xs text-muted-foreground leading-relaxed">أُبطل بإجراء إداري مُصرَّح به فقط.</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Individual reward code records -->
+            <section id="code-records" aria-labelledby="codes-title" class="space-y-3">
+              <div class="flex flex-wrap items-end justify-between gap-3">
+                <div class="space-y-1">
+                  <h3 id="codes-title" class="text-sm font-semibold text-foreground">سجل الرموز الفريدة</h3>
+                  <p class="text-xs text-muted-foreground">عينة من أول رموز الدفعة. كل رمز له سجل مستقل ولا يُعدَّل من هنا.</p>
+                </div>
+                <div role="tablist" aria-label="تصفية الرموز حسب الحالة" class="inline-flex items-center gap-1 p-1 rounded-md bg-muted flex-wrap">
+                  <button type="button" role="tab" aria-selected="true" data-cfilter="all" class="cf inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-accent text-accent-foreground hover:bg-accent-hover active:bg-secondary border border-transparent h-8 px-3 text-xs gap-1.5 rounded-md min-h-[32px]"><span>الكل</span><span class="font-mono tabular-nums" data-count="all">1000</span></button>
+                  <button type="button" role="tab" aria-selected="false" data-cfilter="u" class="cf inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-transparent text-foreground hover:bg-secondary active:bg-secondary-active border border-transparent h-8 px-3 text-xs gap-1.5 rounded-md min-h-[32px]"><span>غير مستخدم</span><span class="font-mono tabular-nums" data-count="u">210</span></button>
+                  <button type="button" role="tab" aria-selected="false" data-cfilter="r" class="cf inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-transparent text-foreground hover:bg-secondary active:bg-secondary-active border border-transparent h-8 px-3 text-xs gap-1.5 rounded-md min-h-[32px]"><span>محجوز</span><span class="font-mono tabular-nums" data-count="r">150</span></button>
+                  <button type="button" role="tab" aria-selected="false" data-cfilter="s" class="cf inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-transparent text-foreground hover:bg-secondary active:bg-secondary-active border border-transparent h-8 px-3 text-xs gap-1.5 rounded-md min-h-[32px]"><span>مستخدم</span><span class="font-mono tabular-nums" data-count="s">640</span></button>
+                  <button type="button" role="tab" aria-selected="false" data-cfilter="c" class="cf inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-transparent text-foreground hover:bg-secondary active:bg-secondary-active border border-transparent h-8 px-3 text-xs gap-1.5 rounded-md min-h-[32px]"><span>ملغى</span><span class="font-mono tabular-nums" data-count="c">0</span></button>
+                </div>
+              </div>
+
+              <div class="overflow-x-auto rounded-md border border-border">
+                <!-- DS gap: no table component in the catalog; styled with DS tokens -->
+                <table class="w-full text-sm">
+                  <thead class="bg-surface-subtle text-xs text-muted-foreground">
+                    <tr>
+                      <th scope="col" class="px-4 py-2.5 font-medium text-start">الرمز الفريد</th>
+                      <th scope="col" class="px-4 py-2.5 font-medium text-start">الحالة</th>
+                      <th scope="col" class="px-4 py-2.5 font-medium text-start">المطالبة المرتبطة</th>
+                      <th scope="col" class="px-4 py-2.5 font-medium text-start">رقم الصنف</th>
+                    </tr>
+                  </thead>
+                  <tbody id="code-rows" class="divide-y divide-border"></tbody>
+                </table>
+              </div>
+              <div id="code-empty" class="hidden rounded-md border border-dashed border-border bg-card/50 p-6 text-center space-y-1">
+                <p class="text-sm font-medium text-foreground">لا توجد رموز من هذه الحالة في العينة المعروضة</p>
+                <p id="code-empty-desc" class="text-xs text-muted-foreground"></p>
+              </div>
+              <p class="text-xs text-muted-foreground">تعرض العينة <span class="font-mono tabular-nums text-foreground" id="sample-count">5</span> من أصل <span class="font-mono tabular-nums text-foreground" id="total-count">1,000</span> رمزًا. السجل الكامل متاح عبر التصدير.</p>
+
+              <div class="flex flex-wrap items-center justify-between gap-3 rounded-md bg-muted p-3">
+                <p class="text-xs text-muted-foreground leading-relaxed max-w-xl">الإلغاء الإداري: لا يُلغى أي رمز محجوز أو مستخدم من هذه الشاشة. إلغاء الرموز غير المستخدمة يتطلب صلاحية معتمدة وسببًا مكتوبًا وتأكيدًا صريحًا.</p>
+                <button type="button" disabled data-ds-comp="Button" data-ds-variant="variant=outline,size=sm" class="inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed bg-transparent text-destructive border border-destructive/40 hover:bg-destructive-subtle h-8 px-3 text-xs gap-1.5 rounded-md min-h-[32px]"><span>طلب إلغاء رموز غير مستخدمة</span></button>
+              </div>
+            </section>
+
+            <!-- Factory label preview + pre-print checks -->
+            <section id="label-section" aria-labelledby="label-title" class="space-y-3">
+              <div class="space-y-1">
+                <h3 id="label-title" class="text-sm font-semibold text-foreground">معاينة ملصق المصنع</h3>
+                <p class="text-xs text-muted-foreground">رقم الصنف مكتوب نصًا على كل ملصق، والرمز الفريد يظهر بتنسيق Code 128 مع نصه القابل للقراءة.</p>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
+                <div class="space-y-2">
+                  <div id="label-preview" class="relative w-full max-w-[420px] aspect-[2/1] bg-surface border border-border p-4 flex flex-col justify-between gap-2 text-foreground">
+                    <div class="flex items-center justify-between gap-2">
+                      <span class="text-xs font-semibold tracking-wide">MK KASHIYAMA</span>
+                      <span dir="ltr" id="lbl-batch" class="font-mono text-[11px] tracking-wider text-muted-foreground">BATCH-2026-001</span>
+                    </div>
+                    <p id="lbl-name" class="text-sm font-medium leading-snug truncate">فحمات فرامل أمامية</p>
+                    <p class="text-sm flex items-baseline gap-2">
+                      <span>رقم الصنف:</span>
+                      <span dir="ltr" id="lbl-item" class="font-mono text-base font-semibold tracking-wider">MK-10025</span>
+                    </p>
+                    <div class="flex flex-col items-center gap-1">
+                      <svg id="lbl-bars" class="w-[70%] h-9 text-foreground" viewBox="0 0 200 40" preserveAspectRatio="none" role="img" aria-label="رسم توضيحي للرمز الفريد"></svg>
+                      <span dir="ltr" id="lbl-code" class="font-mono text-xs tracking-[0.15em]">RWD-2026-000001</span>
+                    </div>
+                  </div>
+                  <p class="text-xs text-muted-foreground leading-relaxed max-w-[420px]">معاينة توضيحية: الخطوط على الملصق للعرض فقط ولا تمثل ترميز Code 128 مُتحقَّقًا. الطباعة الفعلية تتطلب ترميزًا مطابقًا للمعيار واختبار قابلية المسح على الطابعة المعتمدة.</p>
+                </div>
+
+                <div class="rounded-md border border-border p-4 space-y-3">
+                  <h4 class="text-sm font-semibold text-foreground">قبل الطباعة</h4>
+                  <ul class="space-y-2.5 text-sm text-foreground">
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-success mt-0.5"></i><span>رقم الصنف <span dir="ltr" id="cl-item" class="font-mono tracking-wider">MK-10025</span> ظاهر نصيًا على كل ملصق</span></li>
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-success mt-0.5"></i><span>الرمز الفريد مطبوع بـ Code 128 مع نصه القابل للقراءة</span></li>
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-success mt-0.5"></i><span id="cl-qty">تُطبع الملصقات للرموز غير المستخدمة فقط (210)</span></li>
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-success mt-0.5"></i><span>باركود الصنف الثابت لا يُستخدم مكان الرمز الفريد</span></li>
+                  </ul>
+                  <p class="text-xs text-muted-foreground leading-relaxed">الطباعة لا تغيّر حالة أي رمز. يبقى الرمز غير مستخدم حتى تُعتمد المطالبة عبر مسار التركيب.</p>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </article>
+
+      </section>
+
+      <p class="text-xs text-muted-foreground leading-relaxed border-t border-border pt-4">هذه الشاشة نموذج تصميمي تعرض بيانات عينة وأرقامًا توضيحية لأغراض العرض فقط. الرموز المعروضة ليست رموزًا حقيقية ولم تُنشأ أو تُسجَّل على أي خادم، ورسوم الباركود توضيحية وليست ترميز Code 128 مُتحقَّقًا.</p>
+
+    </main>
+  </div>
+</div>
+
+<!-- ============ GENERATION DRAWER (Drawer, side=start) ============ -->
+<div id="generate-drawer" role="dialog" aria-modal="true" aria-labelledby="gen-title" class="hidden fixed inset-0 z-50 overflow-hidden dir-rtl">
+  <div data-close-drawer class="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity" aria-hidden="true"></div>
+  <div class="fixed top-0 bottom-0 right-0 z-10 w-full max-w-lg bg-card text-card-foreground border-l border-border shadow-md flex flex-col focus:outline-none">
+    <div class="flex items-start justify-between p-5 border-b border-border shrink-0 gap-4 bg-surface-subtle">
+      <div class="space-y-1 text-start">
+        <h3 id="gen-title" class="text-lg font-semibold leading-tight text-foreground">إنشاء دفعة باركود جديدة</h3>
+        <p class="text-sm text-muted-foreground leading-normal">تتحقق الخدمة الخلفية من تفرد كل رمز قبل تأكيد الدفعة. راجع الخطوات قبل الإنشاء.</p>
+      </div>
+      <button type="button" data-close-drawer aria-label="إغلاق اللوحة الجانبية" class="p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted focus:outline-none focus:ring-2 focus:ring-ring shrink-0">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+    </div>
+
+    <div class="p-5 overflow-y-auto flex-1 text-start space-y-6">
+
+      <!-- Step 1: product -->
+      <section class="space-y-3">
+        <div class="flex items-center justify-between gap-2">
+          <h4 class="text-sm font-medium text-foreground">الصنف <span class="text-destructive font-bold">*</span></h4>
+          <span class="text-xs text-muted-foreground">الخطوة 1 من 3</span>
+        </div>
+        <div data-ds-comp="SearchField" class="w-full flex flex-col gap-1.5">
+          <div class="relative flex items-center w-full bg-surface rounded-md border transition-colors duration-150 ease-in-out border-input hover:border-border-hover focus-within:border-primary focus-within:ring-2 focus-within:ring-ring">
+            <span class="ps-3 text-muted-foreground flex items-center shrink-0 pointer-events-none">
+              <svg class="w-4 h-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+            </span>
+            <input id="product-search" type="search" aria-label="البحث عن صنف" placeholder="رقم الصنف، اسم الصنف، أو الباركود الثابت" class="w-full bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none transition-colors select-text h-10 px-3 text-sm min-h-[40px] font-sans text-start" />
+          </div>
+        </div>
+        <div id="product-options" role="radiogroup" aria-label="الصنف" class="space-y-2">
+          <label data-search="MK-10025 فحمات فرامل أمامية 6291041002501" data-name="فحمات فرامل أمامية" data-item="MK-10025" class="relative flex items-start gap-3 select-none cursor-pointer p-3 rounded-lg border transition-all duration-150 min-h-[48px] border-input bg-surface hover:border-border-hover has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+            <div class="relative flex items-center justify-center shrink-0 mt-0.5">
+              <input type="radio" name="gen-product" value="MK-10025" data-sync checked class="peer sr-only" />
+              <div class="h-5 w-5 rounded-full border transition-all duration-150 flex items-center justify-center bg-surface peer-focus-visible:ring-2 peer-focus-visible:ring-ring peer-focus-visible:ring-offset-2 border-input peer-checked:border-primary peer-checked:bg-[hsl(var(--primary))]">
+                <div class="ind h-2 w-2 rounded-full bg-[hsl(var(--primary-foreground))] transition-transform duration-150 scale-100"></div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-0.5 text-start min-w-0">
+              <span class="text-sm font-medium text-foreground leading-snug"><span dir="ltr" class="font-mono tracking-wider">MK-10025</span> · فحمات فرامل أمامية</span>
+              <span class="text-xs text-muted-foreground leading-normal">باركود الصنف الثابت (مرجع فقط): <span dir="ltr" class="font-mono tracking-wider">6291041002501</span></span>
+            </div>
+          </label>
+          <label data-search="MK-20417 أقراص فرامل مهوّاة 6291041204170" data-name="أقراص فرامل مهوّاة" data-item="MK-20417" class="relative flex items-start gap-3 select-none cursor-pointer p-3 rounded-lg border transition-all duration-150 min-h-[48px] border-input bg-surface hover:border-border-hover has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+            <div class="relative flex items-center justify-center shrink-0 mt-0.5">
+              <input type="radio" name="gen-product" value="MK-20417" data-sync class="peer sr-only" />
+              <div class="h-5 w-5 rounded-full border transition-all duration-150 flex items-center justify-center bg-surface peer-focus-visible:ring-2 peer-focus-visible:ring-ring peer-focus-visible:ring-offset-2 border-input peer-checked:border-primary peer-checked:bg-[hsl(var(--primary))]">
+                <div class="ind h-2 w-2 rounded-full bg-[hsl(var(--primary-foreground))] transition-transform duration-150 scale-0"></div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-0.5 text-start min-w-0">
+              <span class="text-sm font-medium text-foreground leading-snug"><span dir="ltr" class="font-mono tracking-wider">MK-20417</span> · أقراص فرامل مهوّاة</span>
+              <span class="text-xs text-muted-foreground leading-normal">باركود الصنف الثابت (مرجع فقط): <span dir="ltr" class="font-mono tracking-wider">6291041204170</span></span>
+            </div>
+          </label>
+          <label data-search="MK-31002 ممتص صدمات أمامي 6291041310028" data-name="ممتص صدمات أمامي" data-item="MK-31002" class="relative flex items-start gap-3 select-none cursor-pointer p-3 rounded-lg border transition-all duration-150 min-h-[48px] border-input bg-surface hover:border-border-hover has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+            <div class="relative flex items-center justify-center shrink-0 mt-0.5">
+              <input type="radio" name="gen-product" value="MK-31002" data-sync class="peer sr-only" />
+              <div class="h-5 w-5 rounded-full border transition-all duration-150 flex items-center justify-center bg-surface peer-focus-visible:ring-2 peer-focus-visible:ring-ring peer-focus-visible:ring-offset-2 border-input peer-checked:border-primary peer-checked:bg-[hsl(var(--primary))]">
+                <div class="ind h-2 w-2 rounded-full bg-[hsl(var(--primary-foreground))] transition-transform duration-150 scale-0"></div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-0.5 text-start min-w-0">
+              <span class="text-sm font-medium text-foreground leading-snug"><span dir="ltr" class="font-mono tracking-wider">MK-31002</span> · ممتص صدمات أمامي</span>
+              <span class="text-xs text-muted-foreground leading-normal">باركود الصنف الثابت (مرجع فقط): <span dir="ltr" class="font-mono tracking-wider">6291041310028</span></span>
+            </div>
+          </label>
+          <label data-search="MK-40815 مرشح زيت المحرك 6291041408153" data-name="مرشح زيت المحرك" data-item="MK-40815" class="relative flex items-start gap-3 select-none cursor-pointer p-3 rounded-lg border transition-all duration-150 min-h-[48px] border-input bg-surface hover:border-border-hover has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+            <div class="relative flex items-center justify-center shrink-0 mt-0.5">
+              <input type="radio" name="gen-product" value="MK-40815" data-sync class="peer sr-only" />
+              <div class="h-5 w-5 rounded-full border transition-all duration-150 flex items-center justify-center bg-surface peer-focus-visible:ring-2 peer-focus-visible:ring-ring peer-focus-visible:ring-offset-2 border-input peer-checked:border-primary peer-checked:bg-[hsl(var(--primary))]">
+                <div class="ind h-2 w-2 rounded-full bg-[hsl(var(--primary-foreground))] transition-transform duration-150 scale-0"></div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-0.5 text-start min-w-0">
+              <span class="text-sm font-medium text-foreground leading-snug"><span dir="ltr" class="font-mono tracking-wider">MK-40815</span> · مرشح زيت المحرك</span>
+              <span class="text-xs text-muted-foreground leading-normal">باركود الصنف الثابت (مرجع فقط): <span dir="ltr" class="font-mono tracking-wider">6291041408153</span></span>
+            </div>
+          </label>
+        </div>
+        <p id="product-empty" class="hidden text-xs text-muted-foreground">لا توجد أصناف مطابقة في الكتالوج.</p>
+      </section>
+
+      <!-- Step 2: quantity -->
+      <section class="space-y-3">
+        <div class="flex items-center justify-between gap-2">
+          <label for="gen-qty" class="text-sm font-medium font-sans text-foreground select-none">عدد الباركودات<span class="ms-1 text-destructive font-bold" aria-hidden="true">*</span></label>
+          <span class="text-xs text-muted-foreground">الخطوة 2 من 3</span>
+        </div>
+        <div class="relative flex items-center w-full bg-surface rounded-md border transition-colors duration-150 ease-in-out select-none border-input hover:border-border-hover focus-within:border-primary focus-within:ring-2 focus-within:ring-ring">
+          <input id="gen-qty" type="text" inputmode="numeric" value="500" dir="ltr" aria-describedby="gen-qty-help" class="w-full bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none font-mono tracking-wider text-start px-3 h-10 text-sm min-h-[40px]" />
+          <span class="px-3 text-xs font-medium text-muted-foreground bg-muted/50 h-full flex items-center border-s border-input shrink-0 select-none">رمز فريد</span>
+          <div class="flex items-center border-s border-input shrink-0">
+            <button type="button" data-step="-1" data-target="gen-qty" tabindex="-1" aria-label="إنقاص القيمة" class="w-9 h-10 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted/50 active:bg-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" /></svg></button>
+            <div class="w-px h-5 bg-border"></div>
+            <button type="button" data-step="1" data-target="gen-qty" tabindex="-1" aria-label="زيادة القيمة" class="w-9 h-10 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted/50 active:bg-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed rounded-e-md"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg></button>
+          </div>
+        </div>
+        <p id="gen-qty-help" class="text-xs text-muted-foreground font-sans">عدد صحيح أكبر من صفر. حدود التوليد غير مُعرَّفة في هذا النموذج، وتُضبط من سياسة الرموز.</p>
+        <div id="gen-qty-error" class="hidden items-center gap-1.5 text-xs text-destructive font-medium font-sans">
+          <svg class="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <span>أدخل عددًا صحيحًا أكبر من صفر.</span>
+        </div>
+      </section>
+
+      <!-- Step 3: summary -->
+      <section id="gen-summary" aria-label="ملخص قبل الإنشاء" class="space-y-3">
+        <div class="flex items-center justify-between gap-2">
+          <h4 class="text-sm font-medium text-foreground">ملخص قبل الإنشاء</h4>
+          <span class="text-xs text-muted-foreground">الخطوة 3 من 3</span>
+        </div>
+        <div class="rounded-md border border-border divide-y divide-border text-sm">
+          <div class="flex items-start justify-between gap-3 p-3"><span class="text-xs text-muted-foreground shrink-0">الصنف</span><span id="gs-product" class="text-end text-foreground font-medium">MK-10025 · فحمات فرامل أمامية</span></div>
+          <div class="flex items-start justify-between gap-3 p-3"><span class="text-xs text-muted-foreground shrink-0">الكمية المطلوبة</span><span class="text-end text-foreground tabular-nums"><span id="gs-qty" class="font-mono">500</span> رمز فريد</span></div>
+          <div class="flex items-start justify-between gap-3 p-3"><span class="text-xs text-muted-foreground shrink-0">معرّف الدفعة</span><span dir="ltr" class="font-mono tracking-wider text-foreground">BATCH-2026-005 <span class="text-xs font-sans text-muted-foreground">(مثال، يحدده الخادم)</span></span></div>
+          <div class="flex items-start justify-between gap-3 p-3"><span class="text-xs text-muted-foreground shrink-0">الحالة عند الإنشاء</span><span id="gs-status" class="text-end text-foreground tabular-nums">500 غير مستخدم · 0 محجوز · 0 مستخدم · 0 ملغى</span></div>
+          <div class="flex items-start justify-between gap-3 p-3"><span class="text-xs text-muted-foreground shrink-0">نطاق الرموز المقترح</span><span dir="ltr" id="gs-range" class="font-mono tracking-wider text-foreground text-end">RWD-2026-002051 — RWD-2026-002550</span></div>
+          <div class="flex items-start justify-between gap-3 p-3"><span class="text-xs text-muted-foreground shrink-0">نوع الترميز</span><span class="text-end text-foreground">Code 128 · رمز مختلف لكل عبوة</span></div>
+        </div>
+        <label class="relative inline-flex items-start gap-3 select-none cursor-pointer text-start min-h-[48px] py-2 px-1">
+          <div class="relative flex items-center justify-center shrink-0 mt-0.5">
+            <input type="checkbox" id="gen-confirm" data-sync class="peer sr-only" />
+            <div class="h-5 w-5 rounded border transition-all duration-150 flex items-center justify-center bg-surface peer-focus-visible:ring-2 peer-focus-visible:ring-ring peer-focus-visible:ring-offset-2 border-input hover:border-border-hover peer-checked:border-primary peer-checked:bg-[hsl(var(--primary))] peer-checked:text-[hsl(var(--primary-foreground))]">
+              <svg class="ind h-3.5 w-3.5 stroke-current stroke-[2.5] transition-transform duration-150 scale-0 opacity-0" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </div>
+          </div>
+          <div class="flex flex-col gap-0.5 text-start">
+            <span class="text-sm font-medium font-sans text-foreground leading-snug">راجعت الصنف والكمية، وأفهم أن الرموز الناتجة فريدة ولا يمكن تعديلها أو إعادة استخدامها بعد الإنشاء</span>
+          </div>
+        </label>
+      </section>
+    </div>
+
+    <div class="flex items-center justify-end gap-3 p-4 bg-surface-subtle border-t border-border shrink-0">
+      <p id="gen-hint" class="flex-1 text-xs text-muted-foreground">أكمل التحقق للمتابعة</p>
+      <button type="button" data-close-drawer data-ds-comp="Button" data-ds-variant="variant=outline,size=default" class="inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-transparent text-foreground border border-border hover:bg-secondary active:bg-secondary-active h-10 px-4 text-sm gap-2 rounded-md min-h-[40px]"><span>إلغاء</span></button>
+      <button id="gen-submit" type="button" disabled data-ds-comp="Button" data-ds-variant="variant=primary,size=default" class="inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.98] bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] hover:bg-[hsl(var(--primary-hover))] active:bg-[hsl(var(--primary-active))] border border-transparent shadow-sm h-10 px-4 text-sm gap-2 rounded-md min-h-[40px]"><span class="inline-flex shrink-0"><i class="fa-solid fa-barcode"></i></span><span id="gen-submit-label">إنشاء الدفعة</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PRINT DIALOG (Dialog, lg) ============ -->
+<div id="print-dialog" role="dialog" aria-modal="true" aria-labelledby="print-title" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 dir-rtl">
+  <div data-close-print class="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity" aria-hidden="true"></div>
+  <div class="relative w-full max-w-2xl bg-card text-card-foreground rounded-lg border border-border shadow-md flex flex-col max-h-[calc(100vh-4rem)] z-10 focus:outline-none">
+    <div class="flex items-start justify-between p-6 border-b border-border shrink-0 gap-4">
+      <div class="space-y-1 text-start">
+        <h3 id="print-title" class="text-xl font-semibold leading-tight text-foreground">طباعة ملصقات المصنع</h3>
+        <p class="text-sm text-muted-foreground leading-normal">راجع الصنف والدفعة قبل الإرسال. الملصق الخاطئ يعني عبوة بلا صنف صحيح.</p>
+      </div>
+      <button type="button" data-close-print aria-label="إغلاق النافذة" class="p-1 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted focus:outline-none focus:ring-2 focus:ring-ring shrink-0">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+    </div>
+
+    <div class="p-6 overflow-y-auto flex-1 text-start space-y-5">
+      <!-- Verification -->
+      <div class="rounded-md bg-muted/40 border border-border p-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div class="space-y-1"><p class="text-xs text-muted-foreground">رقم الصنف</p><p dir="ltr" id="pd-item" class="font-mono text-sm font-semibold tracking-wider text-foreground text-start">MK-10025</p></div>
+        <div class="space-y-1 min-w-0"><p class="text-xs text-muted-foreground">اسم الصنف</p><p id="pd-name" class="text-sm font-medium text-foreground truncate">فحمات فرامل أمامية</p></div>
+        <div class="space-y-1"><p class="text-xs text-muted-foreground">الدفعة</p><p dir="ltr" id="pd-batch" class="font-mono text-sm tracking-wider text-foreground text-start">BATCH-2026-001</p></div>
+      </div>
+
+      <!-- Output mode -->
+      <section class="space-y-2">
+        <h4 class="text-sm font-medium text-foreground">مخرج الطباعة <span class="text-destructive font-bold">*</span></h4>
+        <div role="radiogroup" aria-label="مخرج الطباعة" class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <label class="relative flex items-start gap-3 select-none cursor-pointer p-2.5 rounded-lg border transition-all duration-150 min-h-[48px] border-input bg-surface hover:border-border-hover has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+            <div class="relative flex items-center justify-center shrink-0 mt-0.5">
+              <input type="radio" name="print-mode" value="print" data-sync checked class="peer sr-only" />
+              <div class="h-5 w-5 rounded-full border transition-all duration-150 flex items-center justify-center bg-surface peer-focus-visible:ring-2 peer-focus-visible:ring-ring peer-focus-visible:ring-offset-2 border-input peer-checked:border-primary peer-checked:bg-[hsl(var(--primary))]">
+                <div class="ind h-2 w-2 rounded-full bg-[hsl(var(--primary-foreground))] transition-transform duration-150 scale-100"></div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-0.5 text-start"><span class="text-sm font-medium text-foreground leading-snug">طباعة مباشرة</span><span class="text-xs text-muted-foreground leading-normal">إرسال الملصقات إلى الطابعة المحددة</span></div>
+          </label>
+          <label class="relative flex items-start gap-3 select-none cursor-pointer p-2.5 rounded-lg border transition-all duration-150 min-h-[48px] border-input bg-surface hover:border-border-hover has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+            <div class="relative flex items-center justify-center shrink-0 mt-0.5">
+              <input type="radio" name="print-mode" value="export" data-sync class="peer sr-only" />
+              <div class="h-5 w-5 rounded-full border transition-all duration-150 flex items-center justify-center bg-surface peer-focus-visible:ring-2 peer-focus-visible:ring-ring peer-focus-visible:ring-offset-2 border-input peer-checked:border-primary peer-checked:bg-[hsl(var(--primary))]">
+                <div class="ind h-2 w-2 rounded-full bg-[hsl(var(--primary-foreground))] transition-transform duration-150 scale-0"></div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-0.5 text-start"><span class="text-sm font-medium text-foreground leading-snug">تصدير ملف للطباعة</span><span class="text-xs text-muted-foreground leading-normal">ملف يُراجع ويُطبع لاحقًا من نظام الطباعة</span></div>
+          </label>
+        </div>
+      </section>
+
+      <!-- Quantity -->
+      <section class="space-y-1.5">
+        <div class="flex items-center justify-between gap-2">
+          <label for="pr-qty" class="text-sm font-medium font-sans text-foreground select-none">عدد الملصقات<span class="ms-1 text-destructive font-bold" aria-hidden="true">*</span></label>
+        </div>
+        <div class="relative flex items-center w-full bg-surface rounded-md border transition-colors duration-150 ease-in-out select-none border-input hover:border-border-hover focus-within:border-primary focus-within:ring-2 focus-within:ring-ring">
+          <input id="pr-qty" type="text" inputmode="numeric" value="210" dir="ltr" aria-describedby="pr-qty-help" class="w-full bg-transparent text-foreground focus:outline-none font-mono tracking-wider text-start px-3 h-10 text-sm min-h-[40px]" />
+          <span class="px-3 text-xs font-medium text-muted-foreground bg-muted/50 h-full flex items-center border-s border-input shrink-0 select-none">ملصق</span>
+          <div class="flex items-center border-s border-input shrink-0">
+            <button type="button" data-step="-1" data-target="pr-qty" tabindex="-1" aria-label="إنقاص القيمة" class="w-9 h-10 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted/50 active:bg-muted transition-colors"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" /></svg></button>
+            <div class="w-px h-5 bg-border"></div>
+            <button type="button" data-step="1" data-target="pr-qty" tabindex="-1" aria-label="زيادة القيمة" class="w-9 h-10 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted/50 active:bg-muted transition-colors rounded-e-md"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg></button>
+          </div>
+        </div>
+        <p id="pr-qty-help" class="text-xs text-muted-foreground">الحد الأعلى: الرموز غير المستخدمة في هذه الدفعة فقط. الرموز المحجوزة أو المستخدمة لا تُطبع من هنا.</p>
+      </section>
+
+      <!-- Label size + sheet layout -->
+      <section class="grid grid-cols-1 sm:grid-cols-3 gap-3 items-start">
+        <div class="space-y-1.5">
+          <label for="pr-w" class="text-sm font-medium font-sans text-foreground select-none">عرض الملصق</label>
+          <div class="relative flex items-center w-full bg-surface rounded-md border transition-colors duration-150 ease-in-out select-none border-input hover:border-border-hover focus-within:border-primary focus-within:ring-2 focus-within:ring-ring">
+            <input id="pr-w" type="text" inputmode="numeric" value="50" dir="ltr" class="w-full bg-transparent text-foreground focus:outline-none font-mono tracking-wider text-start px-3 h-10 text-sm min-h-[40px]" />
+            <span class="px-3 text-xs font-medium text-muted-foreground bg-muted/50 h-full flex items-center border-s border-input shrink-0 select-none">مم</span>
+          </div>
+        </div>
+        <div class="space-y-1.5">
+          <label for="pr-h" class="text-sm font-medium font-sans text-foreground select-none">ارتفاع الملصق</label>
+          <div class="relative flex items-center w-full bg-surface rounded-md border transition-colors duration-150 ease-in-out select-none border-input hover:border-border-hover focus-within:border-primary focus-within:ring-2 focus-within:ring-ring">
+            <input id="pr-h" type="text" inputmode="numeric" value="25" dir="ltr" class="w-full bg-transparent text-foreground focus:outline-none font-mono tracking-wider text-start px-3 h-10 text-sm min-h-[40px]" />
+            <span class="px-3 text-xs font-medium text-muted-foreground bg-muted/50 h-full flex items-center border-s border-input shrink-0 select-none">مم</span>
+          </div>
+        </div>
+        <div class="space-y-1.5">
+          <span class="block text-sm font-medium font-sans text-foreground select-none">تخطيط الصفحة</span>
+          <button type="button" aria-haspopup="listbox" class="flex items-center justify-between w-full bg-surface text-foreground font-normal border border-input hover:border-border-hover select-none cursor-pointer h-10 px-3.5 text-sm min-h-[40px] rounded-md"><span class="truncate">ملصق واحد لكل صفحة</span><i class="fa-solid fa-chevron-down text-xs text-muted-foreground ms-2"></i></button>
+        </div>
+        <p class="sm:col-span-3 text-xs text-muted-foreground">قياس الملصق افتراضي للمعاينة، ولا يُفرض أي طراز طابعة أو مقاس ثابت. اضبطه وفق مواصفات الملصق المعتمدة لدى المصنع.</p>
+      </section>
+
+      <!-- Reprint identification -->
+      <div>
+        <label class="relative inline-flex items-start gap-3 select-none cursor-pointer text-start min-h-[48px] py-2 px-1">
+          <div class="relative flex items-center justify-center shrink-0 mt-0.5">
+            <input type="checkbox" id="pr-reprint" data-sync class="peer sr-only" />
+            <div class="h-5 w-5 rounded border transition-all duration-150 flex items-center justify-center bg-surface peer-focus-visible:ring-2 peer-focus-visible:ring-ring peer-focus-visible:ring-offset-2 border-input hover:border-border-hover peer-checked:border-primary peer-checked:bg-[hsl(var(--primary))] peer-checked:text-[hsl(var(--primary-foreground))]">
+              <svg class="ind h-3.5 w-3.5 stroke-current stroke-[2.5] transition-transform duration-150 scale-0 opacity-0" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </div>
+          </div>
+          <div class="flex flex-col gap-0.5 text-start">
+            <span class="text-sm font-medium font-sans text-foreground leading-snug">وضع إعادة الطباعة</span>
+            <span class="text-xs font-sans text-muted-foreground leading-normal">يُضاف على الملصق علامة إعادة طباعة ويُسجَّل في سجل التدقيق.</span>
+          </div>
+        </label>
+        <div id="reprint-risk" class="hidden mt-2 rounded-md border border-amber-200 bg-amber-50 text-amber-950 p-3 text-xs leading-relaxed flex gap-2">
+          <i class="fa-solid fa-triangle-exclamation text-amber-700 mt-0.5"></i>
+          <span>إعادة طباعة رمز قد تُنتج عبوتين تحملان الرمز نفسه. أتلف الملصقات القديمة قبل التركيب. إعادة الطباعة لا تغيّر حالة الرمز.</span>
+        </div>
+      </div>
+
+      <div class="rounded-md border border-amber-200 bg-amber-50 text-amber-950 p-4 text-sm flex gap-3 items-start">
+        <i class="fa-solid fa-circle-info text-amber-700 mt-0.5"></i>
+        <p class="leading-relaxed">الطباعة لا تغيّر حالة أي رمز من غير مستخدم إلى مستخدم. يبقى الرمز غير مستخدم حتى تُعتمد المطالبة عبر مسار التركيب، ولا تُمنح أي نقاط من الطباعة.</p>
+      </div>
+
+      <!-- Confirmation -->
+      <label class="relative inline-flex items-start gap-3 select-none cursor-pointer text-start min-h-[48px] py-2 px-1">
+        <div class="relative flex items-center justify-center shrink-0 mt-0.5">
+          <input type="checkbox" id="pr-confirm" data-sync class="peer sr-only" />
+          <div class="h-5 w-5 rounded border transition-all duration-150 flex items-center justify-center bg-surface peer-focus-visible:ring-2 peer-focus-visible:ring-ring peer-focus-visible:ring-offset-2 border-input hover:border-border-hover peer-checked:border-primary peer-checked:bg-[hsl(var(--primary))] peer-checked:text-[hsl(var(--primary-foreground))]">
+            <svg class="ind h-3.5 w-3.5 stroke-current stroke-[2.5] transition-transform duration-150 scale-0 opacity-0" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </div>
+        </div>
+        <div class="flex flex-col gap-0.5 text-start">
+          <span class="text-sm font-medium font-sans text-foreground leading-snug">أؤكد أن رقم الصنف <span dir="ltr" id="pr-confirm-item" class="font-mono tracking-wider">MK-10025</span> صحيح لهذه الدفعة</span>
+        </div>
+      </label>
+    </div>
+
+    <div class="flex items-center justify-end gap-3 p-4 bg-surface-subtle border-t border-border shrink-0 rounded-b-lg">
+      <p id="pr-hint" class="flex-1 text-xs text-muted-foreground">أكمل التأكيد للمتابعة</p>
+      <button type="button" data-close-print data-ds-comp="Button" data-ds-variant="variant=outline,size=default" class="inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-transparent text-foreground border border-border hover:bg-secondary active:bg-secondary-active h-10 px-4 text-sm gap-2 rounded-md min-h-[40px]"><span>إلغاء</span></button>
+      <button id="pr-submit" type="button" disabled data-ds-comp="Button" data-ds-variant="variant=primary,size=default" class="inline-flex items-center justify-center font-sans font-medium transition-all duration-150 ease-in-out select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed active:scale-[0.98] bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] hover:bg-[hsl(var(--primary-hover))] active:bg-[hsl(var(--primary-active))] border border-transparent shadow-sm h-10 px-4 text-sm gap-2 rounded-md min-h-[40px]"><span class="inline-flex shrink-0"><i class="fa-solid fa-print"></i></span><span id="pr-submit-label">إرسال 210 ملصقًا للطباعة</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TOAST (bottom-start) ============ -->
+<div id="toast" role="status" aria-live="polite" class="hidden fixed bottom-5 start-5 z-50 min-w-[320px] max-w-md p-4 rounded-xl shadow-lg border backdrop-blur-sm transition-all duration-200 dir-rtl flex gap-3 items-start bg-surface border-primary/40 text-foreground">
+  <div class="shrink-0 mt-0.5 text-primary">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+  </div>
+  <div class="flex-1 space-y-1 text-sm">
+    <h5 id="toast-title" class="font-semibold text-foreground leading-tight"></h5>
+    <div id="toast-desc" class="text-muted-foreground text-xs leading-relaxed"></div>
+  </div>
+  <button type="button" id="toast-close" aria-label="إغلاق التنبيه" class="shrink-0 p-1 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors focus:outline-none focus:ring-2 focus:ring-ring">
+    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+  </button>
+</div>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var fmt = function (n) { return Number(n).toLocaleString('en-US'); };
+  var pad = function (n) { return String(n).padStart(6, '0'); };
+  var pct = function (v, t) { return t ? Math.round(v / t * 100) : 0; };
+
+  var BADGE = {
+    u: '<span class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-accent text-primary border-transparent"><span class="shrink-0 flex items-center"><i class="fa-regular fa-circle text-[10px]"></i></span><span>غير مستخدم</span></span>',
+    r: '<span class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-amber-50 text-amber-800 border-amber-200/50"><span class="shrink-0 flex items-center"><i class="fa-solid fa-hourglass-half"></i></span><span>محجوز</span></span>',
+    s: '<span class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-emerald-50 text-emerald-800 border-emerald-200/50"><span class="shrink-0 flex items-center"><i class="fa-solid fa-circle-check"></i></span><span>مستخدم</span></span>',
+    c: '<span class="inline-flex items-center justify-center border transition-colors whitespace-nowrap dir-rtl text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-red-50 text-red-700 border-red-200/50"><span class="shrink-0 flex items-center"><i class="fa-solid fa-ban"></i></span><span>ملغى</span></span>'
+  };
+  var STATUS_NAME = { u: 'غير مستخدم', r: 'محجوز', s: 'مستخدم', c: 'ملغى' };
+
+  // Sample data: totals are coherent (u + r + s + c = total); codes are illustrative.
+  var BATCHES = [
+    { id: 'BATCH-2026-001', item: 'MK-10025', name: 'فحمات فرامل أمامية', date: '2026-03-02', total: 1000, u: 210, r: 150, s: 640, c: 0,
+      codes: [['RWD-2026-000001', 'u', ''], ['RWD-2026-000002', 'r', 'CLM-24-08842'], ['RWD-2026-000003', 's', 'CLM-24-08790'], ['RWD-2026-000004', 'u', ''], ['RWD-2026-000005', 's', 'CLM-24-08795']] },
+    { id: 'BATCH-2026-002', item: 'MK-20417', name: 'أقراص فرامل مهوّاة', date: '2026-03-09', total: 500, u: 380, r: 60, s: 58, c: 2,
+      codes: [['RWD-2026-001001', 'u', ''], ['RWD-2026-001002', 'u', ''], ['RWD-2026-001003', 'c', ''], ['RWD-2026-001004', 'r', 'CLM-24-08821'], ['RWD-2026-001005', 's', 'CLM-24-08774']] },
+    { id: 'BATCH-2026-003', item: 'MK-31002', name: 'ممتص صدمات أمامي', date: '2026-02-18', total: 300, u: 40, r: 180, s: 80, c: 0,
+      codes: [['RWD-2026-001501', 'r', 'CLM-24-08828'], ['RWD-2026-001502', 's', 'CLM-24-08760'], ['RWD-2026-001503', 'u', ''], ['RWD-2026-001504', 'r', 'CLM-24-08819'], ['RWD-2026-001505', 's', 'CLM-24-08744']] },
+    { id: 'BATCH-2026-004', item: 'MK-40815', name: 'مرشح زيت المحرك', date: '2026-03-20', total: 250, u: 250, r: 0, s: 0, c: 0,
+      codes: [['RWD-2026-001801', 'u', ''], ['RWD-2026-001802', 'u', ''], ['RWD-2026-001803', 'u', ''], ['RWD-2026-001804', 'u', ''], ['RWD-2026-001805', 'u', '']] },
+    { id: 'BATCH-2025-018', item: 'MK-10025', name: 'فحمات فرامل أمامية', date: '2025-12-11', total: 800, u: 0, r: 0, s: 790, c: 10,
+      codes: [['RWD-2025-000001', 's', 'CLM-24-07612'], ['RWD-2025-000002', 'c', ''], ['RWD-2025-000003', 's', 'CLM-24-07618'], ['RWD-2025-000004', 's', 'CLM-24-07622'], ['RWD-2025-000005', 'c', '']] }
+  ];
+  var current = BATCHES[0];
+  var codeFilter = 'all';
+  var ON = ['bg-accent', 'text-accent-foreground', 'hover:bg-accent-hover'];
+  var OFF = ['bg-transparent', 'text-foreground', 'hover:bg-secondary'];
+
+  function setText(id, t) { var el = $(id); if (el) el.textContent = t; }
+  function setWidth(id, p) { var el = $(id); if (el) el.style.width = p + '%'; }
+
+  // Illustrative bar pattern only (not verified Code 128 encoding)
+  function renderBars(code) {
+    var svg = $('lbl-bars');
+    if (!code) { svg.innerHTML = ''; return; }
+    var x = 0, rects = '';
+    for (var i = 0; i < code.length; i++) {
+      var cc = code.charCodeAt(i);
+      var w1 = 1 + (cc % 3), w2 = 1 + ((cc >> 2) % 2);
+      rects += '<rect x="' + x + '" y="0" width="' + w1 + '" height="40" fill="currentColor"/>';
+      x += w1 + w2;
+    }
+    svg.setAttribute('viewBox', '0 0 ' + x + ' 40');
+    svg.innerHTML = rects;
+  }
+
+  function renderCodes() {
+    var rows = current.codes.filter(function (c) { return codeFilter === 'all' || c[1] === codeFilter; });
+    $('code-rows').innerHTML = rows.map(function (c) {
+      var claim = c[2] ? '<span dir="ltr" class="font-mono text-xs tracking-wider text-foreground">' + c[2] + '</span>' : '<span class="text-xs text-muted-foreground">—</span>';
+      return '<tr class="hover:bg-surface-subtle transition-colors">' +
+        '<td class="px-4 py-3"><span dir="ltr" class="font-mono text-sm tracking-wider text-foreground">' + c[0] + '</span></td>' +
+        '<td class="px-4 py-3">' + BADGE[c[1]] + '</td>' +
+        '<td class="px-4 py-3">' + claim + '</td>' +
+        '<td class="px-4 py-3"><span dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground">' + current.item + '</span></td>' +
+        '</tr>';
+    }).join('');
+    var empty = $('code-empty');
+    empty.classList.toggle('hidden', rows.length > 0);
+    empty.classList.toggle('flex', rows.length === 0);
+    if (rows.length === 0 && codeFilter !== 'all') {
+      var key = codeFilter;
+      setText('code-empty-desc', 'العدد الكامل لهذه الحالة في الدفعة: ' + fmt(current[key]) + ' رمزًا. العينة المعروضة لا تتضمنها.');
+    }
+    setText('sample-count', current.codes.length);
+    setText('total-count', fmt(current.total));
+  }
+
+  function renderBatch(b) {
+    current = b;
+    setText('detail-title', b.id);
+    setText('d-item', b.item);
+    setText('d-name', b.name);
+    setText('d-date', b.date);
+    setText('d-total', fmt(b.total) + ' رمز');
+    setText('c-u', fmt(b.u)); setText('c-r', fmt(b.r)); setText('c-s', fmt(b.s)); setText('c-c', fmt(b.c));
+    var pu = pct(b.u, b.total), pr = pct(b.r, b.total), ps = pct(b.s, b.total), pc = pct(b.c, b.total);
+    setText('p-u', pu + '%'); setText('p-r', pr + '%'); setText('p-s', ps + '%'); setText('p-c', pc + '%');
+    setWidth('seg-u', pu); setWidth('seg-r', pr); setWidth('seg-s', ps); setWidth('seg-c', pc);
+    setText('math', fmt(b.u) + ' + ' + fmt(b.r) + ' + ' + fmt(b.s) + ' + ' + fmt(b.c) + ' = ' + fmt(b.u + b.r + b.s + b.c));
+
+    // counts on code filter tabs
+    setText('total-count', fmt(b.total));
+    document.querySelectorAll('[data-count]').forEach(function (el) {
+      var k = el.getAttribute('data-count');
+      el.textContent = k === 'all' ? fmt(b.total) : fmt(b[k]);
+    });
+
+    // label preview: first unused code in the sample
+    var firstU = null;
+    for (var i = 0; i < b.codes.length; i++) { if (b.codes[i][1] === 'u') { firstU = b.codes[i][0]; break; } }
+    setText('lbl-batch', b.id);
+    setText('lbl-name', b.name);
+    setText('lbl-item', b.item);
+    setText('lbl-code', firstU || 'لا يوجد رمز غير مستخدم');
+    renderBars(firstU);
+
+    // pre-print checks
+    setText('cl-item', b.item);
+    setText('cl-qty', b.u > 0 ? 'تُطبع الملصقات للرموز غير المستخدمة فقط (' + fmt(b.u) + ')' : 'لا توجد رموز غير مستخدمة في هذه الدفعة للطباعة');
+
+    // print dialog values
+    setText('pd-item', b.item); setText('pd-name', b.name); setText('pd-batch', b.id);
+    setText('pr-confirm-item', b.item);
+    $('pr-qty').setAttribute('data-max', String(b.u));
+    $('pr-qty').value = String(b.u);
+    updatePrint();
+
+    renderCodes();
+  }
+
+  // Batch list selection
+  var rows = document.querySelectorAll('.batch-row');
+  function selectRow(btn) {
+    rows.forEach(function (r) {
+      var on = r === btn;
+      r.setAttribute('aria-pressed', on ? 'true' : 'false');
+      r.classList.toggle('bg-primary-subtle', on);
+      r.classList.toggle('border-primary', on);
+      r.classList.toggle('border-transparent', !on);
+    });
+  }
+  rows.forEach(function (r) {
+    r.addEventListener('click', function () {
+      selectRow(r);
+      renderBatch(BATCHES[Number(r.parentElement.getAttribute('data-idx'))]);
+    });
+  });
+
+  $('batch-search').addEventListener('input', function (e) {
+    var q = e.target.value.trim().toLowerCase();
+    document.querySelectorAll('#batch-list > li').forEach(function (li) {
+      li.classList.toggle('hidden', q !== '' && li.getAttribute('data-search').toLowerCase().indexOf(q) === -1);
+    });
+  });
+
+  // Code status filter
+  document.querySelectorAll('.cf').forEach(function (t) {
+    t.addEventListener('click', function () {
+      codeFilter = t.getAttribute('data-cfilter');
+      document.querySelectorAll('.cf').forEach(function (x) {
+        var on = x === t;
+        x.setAttribute('aria-selected', on ? 'true' : 'false');
+        ON.forEach(function (c) { x.classList.toggle(c, on); });
+        OFF.forEach(function (c) { x.classList.toggle(c, !on); });
+      });
+      renderCodes();
+    });
+  });
+
+  // Checkbox / radio indicator sync
+  function syncAll() {
+    document.querySelectorAll('input[data-sync]').forEach(function (inp) {
+      var lbl = inp.closest('label');
+      var ind = lbl && lbl.querySelector('.ind');
+      if (!ind) return;
+      var on = inp.checked;
+      ind.classList.toggle('scale-0', !on);
+      ind.classList.toggle('scale-100', on);
+      ind.classList.toggle('opacity-0', !on);
+      ind.classList.toggle('opacity-100', on);
+    });
+  }
+  document.addEventListener('change', syncAll);
+
+  // Stepper buttons
+  document.querySelectorAll('[data-step]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var input = $(btn.getAttribute('data-target'));
+      var step = Number(btn.getAttribute('data-step'));
+      var v = parseInt(input.value, 10);
+      if (isNaN(v)) v = 0;
+      v += step;
+      var max = input.getAttribute('data-max');
+      if (v < 1) v = 1;
+      if (max !== null && v > Number(max)) v = Number(max);
+      input.value = String(v);
+      input.dispatchEvent(new Event('input'));
+    });
+  });
+
+  // Drawer
+  var drawer = $('generate-drawer');
+  function openDrawer() { drawer.classList.remove('hidden'); updateGen(); }
+  function closeDrawer() { drawer.classList.add('hidden'); }
+  $('open-generate').addEventListener('click', openDrawer);
+  document.querySelectorAll('[data-close-drawer]').forEach(function (el) { el.addEventListener('click', closeDrawer); });
+
+  $('product-search').addEventListener('input', function (e) {
+    var q = e.target.value.trim().toLowerCase();
+    var shown = 0;
+    document.querySelectorAll('#product-options > label').forEach(function (lb) {
+      var ok = q === '' || lb.getAttribute('data-search').toLowerCase().indexOf(q) !== -1;
+      lb.classList.toggle('hidden', !ok);
+      if (ok) shown++;
+    });
+    $('product-empty').classList.toggle('hidden', shown > 0);
+  });
+
+  function qtyValid(v) { return /^\d+$/.test(v) && Number(v) >= 1; }
+
+  function updateGen() {
+    var checked = document.querySelector('input[name="gen-product"]:checked');
+    var lb = checked ? checked.closest('label') : null;
+    var qtyRaw = $('gen-qty').value.trim();
+    var okQty = qtyValid(qtyRaw);
+    var okProduct = !!checked;
+    var okConfirm = $('gen-confirm').checked;
+
+    $('gen-qty-error').classList.toggle('hidden', okQty);
+    $('gen-qty-error').classList.toggle('flex', !okQty);
+    $('gen-qty').setAttribute('aria-invalid', okQty ? 'false' : 'true');
+
+    $('gs-product').textContent = lb ? (lb.getAttribute('data-item') + ' · ' + lb.getAttribute('data-name')) : 'لم يُختر صنف';
+    var q = okQty ? Number(qtyRaw) : null;
+    $('gs-qty').textContent = q ? fmt(q) : '—';
+    $('gs-status').textContent = q ? fmt(q) + ' غير مستخدم · 0 محجوز · 0 مستخدم · 0 ملغى' : '—';
+    $('gs-range').textContent = q ? 'RWD-2026-' + pad(2051) + ' — RWD-2026-' + pad(2050 + q) : '—';
+
+    var ready = okProduct && okQty && okConfirm;
+    $('gen-submit').disabled = !ready;
+    $('gen-hint').textContent = ready ? 'جاهز للإنشاء' : (!okProduct ? 'اختر صنفًا للمتابعة' : (!okQty ? 'أدخل كمية صحيحة للمتابعة' : 'أكّد المراجعة للمتابعة'));
+  }
+  $('gen-qty').addEventListener('input', function (e) {
+    e.target.value = e.target.value.replace(/[^\d]/g, '');
+    updateGen();
+  });
+  document.querySelectorAll('input[name="gen-product"]').forEach(function (r) { r.addEventListener('change', updateGen); });
+  $('gen-confirm').addEventListener('change', updateGen);
+
+  var generating = false;
+  $('gen-submit').addEventListener('click', function () {
+    if (generating || $('gen-submit').disabled) return;
+    generating = true;
+    var btn = $('gen-submit');
+    btn.disabled = true;
+    btn.setAttribute('aria-busy', 'true');
+    setText('gen-submit-label', 'جارٍ الإنشاء…');
+    setTimeout(function () {
+      closeDrawer();
+      showToast('تمت محاكاة إنشاء الدفعة BATCH-2026-005', 'عرض تصميمي فقط: لم تُنشأ أو تُسجَّل أي رموز فعلية. في النظام الفعلي يتحقق الخادم من تفرد كل رمز قبل تأكيد الدفعة.');
+      setText('gen-submit-label', 'إنشاء الدفعة');
+      btn.removeAttribute('aria-busy');
+      generating = false;
+      updateGen();
+    }, 1200);
+  });
+
+  // Print dialog
+  var dlg = $('print-dialog');
+  function openPrint() { dlg.classList.remove('hidden'); updatePrint(); }
+  function closePrint() { dlg.classList.add('hidden'); }
+  $('open-print').addEventListener('click', openPrint);
+  document.querySelectorAll('[data-close-print]').forEach(function (el) { el.addEventListener('click', closePrint); });
+
+  function updatePrint() {
+    var max = Number($('pr-qty').getAttribute('data-max') || 0);
+    var raw = $('pr-qty').value.trim();
+    var okQty = qtyValid(raw) && Number(raw) <= max && max > 0;
+    var mode = (document.querySelector('input[name="print-mode"]:checked') || {}).value || 'print';
+    var okConfirm = $('pr-confirm').checked;
+    var ready = okQty && okConfirm;
+
+    $('pr-reprint').checked ? $('reprint-risk').classList.remove('hidden') : $('reprint-risk').classList.add('hidden');
+    $('pr-qty-help').textContent = max > 0
+      ? 'الحد الأعلى: ' + fmt(max) + ' رمزًا غير مستخدم في هذه الدفعة. الرموز المحجوزة أو المستخدمة لا تُطبع من هنا.'
+      : 'لا توجد رموز غير مستخدمة في هذه الدفعة للطباعة.';
+    if (max === 0) {
+      $('pr-submit-label').textContent = 'لا توجد ملصقات للطباعة';
+    } else {
+      var n = okQty ? fmt(raw) : '—';
+      $('pr-submit-label').textContent = mode === 'print' ? 'إرسال ' + n + ' ملصقًا للطباعة' : 'تصدير ' + n + ' ملصقًا كملف';
+    }
+    $('pr-submit').disabled = !ready;
+    $('pr-hint').textContent = max === 0 ? 'اختر دفعة تحتوي على رموز غير مستخدمة' : (ready ? 'جاهز للإرسال' : (!okQty ? 'أدخل عددًا ضمن الحد المتاح' : 'أكّد رقم الصنف للمتابعة'));
+  }
+  $('pr-qty').addEventListener('input', function (e) {
+    e.target.value = e.target.value.replace(/[^\d]/g, '');
+    updatePrint();
+  });
+  $('pr-qty').addEventListener('blur', function (e) {
+    var max = Number(e.target.getAttribute('data-max') || 0);
+    var v = parseInt(e.target.value, 10);
+    if (!isNaN(v)) e.target.value = String(Math.min(Math.max(v, 1), Math.max(max, 1)));
+    updatePrint();
+  });
+  document.querySelectorAll('input[name="print-mode"]').forEach(function (r) { r.addEventListener('change', updatePrint); });
+  $('pr-reprint').addEventListener('change', updatePrint);
+  $('pr-confirm').addEventListener('change', updatePrint);
+
+  $('pr-submit').addEventListener('click', function () {
+    if ($('pr-submit').disabled) return;
+    var mode = (document.querySelector('input[name="print-mode"]:checked') || {}).value;
+    var n = fmt($('pr-qty').value);
+    closePrint();
+    if (mode === 'export') {
+      showToast('بدأ تجهيز ملف الملصقات', 'لم يكتمل التصدير بعد. ' + n + ' ملصقًا لدفعة ' + current.id + '. لم تتغير حالة أي رمز.');
+    } else {
+      showToast('أُرسل طلب الطباعة — بانتظار تأكيد الطابعة', 'لم تُؤكَّد الطباعة بعد. ' + n + ' ملصقًا لدفعة ' + current.id + '. لم تتغير حالة أي رمز.');
+    }
+  });
+
+  // Toast
+  var toast = $('toast'), toastTimer = null;
+  function showToast(title, desc) {
+    setText('toast-title', title);
+    setText('toast-desc', desc);
+    toast.classList.remove('hidden');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(hideToast, 6000);
+  }
+  function hideToast() { toast.classList.add('hidden'); clearTimeout(toastTimer); }
+  $('toast-close').addEventListener('click', hideToast);
+
+  // Escape closes overlays
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      if (!dlg.classList.contains('hidden')) closePrint();
+      else if (!drawer.classList.contains('hidden')) closeDrawer();
+    }
+  });
+
+  syncAll();
+  renderBatch(BATCHES[0]);
+  updateGen();
+})();
+</script>
+
+<script src="assets/demo.js" defer></script>
+</body>
+</html>

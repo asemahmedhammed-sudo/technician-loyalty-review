@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إدارة الأصناف</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
+:root {
+  --background: 210 40% 98%;
+  --foreground: 222.2 47.4% 11.2%;
+  --card: 0 0% 100%;
+  --surface: 0 0% 100%;
+  --surface-muted: 210 40% 96.1%;
+  --primary: 211 100% 30.8%;
+  --primary-hover: 211 100% 23.5%;
+  --primary-active: 211.3 100% 17.6%;
+  --primary-subtle: 215.3 100% 96.7%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 40% 96.1%;
+  --secondary-active: 212.7 26.8% 83.9%;
+  --accent: 215.3 100% 96.7%;
+  --accent-hover: 214.3 100% 93.1%;
+  --destructive: 358.8 80.5% 51.8%;
+  --destructive-hover: 358.6 78.2% 43.1%;
+  --destructive-subtle: 0 85.7% 97.3%;
+  --success: 142.4 71.8% 29.2%;
+  --success-hover: 142.8 64.2% 24.1%;
+  --success-subtle: 138.5 76.5% 96.7%;
+  --warning: 26 90.5% 37.1%;
+  --warning-hover: 22.7 82.5% 31.4%;
+  --warning-subtle: 48 100% 96.1%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.3 19.3% 34.5%;
+  --surface-subtle: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --border-hover: 212.7 26.8% 83.9%;
+  --ring: 211 100% 30.8%;
+}
+</style>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: {
+    background:"hsl(var(--background) / <alpha-value>)", foreground:"hsl(var(--foreground) / <alpha-value>)",
+    card:"hsl(var(--card) / <alpha-value>)", surface:"hsl(var(--surface) / <alpha-value>)",
+    "surface-muted":"hsl(var(--surface-muted) / <alpha-value>)",
+    primary:"hsl(var(--primary) / <alpha-value>)", "primary-hover":"hsl(var(--primary-hover) / <alpha-value>)",
+    "primary-active":"hsl(var(--primary-active) / <alpha-value>)", "primary-subtle":"hsl(var(--primary-subtle) / <alpha-value>)",
+    "primary-foreground":"hsl(var(--primary-foreground) / <alpha-value>)",
+    secondary:"hsl(var(--secondary) / <alpha-value>)", "secondary-active":"hsl(var(--secondary-active) / <alpha-value>)",
+    accent:"hsl(var(--accent) / <alpha-value>)", "accent-hover":"hsl(var(--accent-hover) / <alpha-value>)",
+    destructive:"hsl(var(--destructive) / <alpha-value>)", "destructive-hover":"hsl(var(--destructive-hover) / <alpha-value>)",
+    "destructive-subtle":"hsl(var(--destructive-subtle) / <alpha-value>)",
+    success:"hsl(var(--success) / <alpha-value>)", "success-hover":"hsl(var(--success-hover) / <alpha-value>)",
+    "success-subtle":"hsl(var(--success-subtle) / <alpha-value>)",
+    warning:"hsl(var(--warning) / <alpha-value>)", "warning-hover":"hsl(var(--warning-hover) / <alpha-value>)",
+    "warning-subtle":"hsl(var(--warning-subtle) / <alpha-value>)",
+    muted:"hsl(var(--muted) / <alpha-value>)", "muted-foreground":"hsl(var(--muted-foreground) / <alpha-value>)",
+    "surface-subtle":"hsl(var(--surface-subtle) / <alpha-value>)",
+    border:"hsl(var(--border) / <alpha-value>)", "border-hover":"hsl(var(--border-hover) / <alpha-value>)",
+    ring:"hsl(var(--ring) / <alpha-value>)", input:"hsl(var(--border) / <alpha-value>)"
+  },
+  fontFamily: { sans:["'IBM Plex Sans Arabic'","sans-serif"], mono:["'IBM Plex Mono'","monospace"] },
+  borderRadius: { DEFAULT:"0.375rem", md:"0.5rem", lg:"0.75rem" }
+}}}
+</script>
+<!-- uxp-ds-theme:start -->
+<style>
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
+
+:root {
+  --background: 210 40% 98%;
+  --foreground: 222.2 47.4% 11.2%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 47.4% 11.2%;
+  --card-border: 214.3 31.8% 91.4%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 47.4% 11.2%;
+  --primary: 211 100% 30.8%;
+  --primary-hover: 211 100% 23.5%;
+  --primary-active: 211.3 100% 17.6%;
+  --primary-subtle: 215.3 100% 96.7%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 40% 96.1%;
+  --secondary-hover: 214.3 31.8% 91.4%;
+  --secondary-active: 212.7 26.8% 83.9%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --accent: 215.3 100% 96.7%;
+  --accent-hover: 214.3 100% 93.1%;
+  --accent-foreground: 211 100% 30.8%;
+  --destructive: 358.8 80.5% 51.8%;
+  --destructive-hover: 358.6 78.2% 43.1%;
+  --destructive-active: 358.3 82.7% 33.9%;
+  --destructive-subtle: 0 85.7% 97.3%;
+  --destructive-foreground: 0 0% 100%;
+  --success: 142.4 71.8% 29.2%;
+  --success-hover: 142.8 64.2% 24.1%;
+  --success-subtle: 138.5 76.5% 96.7%;
+  --success-foreground: 0 0% 100%;
+  --warning: 26 90.5% 37.1%;
+  --warning-hover: 22.7 82.5% 31.4%;
+  --warning-subtle: 48 100% 96.1%;
+  --warning-foreground: 0 0% 100%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.3 19.3% 34.5%;
+  --brand-blue: 211 100% 30.8%;
+  --brand-red: 358.8 80.5% 51.8%;
+  --brand-yellow: 52.2 100% 50%;
+  --surface: 0 0% 100%;
+  --surface-subtle: 210 40% 98%;
+  --surface-muted: 210 40% 96.1%;
+  --surface-border: 214.3 31.8% 91.4%;
+  --border: 214.3 31.8% 91.4%;
+  --border-hover: 212.7 26.8% 83.9%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 211 100% 30.8%;
+  --font-family-sans: 'IBM Plex Sans Arabic', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --spacing-0: 0px;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --radius-none: 0px;
+  --radius-sm: 0.25rem;
+  --radius: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+  --shadow-none: none;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --border-width-0: 0px;
+  --border-width-2: 2px;
+  --border-width: 1px;
+}
+</style>
+<script>
+  (function () {
+    var ds = {
+      colors: {
+        "background": "hsl(var(--background) / <alpha-value>)",
+        "foreground": "hsl(var(--foreground) / <alpha-value>)",
+        "card": "hsl(var(--card) / <alpha-value>)",
+        "card-foreground": "hsl(var(--card-foreground) / <alpha-value>)",
+        "card-border": "hsl(var(--card-border) / <alpha-value>)",
+        "popover": "hsl(var(--popover) / <alpha-value>)",
+        "popover-foreground": "hsl(var(--popover-foreground) / <alpha-value>)",
+        "primary": "hsl(var(--primary) / <alpha-value>)",
+        "primary-hover": "hsl(var(--primary-hover) / <alpha-value>)",
+        "primary-active": "hsl(var(--primary-active) / <alpha-value>)",
+        "primary-subtle": "hsl(var(--primary-subtle) / <alpha-value>)",
+        "primary-foreground": "hsl(var(--primary-foreground) / <alpha-value>)",
+        "secondary": "hsl(var(--secondary) / <alpha-value>)",
+        "secondary-hover": "hsl(var(--secondary-hover) / <alpha-value>)",
+        "secondary-active": "hsl(var(--secondary-active) / <alpha-value>)",
+        "secondary-foreground": "hsl(var(--secondary-foreground) / <alpha-value>)",
+        "accent": "hsl(var(--accent) / <alpha-value>)",
+        "accent-hover": "hsl(var(--accent-hover) / <alpha-value>)",
+        "accent-foreground": "hsl(var(--accent-foreground) / <alpha-value>)",
+        "destructive": "hsl(var(--destructive) / <alpha-value>)",
+        "destructive-hover": "hsl(var(--destructive-hover) / <alpha-value>)",
+        "destructive-active": "hsl(var(--destructive-active) / <alpha-value>)",
+        "destructive-subtle": "hsl(var(--destructive-subtle) / <alpha-value>)",
+        "destructive-foreground": "hsl(var(--destructive-foreground) / <alpha-value>)",
+        "success": "hsl(var(--success) / <alpha-value>)",
+        "success-hover": "hsl(var(--success-hover) / <alpha-value>)",
+        "success-subtle": "hsl(var(--success-subtle) / <alpha-value>)",
+        "success-foreground": "hsl(var(--success-foreground) / <alpha-value>)",
+        "warning": "hsl(var(--warning) / <alpha-value>)",
+        "warning-hover": "hsl(var(--warning-hover) / <alpha-value>)",
+        "warning-subtle": "hsl(var(--warning-subtle) / <alpha-value>)",
+        "warning-foreground": "hsl(var(--warning-foreground) / <alpha-value>)",
+        "muted": "hsl(var(--muted) / <alpha-value>)",
+        "muted-foreground": "hsl(var(--muted-foreground) / <alpha-value>)",
+        "brand-blue": "hsl(var(--brand-blue) / <alpha-value>)",
+        "brand-red": "hsl(var(--brand-red) / <alpha-value>)",
+        "brand-yellow": "hsl(var(--brand-yellow) / <alpha-value>)",
+        "surface": "hsl(var(--surface) / <alpha-value>)",
+        "surface-subtle": "hsl(var(--surface-subtle) / <alpha-value>)",
+        "surface-muted": "hsl(var(--surface-muted) / <alpha-value>)",
+        "surface-border": "hsl(var(--surface-border) / <alpha-value>)",
+        "border": "hsl(var(--border) / <alpha-value>)",
+        "border-hover": "hsl(var(--border-hover) / <alpha-value>)",
+        "input": "hsl(var(--input) / <alpha-value>)",
+        "ring": "hsl(var(--ring) / <alpha-value>)",
+        "fg": "hsl(var(--foreground) / <alpha-value>)",
+        "card-fg": "hsl(var(--card-foreground) / <alpha-value>)",
+        "popover-fg": "hsl(var(--popover-foreground) / <alpha-value>)",
+        "primary-fg": "hsl(var(--primary-foreground) / <alpha-value>)",
+        "secondary-fg": "hsl(var(--secondary-foreground) / <alpha-value>)",
+        "accent-fg": "hsl(var(--accent-foreground) / <alpha-value>)",
+        "destructive-fg": "hsl(var(--destructive-foreground) / <alpha-value>)",
+        "success-fg": "hsl(var(--success-foreground) / <alpha-value>)",
+        "warning-fg": "hsl(var(--warning-foreground) / <alpha-value>)",
+        "muted-fg": "hsl(var(--muted-foreground) / <alpha-value>)",
+      },
+      fontSize: {
+        "xs": "var(--font-size-xs)",
+        "sm": "var(--font-size-sm)",
+        "base": "var(--font-size-base)",
+        "lg": "var(--font-size-lg)",
+        "xl": "var(--font-size-xl)",
+        "2xl": "var(--font-size-2xl)",
+        "3xl": "var(--font-size-3xl)",
+        "4xl": "var(--font-size-4xl)",
+      },
+      spacing: {
+        "ds-0": "var(--spacing-0)",
+        "ds-1": "var(--spacing-1)",
+        "ds-2": "var(--spacing-2)",
+        "ds-3": "var(--spacing-3)",
+        "ds-4": "var(--spacing-4)",
+        "ds-5": "var(--spacing-5)",
+        "ds-6": "var(--spacing-6)",
+        "ds-8": "var(--spacing-8)",
+        "ds-10": "var(--spacing-10)",
+        "ds-12": "var(--spacing-12)",
+        "ds-16": "var(--spacing-16)",
+      },
+      borderRadius: {
+        "none": "var(--radius-none)",
+        "sm": "var(--radius-sm)",
+        "DEFAULT": "var(--radius)",
+        "md": "var(--radius-md)",
+        "lg": "var(--radius-lg)",
+        "xl": "var(--radius-xl)",
+        "full": "var(--radius-full)",
+      },
+      boxShadow: {
+        "none": "var(--shadow-none)",
+        "sm": "var(--shadow-sm)",
+        "DEFAULT": "var(--shadow)",
+        "md": "var(--shadow-md)",
+        "lg": "var(--shadow-lg)",
+      },
+      borderWidth: {
+        "0": "var(--border-width-0)",
+        "2": "var(--border-width-2)",
+        "DEFAULT": "var(--border-width)",
+      },
+      fontFamily: {
+        "sans": ["'IBM Plex Sans Arabic'","'IBM Plex Sans'","-apple-system","BlinkMacSystemFont","'Segoe UI'","Roboto","sans-serif"],
+        "mono": ["'IBM Plex Mono'","'SFMono-Regular'","Consolas","'Liberation Mono'","monospace"],
+      },
+    };
+    var prev = (typeof tailwind !== "undefined" && tailwind.config) || {};
+    var prevTheme = prev.theme || {};
+    var isPlain = function (v) {
+      return Boolean(v) && typeof v === "object" && !Array.isArray(v);
+    };
+    var prevExtend = isPlain(prevTheme.extend) ? prevTheme.extend : {};
+    var extend = {};
+    Object.keys(prevExtend).forEach(function (k) {
+      extend[k] = prevExtend[k];
+    });
+    Object.keys(ds).forEach(function (k) {
+      extend[k] =
+        isPlain(prevExtend[k]) && isPlain(ds[k])
+          ? Object.assign({}, prevExtend[k], ds[k])
+          : ds[k];
+    });
+    tailwind.config = Object.assign({}, prev, {
+      theme: Object.assign({}, prevTheme, { extend: extend }),
+    });
+  })();
+</script>
+<!-- uxp-ds-theme:end -->
+<link rel="stylesheet" href="assets/demo.css">
+</head>
+<body class="bg-background text-foreground font-sans antialiased">
+
+<div id="app-shell" dir="rtl" class="flex w-full bg-background">
+
+  <!-- SIDEBAR -->
+  <div id="sidebar-container" class="hidden lg:block sticky top-0 h-[900px] shrink-0">
+    <aside id="sidebar" class="flex flex-col bg-card border-l border-border h-full w-64 select-none">
+      <div class="flex items-center h-16 px-4 border-b border-border shrink-0 gap-3">
+        <div class="flex items-center justify-center w-9 h-9 rounded-md bg-primary text-primary-foreground font-bold shrink-0">MK</div>
+        <div class="flex flex-col min-w-0">
+          <span class="font-bold text-sm tracking-wide truncate">MK KASHIYAMA</span>
+          <span class="text-xs text-muted-foreground truncate">نظام إدارة الولاء للفنيين</span>
+        </div>
+      </div>
+      <div class="flex-1 overflow-y-auto py-4 px-2 space-y-6">
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground mb-2">نظرة عامة</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-right text-foreground hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span class="w-5 flex justify-center text-muted-foreground"><i class="fa-solid fa-house"></i></span><span class="flex-1">الرئيسية</span></button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-right text-foreground hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span class="w-5 flex justify-center text-muted-foreground"><i class="fa-solid fa-bell"></i></span><span class="flex-1">الإشعارات</span><span class="px-2 py-0.5 text-xs rounded-full font-semibold bg-accent text-primary">5</span></button>
+        </div>
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground mb-2">العمليات والتركيب</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-right text-foreground hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span class="w-5 flex justify-center text-muted-foreground"><i class="fa-solid fa-clipboard-check"></i></span><span class="flex-1">طلبات التركيب</span><span class="px-2 py-0.5 text-xs rounded-full font-semibold bg-accent text-primary">31</span></button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-right text-foreground hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span class="w-5 flex justify-center text-muted-foreground"><i class="fa-solid fa-barcode"></i></span><span class="flex-1">دفعات الباركود</span></button>
+          <button type="button" aria-current="page" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-semibold text-right bg-accent text-primary border-r-4 border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span class="w-5 flex justify-center text-primary"><i class="fa-solid fa-box-open"></i></span><span class="flex-1">الأصناف والماركات</span></button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-right text-foreground hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span class="w-5 flex justify-center text-muted-foreground"><i class="fa-solid fa-users"></i></span><span class="flex-1">الفنيون</span></button>
+        </div>
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground mb-2">الولاء والمكافآت</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-right text-foreground hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span class="w-5 flex justify-center text-muted-foreground"><i class="fa-solid fa-medal"></i></span><span class="flex-1">مستويات الولاء</span></button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-right text-foreground hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span class="w-5 flex justify-center text-muted-foreground"><i class="fa-solid fa-gift"></i></span><span class="flex-1">طلبات الاسترداد</span><span class="px-2 py-0.5 text-xs rounded-full font-semibold bg-accent text-primary">14</span></button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-right text-foreground hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span class="w-5 flex justify-center text-muted-foreground"><i class="fa-solid fa-hand-holding-dollar"></i></span><span class="flex-1">الصرف اليدوي</span></button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-right text-foreground hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span class="w-5 flex justify-center text-muted-foreground"><i class="fa-solid fa-building-columns"></i></span><span class="flex-1">العهدة المالية</span></button>
+        </div>
+        <div class="space-y-1">
+          <div class="px-3 text-xs font-semibold text-muted-foreground mb-2">النظام والتقارير</div>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-right text-foreground hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span class="w-5 flex justify-center text-muted-foreground"><i class="fa-solid fa-sliders"></i></span><span class="flex-1">ترميز النقاط</span></button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-right text-foreground hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span class="w-5 flex justify-center text-muted-foreground"><i class="fa-solid fa-chart-column"></i></span><span class="flex-1">التقارير والتحليلات</span></button>
+          <button type="button" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-right text-foreground hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span class="w-5 flex justify-center text-muted-foreground"><i class="fa-solid fa-user-shield"></i></span><span class="flex-1">الصلاحيات وسجل التدقيق</span></button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- MAIN -->
+  <div id="main-column" class="flex-1 min-w-0 flex flex-col">
+
+    <header id="topbar" class="h-16 px-6 bg-card border-b border-border flex items-center justify-between gap-4 shrink-0 select-none">
+      <div class="flex items-center gap-3 min-w-0 flex-1">
+        <div class="w-full max-w-md">
+          <div class="relative flex items-center w-full bg-card rounded-md border border-input hover:border-border-hover focus-within:border-primary focus-within:ring-2 focus-within:ring-ring transition-colors">
+            <span class="ps-3 text-muted-foreground pointer-events-none"><i class="fa-solid fa-magnifying-glass text-sm"></i></span>
+            <input type="search" aria-label="البحث في المنصة" placeholder="ابحث في المنصة..." class="w-full bg-transparent placeholder:text-muted-foreground focus:outline-none h-10 px-3 text-sm min-h-[40px] text-start">
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="relative">
+          <button type="button" aria-label="الإشعارات (5 غير مقروء)" class="inline-flex items-center justify-center h-10 w-10 rounded-md text-foreground hover:bg-secondary active:bg-secondary-active transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><i class="fa-regular fa-bell"></i></button>
+          <span class="absolute top-1 start-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 text-[10px] font-bold text-white bg-destructive rounded-full border-2 border-card pointer-events-none">5</span>
+        </div>
+        <div class="h-6 w-px bg-border mx-1" aria-hidden="true"></div>
+        <button type="button" class="flex items-center gap-3 p-1 rounded-lg hover:bg-secondary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+          <div class="w-9 h-9 rounded-full overflow-hidden border border-primary/20"><img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" alt="أحمد الحربي" class="w-full h-full object-cover"></div>
+          <div class="hidden sm:flex flex-col text-right">
+            <span class="text-xs font-semibold truncate max-w-[140px]">أحمد الحربي</span>
+            <span class="text-[11px] text-muted-foreground truncate max-w-[140px]">مدير العمليات</span>
+          </div>
+          <i class="fa-solid fa-chevron-down text-xs text-muted-foreground hidden sm:block"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="content" class="w-full max-w-[1440px] mx-auto p-6 lg:p-8 space-y-6">
+
+      <!-- Page header -->
+      <div id="page-header" class="flex flex-col gap-3 pb-6 border-b border-border">
+        <nav aria-label="مسار التنقل" class="text-xs text-muted-foreground flex items-center gap-2">
+          <span>الأصناف والماركات</span><i class="fa-solid fa-chevron-left text-[10px]"></i><span class="text-foreground font-medium">إدارة الأصناف</span>
+        </nav>
+        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+          <div class="space-y-2 min-w-0">
+            <div class="flex items-center gap-3 flex-wrap">
+              <h1 class="text-2xl sm:text-3xl font-semibold tracking-tight">إدارة الأصناف</h1>
+              <span class="inline-flex items-center border text-xs px-2.5 py-1 gap-1.5 font-medium rounded-md bg-amber-50 text-amber-800 border-amber-200/50 whitespace-nowrap"><span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>بيانات عينة — عرض تجريبي</span>
+            </div>
+            <p class="text-sm text-muted-foreground leading-relaxed max-w-3xl">البيانات الرئيسية للأصناف المرتبطة ببرنامج الولاء. الباركود الثابت للمنتج مختلف عن الباركود الفريد للمكافأة الذي يُدار في وحدة دفعات الباركود.</p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0 flex-wrap">
+            <button type="button" class="inline-flex items-center justify-center font-medium h-10 px-4 text-sm gap-2 rounded-md border border-border bg-transparent hover:bg-secondary active:bg-secondary-active transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"><i class="fa-solid fa-file-export"></i><span>تصدير القائمة</span></button>
+            <button id="add-product" type="button" class="inline-flex items-center justify-center font-medium h-10 px-4 text-sm gap-2 rounded-md bg-primary text-primary-foreground hover:bg-primary-hover active:bg-primary-active shadow-sm transition-all active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"><i class="fa-solid fa-plus"></i><span>إضافة صنف جديد</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Summary strip -->
+      <section id="summary-strip" aria-label="ملخص الأصناف" class="bg-card border border-border rounded-lg grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x md:divide-x-reverse divide-border">
+        <div class="p-5 space-y-2">
+          <p class="text-sm font-medium text-muted-foreground">إجمالي الأصناف</p>
+          <div class="flex items-baseline gap-2"><span id="sum-total" class="text-3xl font-semibold tabular-nums">48</span><span class="text-xs text-muted-foreground">صنفًا</span></div>
+        </div>
+        <div class="p-5 space-y-2">
+          <p class="text-sm font-medium text-muted-foreground">أصناف نشطة</p>
+          <div class="flex items-baseline gap-2"><span id="sum-active" class="text-3xl font-semibold tabular-nums">42</span><span class="text-xs text-muted-foreground">و6 غير نشطة</span></div>
+        </div>
+        <div class="p-5 space-y-2">
+          <p class="text-sm font-medium text-muted-foreground">القيمة بالريال للنقطة</p>
+          <div class="flex items-baseline gap-2"><span class="text-xl font-semibold text-warning">غير مُعدّة</span></div>
+          <p class="text-xs text-muted-foreground leading-normal">تُعرض القيمة المحتسبة لكل الأصناف كغير متاحة حتى تُعرَّف في وحدة ترميز النقاط.</p>
+        </div>
+        <div class="p-5 space-y-2">
+          <p class="text-sm font-medium text-muted-foreground">ماركات مرتبطة</p>
+          <div class="flex items-baseline gap-2"><span class="text-3xl font-semibold tabular-nums">6</span><span class="text-xs text-muted-foreground">ماركات</span></div>
+        </div>
+      </section>
+
+      <!-- Product list -->
+      <section id="product-list-card" aria-labelledby="product-list-title" class="bg-card border border-border rounded-lg overflow-hidden">
+
+        <div class="p-4 border-b border-border space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h2 id="product-list-title" class="text-lg font-medium">قائمة الأصناف</h2>
+            <p class="text-xs text-muted-foreground flex items-center gap-1.5"><i class="fa-solid fa-circle-info text-primary"></i>القيمة بالريال تُحسب من عدد النقاط وقيمة النقطة المُعدّة. لا تُدخل يدويًا.</p>
+          </div>
+          <div class="flex flex-col lg:flex-row gap-3">
+            <div class="relative flex items-center flex-1 min-w-[240px] bg-card rounded-md border border-input hover:border-border-hover focus-within:border-primary focus-within:ring-2 focus-within:ring-ring transition-colors">
+              <span class="ps-3 text-muted-foreground pointer-events-none"><i class="fa-solid fa-magnifying-glass text-sm"></i></span>
+              <input id="product-search" type="search" aria-label="بحث برقم الصنف أو الاسم أو الباركود" placeholder="ابحث برقم الصنف، أو اسم الصنف، أو الباركود..." class="w-full bg-transparent placeholder:text-muted-foreground focus:outline-none h-10 px-3 text-sm min-h-[40px] text-start">
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <div class="relative">
+                <label for="brand-select" class="sr-only">تصفية حسب الماركة</label>
+                <select id="brand-select" class="appearance-none h-10 min-h-[40px] ps-3 pe-9 text-sm rounded-md border border-input bg-card hover:border-border-hover focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary">
+                  <option value="all">كل الماركات</option>
+                  <option value="MK Brakes">MK Brakes</option>
+                  <option value="MK Filters">MK Filters</option>
+                  <option value="MK Lubricants">MK Lubricants</option>
+                  <option value="MK Ignition">MK Ignition</option>
+                  <option value="MK Suspension">MK Suspension</option>
+                  <option value="MK Cooling">MK Cooling</option>
+                </select>
+                <span class="absolute top-1/2 -translate-y-1/2 end-3 pointer-events-none text-muted-foreground"><i class="fa-solid fa-chevron-down text-xs"></i></span>
+              </div>
+              <div class="relative">
+                <label for="sort-select" class="sr-only">ترتيب القائمة</label>
+                <select id="sort-select" class="appearance-none h-10 min-h-[40px] ps-3 pe-9 text-sm rounded-md border border-input bg-card hover:border-border-hover focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary">
+                  <option value="item">ترتيب: رقم الصنف</option>
+                  <option value="name">ترتيب: اسم الصنف</option>
+                  <option value="points">ترتيب: النقاط الأساسية</option>
+                </select>
+                <span class="absolute top-1/2 -translate-y-1/2 end-3 pointer-events-none text-muted-foreground"><i class="fa-solid fa-chevron-down text-xs"></i></span>
+              </div>
+              <button id="reset-filters" type="button" class="inline-flex items-center justify-center h-10 px-3 text-sm gap-2 rounded-md border border-border bg-transparent hover:bg-secondary active:bg-secondary-active transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><i class="fa-solid fa-rotate-left text-xs"></i><span>إعادة الضبط</span></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full min-w-[920px] border-collapse text-start">
+            <thead class="bg-surface-subtle">
+              <tr>
+                <th scope="col" class="px-4 py-3 text-sm font-medium text-muted-foreground text-start whitespace-nowrap border-b border-border">الصنف ورقمه</th>
+                <th scope="col" class="px-4 py-3 text-sm font-medium text-muted-foreground text-start whitespace-nowrap border-b border-border">الماركة</th>
+                <th scope="col" class="px-4 py-3 text-sm font-medium text-muted-foreground text-start whitespace-nowrap border-b border-border">باركود الصنف الثابت</th>
+                <th scope="col" class="px-4 py-3 text-sm font-medium text-muted-foreground text-start whitespace-nowrap border-b border-border">النقاط الأساسية</th>
+                <th scope="col" class="px-4 py-3 text-sm font-medium text-muted-foreground text-start whitespace-nowrap border-b border-border">القيمة بالريال</th>
+                <th scope="col" class="px-4 py-3 text-sm font-medium text-muted-foreground text-start whitespace-nowrap border-b border-border">الحالة</th>
+                <th scope="col" class="px-4 py-3 text-sm font-medium text-muted-foreground text-end whitespace-nowrap border-b border-border"><span class="sr-only">الإجراءات</span></th>
+              </tr>
+            </thead>
+            <tbody id="product-rows"></tbody>
+          </table>
+        </div>
+
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 p-4 border-t border-border">
+          <p id="results-text" class="text-sm text-muted-foreground"></p>
+          <nav aria-label="ترقيم الصفحات" class="flex items-center gap-1">
+            <button id="prev-page" type="button" class="inline-flex items-center justify-center h-8 px-3 gap-1.5 text-xs rounded-md border border-border bg-transparent hover:bg-secondary transition-all disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><i class="fa-solid fa-chevron-right text-[10px]"></i><span>السابق</span></button>
+            <div id="page-numbers" class="flex items-center gap-1"></div>
+            <button id="next-page" type="button" class="inline-flex items-center justify-center h-8 px-3 gap-1.5 text-xs rounded-md border border-border bg-transparent hover:bg-secondary transition-all disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><span>التالي</span><i class="fa-solid fa-chevron-left text-[10px]"></i></button>
+          </nav>
+        </div>
+      </section>
+
+      <p class="text-xs text-muted-foreground leading-relaxed border-t border-border pt-4">هذه شاشة عرض تجريبي ببيانات عينة. يمكن تجربة الإضافة والتعديل محليًا في المتصفح. تظهر القيمة بالريال عند ضبط ترميز النقاط؛ ولا يوجد خادم بيانات حقيقي.</p>
+    </main>
+  </div>
+</div>
+
+<!-- PRODUCT DRAWER: add / view / edit -->
+<div id="drawer-root" class="hidden fixed inset-0 z-50">
+  <div id="drawer-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+  <aside id="product-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" class="absolute inset-y-0 start-0 w-full max-w-[480px] bg-card border-e border-border shadow-md flex flex-col">
+
+    <header class="flex items-start justify-between gap-3 p-5 border-b border-border">
+      <div class="space-y-1 min-w-0">
+        <p id="drawer-kicker" class="text-xs text-muted-foreground">صنف جديد</p>
+        <h2 id="drawer-title" class="text-lg font-semibold text-foreground">إضافة صنف جديد</h2>
+      </div>
+      <button id="drawer-close" type="button" aria-label="إغلاق النافذة" class="inline-flex items-center justify-center h-8 w-8 rounded-md text-foreground hover:bg-secondary transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><i class="fa-solid fa-xmark"></i></button>
+    </header>
+
+    <form id="product-form" novalidate class="flex-1 overflow-y-auto p-5 space-y-5">
+
+      <div class="rounded-md bg-muted p-3 text-xs text-muted-foreground leading-relaxed flex gap-2">
+        <i class="fa-solid fa-circle-info text-primary mt-0.5"></i>
+        <p>الباركود الثابت يعرّف <span class="text-foreground font-medium">المنتج</span> وليس المكافأة. رموز المكافأة الفريدة تُنشأ لاحقًا في وحدة دفعات الباركود.</p>
+      </div>
+
+      <div id="form-summary" role="alert" class="hidden rounded-md border border-destructive/30 bg-destructive-subtle p-3 text-sm text-destructive"></div>
+
+      <!-- Item number -->
+      <div class="space-y-1.5">
+        <label for="f-item" class="text-sm font-medium text-foreground">رقم الصنف <span class="text-destructive">*</span></label>
+        <input id="f-item" type="text" dir="ltr" placeholder="MK-00000" aria-describedby="h-item e-item w-item" class="w-full h-10 px-3 text-sm font-mono tracking-wider rounded-md border border-input bg-card placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-ring disabled:opacity-60 disabled:cursor-not-allowed">
+        <p id="h-item" class="text-xs text-muted-foreground">أدخل رقمًا فريدًا يدويًا بصيغة MK- متبوعة بخمسة أرقام.</p>
+        <p id="e-item" class="hidden text-xs text-destructive items-center gap-1.5"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+        <p id="w-item" class="hidden text-xs text-warning items-center gap-1.5"><i class="fa-solid fa-triangle-exclamation"></i><span></span></p>
+      </div>
+
+      <!-- Name -->
+      <div class="space-y-1.5">
+        <label for="f-name" class="text-sm font-medium text-foreground">اسم الصنف <span class="text-destructive">*</span></label>
+        <input id="f-name" type="text" aria-describedby="e-name" placeholder="مثال: فحمات فرامل أمامية" class="w-full h-10 px-3 text-sm rounded-md border border-input bg-card placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-ring disabled:opacity-60 disabled:cursor-not-allowed">
+        <p id="e-name" class="hidden text-xs text-destructive items-center gap-1.5"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+      </div>
+
+      <!-- Brand -->
+      <div class="space-y-1.5">
+        <label for="f-brand" class="text-sm font-medium text-foreground">الماركة <span class="text-destructive">*</span></label>
+        <div class="relative">
+          <select id="f-brand" aria-describedby="e-brand" class="appearance-none w-full h-10 ps-3 pe-9 text-sm rounded-md border border-input bg-card focus:outline-none focus:border-primary focus:ring-2 focus:ring-ring disabled:opacity-60 disabled:cursor-not-allowed">
+            <option value="">اختر الماركة</option>
+            <option>MK Brakes</option>
+            <option>MK Filters</option>
+            <option>MK Lubricants</option>
+            <option>MK Ignition</option>
+            <option>MK Suspension</option>
+            <option>MK Cooling</option>
+          </select>
+          <span class="absolute top-1/2 -translate-y-1/2 end-3 pointer-events-none text-muted-foreground"><i class="fa-solid fa-chevron-down text-xs"></i></span>
+        </div>
+        <p id="e-brand" class="hidden text-xs text-destructive items-center gap-1.5"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+      </div>
+
+      <!-- Barcode -->
+      <div class="space-y-1.5">
+        <label for="f-barcode" class="text-sm font-medium text-foreground">باركود الصنف الثابت <span class="text-destructive">*</span></label>
+        <input id="f-barcode" type="text" inputmode="numeric" dir="ltr" maxlength="13" placeholder="6281234567890" aria-describedby="h-barcode e-barcode w-barcode" class="w-full h-10 px-3 text-sm font-mono tracking-wider rounded-md border border-input bg-card placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-ring disabled:opacity-60 disabled:cursor-not-allowed">
+        <p id="h-barcode" class="text-xs text-muted-foreground">13 رقمًا، مطبوعًا على عبوة المنتج. لا يُستخدم لتعريف المكافأة.</p>
+        <p id="e-barcode" class="hidden text-xs text-destructive items-center gap-1.5"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+        <p id="w-barcode" class="hidden text-xs text-warning items-center gap-1.5"><i class="fa-solid fa-triangle-exclamation"></i><span></span></p>
+      </div>
+
+      <!-- Base points -->
+      <div class="space-y-1.5">
+        <label for="f-points" class="text-sm font-medium text-foreground">عدد نقاط الصنف <span class="text-destructive">*</span></label>
+        <input id="f-points" type="text" inputmode="numeric" dir="ltr" placeholder="0" aria-describedby="h-points e-points" class="w-full h-10 px-3 text-sm font-mono tabular-nums rounded-md border border-input bg-card placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-ring disabled:opacity-60 disabled:cursor-not-allowed">
+        <p id="h-points" class="text-xs text-muted-foreground">النقاط الأساسية المخصصة لهذا الصنف، عدد صحيح من 1 إلى 999.</p>
+        <p id="e-points" class="hidden text-xs text-destructive items-center gap-1.5"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>
+      </div>
+
+      <!-- Derived value (read-only) -->
+      <div id="derived-value" class="rounded-md border border-dashed border-border bg-surface-subtle p-4 space-y-2">
+        <div class="flex items-center justify-between gap-3">
+          <span class="text-sm font-medium text-foreground">القيمة بالريال للصنف</span>
+          <span class="inline-flex items-center border text-xs px-2.5 py-1 rounded-md font-medium bg-muted text-muted-foreground border-transparent whitespace-nowrap">غير متاحة</span>
+        </div>
+        <p class="text-xs text-muted-foreground leading-relaxed">تُحسب تلقائيًا من عدد النقاط × قيمة النقطة المُعدّة في وحدة ترميز النقاط. لا يُدخل هذا الحقل يدويًا، ولا تُستخدم قيمة افتراضية.</p>
+      </div>
+
+      <!-- Status -->
+      <div class="space-y-1.5">
+        <label for="f-status" class="text-sm font-medium text-foreground">حالة الصنف</label>
+        <div class="relative">
+          <select id="f-status" class="appearance-none w-full h-10 ps-3 pe-9 text-sm rounded-md border border-input bg-card focus:outline-none focus:border-primary focus:ring-2 focus:ring-ring disabled:opacity-60 disabled:cursor-not-allowed">
+            <option value="active">نشط</option>
+            <option value="inactive">غير نشط</option>
+          </select>
+          <span class="absolute top-1/2 -translate-y-1/2 end-3 pointer-events-none text-muted-foreground"><i class="fa-solid fa-chevron-down text-xs"></i></span>
+        </div>
+      </div>
+    </form>
+
+    <footer class="p-5 border-t border-border bg-surface-subtle space-y-3">
+      <p id="form-note" class="text-xs text-muted-foreground leading-relaxed">التحقق هنا محلي في النموذج التصميمي، ولم تُرسل البيانات إلى الخادم.</p>
+      <p id="form-success" class="hidden text-sm text-success"></p>
+      <div class="flex items-center justify-end gap-2">
+        <button id="btn-cancel" type="button" class="inline-flex items-center justify-center h-10 px-4 text-sm rounded-md border border-border bg-transparent hover:bg-secondary transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">إلغاء</button>
+        <button id="btn-save" type="submit" form="product-form" class="inline-flex items-center justify-center h-10 px-4 text-sm font-medium gap-2 rounded-md bg-primary text-primary-foreground hover:bg-primary-hover active:bg-primary-active shadow-sm transition-all active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">حفظ الصنف</button>
+        <button id="btn-view-close" type="button" class="hidden items-center justify-center h-10 px-4 text-sm rounded-md border border-border bg-transparent hover:bg-secondary transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">إغلاق</button>
+        <button id="btn-to-edit" type="button" class="hidden items-center justify-center h-10 px-4 text-sm font-medium gap-2 rounded-md bg-primary text-primary-foreground hover:bg-primary-hover active:bg-primary-active shadow-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><i class="fa-solid fa-pen text-xs"></i><span>تعديل الصنف</span></button>
+      </div>
+    </footer>
+  </aside>
+</div>
+
+<script>
+(function () {
+  // Sample catalogue: [item number, name, brand index, base points, active]
+  var BRANDS = ['MK Brakes', 'MK Filters', 'MK Lubricants', 'MK Ignition', 'MK Suspension', 'MK Cooling'];
+  var ITEMS = [
+    ['MK-10025','فحمات فرامل أمامية',0,4,1],['MK-10026','فحمات فرامل خلفية',0,3,1],
+    ['MK-10031','أقراص فرامل أمامية مهوّاة',0,6,1],['MK-10032','أقراص فرامل خلفية',0,5,1],
+    ['MK-10040','طقم سيور الفرامل الخلفية',0,2,1],['MK-10044','حساس تآكل الفحمات',0,1,1],
+    ['MK-10051','سائل فرامل DOT 4',0,2,0],['MK-10058','أسطوانة فرامل خلفية',0,4,1],
+    ['MK-20417','فلتر زيت المحرك',1,2,1],['MK-20418','فلتر هواء المحرك',1,3,1],
+    ['MK-20422','فلتر الوقود',1,3,1],['MK-20430','فلتر المكيف الداخلي',1,2,1],
+    ['MK-20436','فلتر زيت عالي السعة',1,4,1],['MK-20441','فلتر هواء رياضي',1,5,0],
+    ['MK-20449','فلتر وقود الديزل',1,4,1],['MK-20455','فلتر المكيف الكربوني',1,3,1],
+    ['MK-30110','زيت محرك 5W-30 (4 لتر)',2,6,1],['MK-30111','زيت محرك 0W-20 (4 لتر)',2,7,1],
+    ['MK-30118','زيت ناقل الحركة الأوتوماتيكي',2,8,1],['MK-30120','زيت تروس يدوي 75W-90',2,5,1],
+    ['MK-30131','زيت محرك 10W-40 (1 لتر)',2,2,1],['MK-30137','زيت محرك 5W-40 تخليقي (4 لتر)',2,7,1],
+    ['MK-30142','شحم متعدد الأغراض',2,1,1],['MK-30149','زيت محرك نصف تخليقي 10W-30 (1 لتر)',2,2,0],
+    ['MK-40210','شمعات إشعال إيريديوم (4 قطع)',3,5,1],['MK-40215','ملف إشعال',3,6,1],
+    ['MK-40221','أسلاك إشعال عالية الجهد',3,4,1],['MK-40230','بطارية 70 أمبير',3,10,1],
+    ['MK-40238','محرك مساحات أمامي',3,3,1],['MK-40244','حساس أكسجين',3,6,1],
+    ['MK-40251','مضخة وقود كهربائية',3,9,1],['MK-40259','بطارية 60 أمبير',3,8,0],
+    ['MK-31002','مساعد تعليق أمامي',4,7,1],['MK-31008','مساعد تعليق خلفي',4,6,1],
+    ['MK-31015','ماص صدمات أمامي',4,9,1],['MK-31021','ماص صدمات خلفي',4,8,1],
+    ['MK-31027','ذراع تحكم سفلي',4,5,1],['MK-31033','رأس توجيه خارجي',4,3,1],
+    ['MK-31040','بوشات عجلة خلفية',4,2,1],['MK-31046','مثبت عرضي أمامي',4,4,0],
+    ['MK-50105','مبرد ماء المحرك',5,8,1],['MK-50112','سائل تبريد أخضر (4 لتر)',5,4,1],
+    ['MK-50118','ترموستات المحرك',5,3,1],['MK-50124','مروحة تبريد كهربائية',5,7,1],
+    ['MK-50131','خرطوم تبريد علوي',5,2,1],['MK-50139','مضخة مياه',5,6,1],
+    ['MK-50146','غطاء خزان التمدد',5,1,1],['MK-50152','سائل تبريد فائق الجودة (1 لتر)',5,2,0]
+  ];
+
+  // EAN-13 style fixed product barcode (Saudi prefix 628) with check digit
+  function ean13(n) {
+    var base = '628' + String((n * 7919) % 1000000000).padStart(9, '0');
+    var s = 0;
+    for (var i = 0; i < 12; i++) { s += Number(base.charAt(i)) * (i % 2 ? 3 : 1); }
+    return base + ((10 - (s % 10)) % 10);
+  }
+
+  var products = ITEMS.map(function (r) {
+    return {
+      item: r[0], name: r[1], brand: BRANDS[r[2]], points: r[3],
+      active: r[4] === 1, barcode: ean13(parseInt(r[0].slice(3), 10))
+    };
+  });
+
+  // Client-demo local edits layered over UX Pilot example data.
+  try {
+    var localProducts = JSON.parse(localStorage.getItem('mk-demo-products') || 'null');
+    if (Array.isArray(localProducts) && localProducts.length && localProducts.every(function(p){return p && typeof p.item === 'string';})) products = localProducts;
+  } catch (err) {}
+  function storeProducts() { try { localStorage.setItem('mk-demo-products', JSON.stringify(products)); } catch (err) {} }
+  function savedPointRate() { try { var x = JSON.parse(localStorage.getItem('mk-demo-point-rate') || 'null'); return typeof x === 'number' && isFinite(x) && x > 0 ? x : null; } catch (err) { return null; } }
+
+  var PAGE = 8;
+  var state = { q: '', brand: 'all', sort: 'item', page: 1 };
+  var current = null;   // product open in drawer
+  var drawerMode = 'add';
+
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+
+  function view() {
+    var q = state.q.trim().toLowerCase();
+    var list = products.filter(function (p) {
+      if (state.brand !== 'all' && p.brand !== state.brand) return false;
+      if (!q) return true;
+      return p.item.toLowerCase().indexOf(q) > -1 ||
+             p.name.toLowerCase().indexOf(q) > -1 ||
+             p.barcode.indexOf(q) > -1;
+    });
+    list.sort(function (a, b) {
+      if (state.sort === 'name') return a.name.localeCompare(b.name, 'ar');
+      if (state.sort === 'points') return (b.points - a.points) || a.item.localeCompare(b.item);
+      return a.item.localeCompare(b.item);
+    });
+    return list;
+  }
+
+  function badgeActive(p) {
+    return p.active
+      ? '<span class="inline-flex items-center gap-1.5 border text-xs px-2.5 py-1 rounded-md font-medium bg-emerald-50 text-emerald-800 border-emerald-200/50 whitespace-nowrap"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>نشط</span>'
+      : '<span class="inline-flex items-center gap-1.5 border text-xs px-2.5 py-1 rounded-md font-medium bg-muted text-muted-foreground border-transparent whitespace-nowrap"><span class="w-1.5 h-1.5 rounded-full bg-muted-foreground"></span>غير نشط</span>';
+  }
+
+  var ICON_BTN = 'inline-flex items-center justify-center h-8 w-8 rounded-md text-foreground hover:bg-secondary active:bg-secondary-active transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring';
+
+  function rowHTML(p) {
+    return '<tr class="border-b border-border last:border-0 hover:bg-surface-subtle transition-colors">' +
+      '<td class="px-4 py-3 align-middle"><p class="text-sm font-medium text-foreground">' + esc(p.name) + '</p><p dir="ltr" class="font-mono text-xs tracking-wider text-muted-foreground mt-1 text-start">' + esc(p.item) + '</p></td>' +
+      '<td class="px-4 py-3 align-middle text-sm text-foreground whitespace-nowrap">' + esc(p.brand) + '</td>' +
+      '<td class="px-4 py-3 align-middle"><span dir="ltr" class="font-mono text-sm tracking-wider tabular-nums text-foreground">' + p.barcode + '</span></td>' +
+      '<td class="px-4 py-3 align-middle"><span class="font-mono text-sm tabular-nums text-foreground">' + p.points + '</span></td>' +
+      '<td class="px-4 py-3 align-middle">' + (savedPointRate() !== null ? '<span dir="ltr" class="font-mono text-sm font-semibold text-foreground">' + (p.points * savedPointRate()).toFixed(2) + ' SAR</span>' : '<span class="inline-flex items-center border text-xs px-2.5 py-1 rounded-md font-medium bg-muted text-muted-foreground border-transparent whitespace-nowrap" title="قيمة النقطة غير مُعدّة في وحدة ترميز النقاط">غير متاحة</span>') + '</td>' +
+      '<td class="px-4 py-3 align-middle">' + badgeActive(p) + '</td>' +
+      '<td class="px-4 py-3 align-middle"><div class="flex items-center justify-end gap-1">' +
+        '<button type="button" data-action="view" data-item="' + p.item + '" aria-label="عرض ' + esc(p.name) + '" title="عرض" class="' + ICON_BTN + '"><i class="fa-regular fa-eye"></i></button>' +
+        '<button type="button" data-action="edit" data-item="' + p.item + '" aria-label="تعديل ' + esc(p.name) + '" title="تعديل" class="' + ICON_BTN + '"><i class="fa-solid fa-pen text-xs"></i></button>' +
+      '</div></td></tr>';
+  }
+
+  function render() {
+    var list = view();
+    var total = list.length;
+    var pages = Math.max(1, Math.ceil(total / PAGE));
+    if (state.page > pages) state.page = pages;
+    var start = (state.page - 1) * PAGE;
+    var slice = list.slice(start, start + PAGE);
+
+    $('product-rows').innerHTML = slice.length
+      ? slice.map(rowHTML).join('')
+      : '<tr><td colspan="7" class="px-4 py-12 text-center"><div class="mx-auto max-w-sm space-y-2"><p class="text-sm font-medium text-foreground">لا توجد أصناف مطابقة للبحث</p><p class="text-xs text-muted-foreground">جرّب رقم صنف آخر أو اسمًا مختلفًا، أو أعد ضبط الماركة.</p></div></td></tr>';
+
+    var filtered = state.q.trim() !== '' || state.brand !== 'all';
+    $('results-text').textContent = total
+      ? 'يعرض ' + (start + 1) + '–' + (start + slice.length) + ' من ' + total + ' صنفًا' + (filtered ? ' مطابقًا للبحث' : '')
+      : 'لا توجد نتائج مطابقة';
+
+    $('prev-page').disabled = state.page <= 1;
+    $('next-page').disabled = state.page >= pages;
+
+    var nums = '';
+    for (var i = 1; i <= pages; i++) {
+      var on = i === state.page;
+      nums += '<button type="button" data-page="' + i + '" aria-label="صفحة ' + i + '"' + (on ? ' aria-current="page"' : '') +
+        ' class="inline-flex items-center justify-center h-8 min-w-[32px] px-2 text-xs font-medium rounded-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ' +
+        (on ? 'bg-primary text-primary-foreground' : 'bg-transparent text-foreground hover:bg-secondary') + '">' + i + '</button>';
+    }
+    $('page-numbers').innerHTML = nums;
+  }
+
+  // ---------- Drawer ----------
+  var FIELDS = ['item', 'name', 'brand', 'barcode', 'points'];
+
+  function hideMsg(el) { el.classList.add('hidden'); el.classList.remove('flex'); }
+  function showMsg(el, text) {
+    el.querySelector('span').textContent = text;
+    el.classList.remove('hidden');
+    el.classList.add('flex');
+  }
+
+  function clearErrors() {
+    FIELDS.forEach(function (k) {
+      hideMsg($('e-' + k));
+      var w = $('w-' + k); if (w) hideMsg(w);
+      $('f-' + k).classList.remove('border-destructive', 'border-warning');
+      $('f-' + k).classList.add('border-input');
+    });
+    $('form-summary').classList.add('hidden');
+    $('form-success').classList.add('hidden');
+  }
+
+  function setError(k, msg) {
+    showMsg($('e-' + k), msg);
+    $('f-' + k).classList.remove('border-input');
+    $('f-' + k).classList.add('border-destructive');
+  }
+
+  function setWarn(k, msg) {
+    var w = $('w-' + k);
+    w.querySelector('span').textContent = msg;
+    w.classList.remove('hidden');
+    w.classList.add('flex');
+    $('f-' + k).classList.remove('border-input');
+    $('f-' + k).classList.add('border-warning');
+  }
+
+  function fillForm(p) {
+    $('f-item').value = p ? p.item : '';
+    $('f-name').value = p ? p.name : '';
+    $('f-brand').value = p ? p.brand : '';
+    $('f-barcode').value = p ? p.barcode : '';
+    $('f-points').value = p ? String(p.points) : '';
+    $('f-status').value = p ? (p.active ? 'active' : 'inactive') : 'active';
+  }
+
+  function setEditable(editable, itemLocked) {
+    ['f-name', 'f-brand', 'f-barcode', 'f-points', 'f-status'].forEach(function (id) { $(id).disabled = !editable; });
+    $('f-item').disabled = !editable || itemLocked;
+  }
+
+  function openDrawer(mode, itemNo) {
+    drawerMode = mode;
+    current = itemNo ? products.filter(function (p) { return p.item === itemNo; })[0] : null;
+    clearErrors();
+    fillForm(mode === 'add' ? null : current);
+
+    var editable = mode !== 'view';
+    setEditable(editable, mode === 'edit');
+
+    var isView = mode === 'view';
+    $('drawer-kicker').textContent = mode === 'add' ? 'صنف جديد' : (isView ? 'عرض الصنف' : 'تعديل صنف');
+    $('drawer-title').textContent = mode === 'add' ? 'إضافة صنف جديد' : (isView ? current.name : 'تعديل الصنف');
+    $('h-item').textContent = mode === 'add'
+      ? 'أدخل رقمًا فريدًا يدويًا بصيغة MK- متبوعة بخمسة أرقام.'
+      : 'رقم الصنف مقفل في هذا النموذج التصميمي (افتراض عرض).';
+    $('form-note').textContent = isView
+      ? 'وضع العرض للقراءة فقط.'
+      : 'التحقق هنا محلي في النموذج التصميمي، ولم تُرسل البيانات إلى الخادم.';
+
+    $('btn-cancel').classList.toggle('hidden', isView);
+    $('btn-save').classList.toggle('hidden', isView);
+    $('btn-view-close').classList.toggle('hidden', !isView);
+    $('btn-view-close').classList.toggle('inline-flex', isView);
+    $('btn-to-edit').classList.toggle('hidden', !isView);
+    $('btn-to-edit').classList.toggle('inline-flex', isView);
+
+    $('drawer-root').classList.remove('hidden');
+    $('product-form').scrollTop = 0;
+    setTimeout(function () { (mode === 'add' ? $('f-item') : (isView ? $('drawer-close') : $('f-name'))).focus(); }, 0);
+  }
+
+  function closeDrawer() {
+    $('drawer-root').classList.add('hidden');
+  }
+
+  function validate() {
+    var count = 0;
+    var item = $('f-item').value.trim();
+    var name = $('f-name').value.trim();
+    var brand = $('f-brand').value;
+    var bc = $('f-barcode').value.trim();
+    var pv = $('f-points').value.trim();
+    var editingItem = current ? current.item : null;
+
+    if (drawerMode === 'add') {
+      if (!item) { setError('item', 'أدخل رقم الصنف.'); count++; }
+      else if (!/^MK-\d{5}$/.test(item)) { setError('item', 'الصيغة غير صحيحة. المطلوب MK- متبوعة بخمسة أرقام، مثل MK-10025.'); count++; }
+      else if (products.some(function (p) { return p.item === item; })) {
+        setWarn('item', 'رقم الصنف مستخدم بالفعل في صنف آخر. هذا تحذير توضيحي للتصميم، وليس نتيجة تحقق من الخادم.');
+        count++;
+      }
+    }
+
+    if (!name) { setError('name', 'أدخل اسم الصنف.'); count++; }
+    if (!brand) { setError('brand', 'اختر الماركة.'); count++; }
+
+    if (!bc) { setError('barcode', 'أدخل باركود الصنف الثابت.'); count++; }
+    else if (!/^\d{13}$/.test(bc)) { setError('barcode', 'يجب أن يتكون الباركود من 13 رقمًا فقط.'); count++; }
+    else if (products.some(function (p) { return p.barcode === bc && p.item !== editingItem; })) {
+      setWarn('barcode', 'هذا الباركود مسجل لصنف آخر. تحذير توضيحي للتصميم، وليس نتيجة تحقق من الخادم.');
+      count++;
+    }
+
+    if (!pv) { setError('points', 'أدخل عدد النقاط الأساسية للصنف.'); count++; }
+    else if (!/^\d+$/.test(pv) || Number(pv) < 1 || Number(pv) > 999) { setError('points', 'أدخل عددًا صحيحًا من 1 إلى 999.'); count++; }
+
+    return count;
+  }
+
+  function firstInvalid() {
+    var order = ['item', 'name', 'brand', 'barcode', 'points'];
+    for (var i = 0; i < order.length; i++) {
+      var k = order[i];
+      if (!$('e-' + k).classList.contains('hidden') || !$('w-' + k).classList.contains('hidden')) return $('f-' + k);
+    }
+    return null;
+  }
+
+  // ---------- Events ----------
+  $('add-product').addEventListener('click', function () { openDrawer('add'); });
+
+  $('product-rows').addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-action]');
+    if (!btn) return;
+    openDrawer(btn.getAttribute('data-action'), btn.getAttribute('data-item'));
+  });
+
+  ['drawer-close', 'btn-cancel', 'btn-view-close', 'drawer-backdrop'].forEach(function (id) {
+    $(id).addEventListener('click', closeDrawer);
+  });
+
+  $('btn-to-edit').addEventListener('click', function () {
+    if (current) openDrawer('edit', current.item);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !$('drawer-root').classList.contains('hidden')) closeDrawer();
+  });
+
+  $('product-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (drawerMode === 'view') return;
+    clearErrors();
+    var n = validate();
+    if (n > 0) {
+      var sum = $('form-summary');
+      sum.textContent = 'يرجى تصحيح ' + n + (n === 1 ? ' حقل' : ' حقول') + ' قبل الحفظ.';
+      sum.classList.remove('hidden');
+      var f = firstInvalid();
+      if (f) f.focus();
+      return;
+    }
+    var rec = {
+      item: $('f-item').value.trim(), name: $('f-name').value.trim(),
+      brand: $('f-brand').value, barcode: $('f-barcode').value.trim(),
+      points: Number($('f-points').value), active: $('f-status').value === 'active'
+    };
+    if (drawerMode === 'edit' && current) Object.assign(current, rec);
+    else products.push(rec);
+    storeProducts(); state.page = 1; render();
+    var ok = $('form-success');
+    ok.textContent = 'تم ' + (drawerMode === 'add' ? 'إضافة' : 'تحديث') + ' الصنف بنجاح داخل بيانات هذا العرض التجريبي في المتصفح. لا يوجد حفظ على خادم حقيقي.';
+    ok.classList.remove('hidden');
+  });
+
+  $('product-search').addEventListener('input', function (e) {
+    state.q = e.target.value; state.page = 1; render();
+  });
+  $('brand-select').addEventListener('change', function (e) {
+    state.brand = e.target.value; state.page = 1; render();
+  });
+  $('sort-select').addEventListener('change', function (e) {
+    state.sort = e.target.value; state.page = 1; render();
+  });
+  $('reset-filters').addEventListener('click', function () {
+    state = { q: '', brand: 'all', sort: 'item', page: 1 };
+    $('product-search').value = '';
+    $('brand-select').value = 'all';
+    $('sort-select').value = 'item';
+    render();
+  });
+
+  $('prev-page').addEventListener('click', function () { if (state.page > 1) { state.page--; render(); } });
+  $('next-page').addEventListener('click', function () { state.page++; render(); });
+  $('page-numbers').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-page]');
+    if (!b) return;
+    state.page = Number(b.getAttribute('data-page'));
+    render();
+  });
+
+  render();
+})();
+</script>
+<script src="assets/demo.js" defer></script>
+</body>
+</html>
